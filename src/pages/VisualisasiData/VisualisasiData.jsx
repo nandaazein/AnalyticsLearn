@@ -1210,9 +1210,6 @@ export default function VisualisasiData() {
           Jawab pertanyaan berikut untuk menguji pemahaman Anda tentang konsep visualisasi data:
         </p>
         <div className="bg-yellow-50 p-2 sm:p-3 md:p-4 border border-yellow-300 rounded mt-4 shadow-md relative">
-          <div className="absolute -top-3 sm:-top-4 md:-top-6 left-2 sm:left-4 bg-yellow-800 text-white px-2 sm:px-3 md:px-5 py-1 rounded-t-lg text-base sm:text-lg font-bold shadow-lg">
-            Soal {currentQuestion} dari 5
-          </div>
           <div className="mt-8 sm:mt-10">
             <h4 className="font-semibold text-yellow-800 text-sm md:text-base mb-2">
               {questions[currentQuestion - 1].question}
