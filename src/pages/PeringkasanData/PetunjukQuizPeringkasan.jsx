@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout";
 import axios from "axios";
 
@@ -6,24 +7,30 @@ export default function PetunjukPengerjaanPeringkasan() {
   const [history, setHistory] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   // Fetch quiz attempt history for Kuis 3 only
   useEffect(() => {
     const fetchQuizHistory = async () => {
       try {
         const token = localStorage.getItem("token");
-        if (!token) {
-          throw new Error("Silakan login kembali.");
-        }
-
         const user = JSON.parse(localStorage.getItem("user"));
-        if (!user || !user.nis) {
-          throw new Error("Data pengguna tidak ditemukan.");
+
+        // Periksa token dan user
+        if (!token || !user || !user.nis) {
+          setError("Silakan login kembali.");
+          navigate("/login");
+          return;
         }
 
-        // Fetch scores for the current student
+        // Log untuk debugging
+        console.log("API Endpoint:", import.meta.env.VITE_API_ENDPOINT);
+        console.log("NIS:", user.nis);
+        console.log("Token:", token);
+
+        // Fetch quiz attempts for the current student
         const response = await axios.get(
-          `${import.meta.env.VITE_API_ENDPOINT}/api/students/scores/${
+          `${import.meta.env.VITE_API_ENDPOINT}/api/students/quiz-attempts/${
             user.nis
           }`,
           {
@@ -31,20 +38,19 @@ export default function PetunjukPengerjaanPeringkasan() {
           }
         );
 
-        const scores = response.data;
-        const kkm = scores.kkm || { kuis3: 75 }; // Default KKM 75 untuk Kuis 3
+        const attempts = response.data;
 
-        // Construct history array for Kuis 3 only
-        const historyData = [];
+        // Log untuk debugging
+        console.log("Quiz attempts:", attempts);
 
-        // Add Kuis 3 attempts only
-        if (scores.kuis3 !== undefined && scores.kuis3 !== null) {
-          historyData.push({
-            date: scores.updated_at || scores.created_at,
-            percentage: `${scores.kuis3}%`,
-            status: scores.kuis3 >= kkm.kuis3 ? "Lulus" : "Tidak Lulus",
-          });
-        }
+        // Filter for Kuis 3 attempts and construct history array
+        const historyData = attempts
+          .filter((attempt) => attempt.quizNumber === 3)
+          .map((attempt) => ({
+            date: attempt.attemptTime,
+            percentage: `${attempt.score}%`,
+            status: attempt.score >= attempt.kkm ? "Lulus" : "Tidak Lulus",
+          }));
 
         // Sort by date (newest first)
         historyData.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -63,7 +69,22 @@ export default function PetunjukPengerjaanPeringkasan() {
     };
 
     fetchQuizHistory();
-  }, []);
+  }, [navigate]);
+
+  // Helper function to format timestamp
+  const formatDate = (dateString) => {
+    if (!dateString) return "-";
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return "-"; // Handle invalid dates
+    return date.toLocaleString("id-ID", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "Asia/Makassar", // WITA timezone
+    });
+  };
 
   return (
     <Layout>
@@ -127,13 +148,7 @@ export default function PetunjukPengerjaanPeringkasan() {
                   {history.map((attempt, index) => (
                     <tr key={index} className="border-b border-gray-200">
                       <td className="px-4 py-3 text-sm">
-                        {new Date(attempt.date).toLocaleString("id-ID", {
-                          day: "2-digit",
-                          month: "long",
-                          year: "numeric",
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })}
+                        {formatDate(attempt.date)}
                       </td>
                       <td className="px-4 py-3 text-sm text-center">
                         {attempt.percentage}

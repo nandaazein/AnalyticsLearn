@@ -37,7 +37,7 @@ export default function PetunjukPengerjaanVisualisasi() {
           .filter((attempt) => attempt.quizNumber === 2)
           .map((attempt) => ({
             date: attempt.attemptTime,
-            percentage: `${attempt.score.toFixed(2)}%`,
+            percentage: `${attempt.score}%`,
             status: attempt.score >= attempt.kkm ? "Lulus" : "Tidak Lulus",
           }));
 
