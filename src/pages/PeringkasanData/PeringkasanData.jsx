@@ -1221,8 +1221,6 @@ export default function PeringkasanData() {
           </div>
         </div>
       </div>
-
-      {/* Tombol Navigasi */}
      <div className="flex justify-between items-center mt-6 px-2 sm:px-4"> {/* Removed 'responsive-nav-buttons' if undefined */}
   <button
     onClick={() => navigate("/feedback2")}
