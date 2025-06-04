@@ -32,7 +32,7 @@ export default function Pendahuluan() {
         const response = await axios.get(
           `${import.meta.env.VITE_API_ENDPOINT}/api/students/quiz-attempts/${
             user.nis
-          }`, // Perbaiki endpoint
+          }`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
