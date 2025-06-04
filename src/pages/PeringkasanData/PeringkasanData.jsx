@@ -2443,11 +2443,12 @@ export default function PeringkasanData() {
               </div>
               {isAnswered[currentQuestion] && (
                 <button
-                  onClick={goToNext}
-                  className="bg-yellow-800 text-white px-4 py-2 rounded hover:bg-yellow-900 cursor-pointer"
-                >
-                  {currentQuestion === 5 ? "Selesai" : "Soal Selanjutnya"}
-                </button>
+  onClick={goToNext}
+  className="bg-yellow-800 text-white px-4 py-2 rounded hover:bg-yellow-900 cursor-pointer"
+>
+  {currentQuestion === 5 ? "Selesai" : "Soal Selanjutnya"}
+</button>
+
               )}
             </div>
             {currentQuestion === 5 && isAnswered[currentQuestion] && (
