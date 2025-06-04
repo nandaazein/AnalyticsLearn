@@ -21,43 +21,24 @@ export default function Pendahuluan() {
           throw new Error("Data pengguna tidak ditemukan.");
         }
 
-        // Fetch scores for the current student
+        // Fetch quiz attempts for the current student
         const response = await axios.get(
-          `${import.meta.env.VITE_API_ENDPOINT}/api/students/scores/${
-            user.nis
-          }`,
+          `${import.meta.env.VITE_API_ENDPOINT}/api/quiz-attempts/${user.nis}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
 
-        const scores = response.data;
-        const kkm = scores.kkm || { kuis1: 75 };
+        const attempts = response.data;
 
-        // Construct history array for Kuis 1 only
-        const historyData = [];
-
-        // Helper function to format timestamp
-        const formatDate = (dateString) => {
-          if (!dateString) return "-";
-          const date = new Date(dateString);
-          return date.toLocaleString("id-ID", {
-            day: "2-digit",
-            month: "long",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-          });
-        };
-
-        // Add Kuis 1 attempts only
-        if (scores.kuis1 !== undefined && scores.kuis1 !== null) {
-          historyData.push({
-            date: scores.updated_at || scores.created_at,
-            percentage: `${scores.kuis1}%`,
-            status: scores.kuis1 >= kkm.kuis1 ? "Lulus" : "Tidak Lulus",
-          });
-        }
+        // Filter for Kuis 1 attempts and construct history array
+        const historyData = attempts
+          .filter((attempt) => attempt.quizNumber === 1)
+          .map((attempt) => ({
+            date: attempt.attemptTime,
+            percentage: `${attempt.score}%`,
+            status: attempt.score >= attempt.kkm ? "Lulus" : "Tidak Lulus",
+          }));
 
         // Sort by date (newest first)
         historyData.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -77,6 +58,21 @@ export default function Pendahuluan() {
 
     fetchQuizHistory();
   }, []);
+
+  // Helper function to format timestamp
+  const formatDate = (dateString) => {
+    if (!dateString) return "-";
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return "-"; // Handle invalid dates
+    return date.toLocaleString("id-ID", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "Asia/Makassar", // WITA timezone
+    });
+  };
 
   return (
     <Layout>
@@ -140,13 +136,7 @@ export default function Pendahuluan() {
                   {history.map((attempt, index) => (
                     <tr key={index} className="border-b border-gray-200">
                       <td className="px-4 py-3 text-sm">
-                        {new Date(attempt.date).toLocaleString("id-ID", {
-                          day: "2-digit",
-                          month: "long",
-                          year: "numeric",
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })}
+                        {formatDate(attempt.date)}
                       </td>
                       <td className="px-4 py-3 text-sm text-center">
                         {attempt.percentage}
