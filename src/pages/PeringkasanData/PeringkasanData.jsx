@@ -1884,11 +1884,12 @@ export default function PeringkasanData() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {["Menentukan Tujuan", "Menentukan Kriteria", "Memilih Fungsi"].map((category) => (
                 <div
-                  key={category}
-                  onDrop={(e) => handleDrop(e, category)}
-                  onDragOver={(e) => handleDragOver(e)} // Corrected binding
-                  className="bg-white p-2 border-2 border-dashed border-green-400 rounded min-h-[120px] flex flex-col items-center justify-center"
-                >
+  key={category}
+  onDrop={(e) => handleDrop(e, category)}
+  onDragOver={handleDragOver} // This line is correct
+  className="bg-white p-2 border-2 border-dashed border-green-400 rounded min-h-[120px] flex flex-col items-center justify-center"
+>
+
                   <h4 className="font-semibold text-green-700 mb-2">{category}</h4>
                   {categories[category].length > 0 ? (
                     categories[category].map((step) => (
