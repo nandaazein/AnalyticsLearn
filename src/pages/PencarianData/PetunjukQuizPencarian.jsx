@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Tambahkan useNavigate
 import Layout from "../../components/Layout";
 import axios from "axios";
 
@@ -6,19 +7,20 @@ export default function Pendahuluan() {
   const [history, setHistory] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate(); // Inisialisasi navigate
 
   // Fetch quiz attempt history for Kuis 1 only
   useEffect(() => {
     const fetchQuizHistory = async () => {
       try {
         const token = localStorage.getItem("token");
-        if (!token) {
-          throw new Error("Silakan login kembali.");
-        }
-
         const user = JSON.parse(localStorage.getItem("user"));
-        if (!user || !user.nis) {
-          throw new Error("Data pengguna tidak ditemukan.");
+
+        // Periksa token dan user
+        if (!token || !user || !user.nis) {
+          setError("Silakan login kembali.");
+          navigate("/login"); // Redirect ke halaman login
+          return;
         }
 
         // Fetch quiz attempts for the current student
@@ -30,6 +32,9 @@ export default function Pendahuluan() {
         );
 
         const attempts = response.data;
+
+        // Log untuk debugging
+        console.log("Quiz attempts:", attempts);
 
         // Filter for Kuis 1 attempts and construct history array
         const historyData = attempts
@@ -57,7 +62,7 @@ export default function Pendahuluan() {
     };
 
     fetchQuizHistory();
-  }, []);
+  }, [navigate]);
 
   // Helper function to format timestamp
   const formatDate = (dateString) => {
