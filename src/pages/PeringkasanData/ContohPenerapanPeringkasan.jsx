@@ -457,7 +457,6 @@ const ContohPeringkasan = () => {
         </ul>
       </div>
 
-      <!-- Studi Kasus 2: COUNTIF & COUNTIFS -->
       <h2 className="text-base sm:text-lg md:text-xl font-bold mt-8 mb-2 text-gray-800">
         Studi Kasus 2: Menghitung dengan COUNTIF & COUNTIFS
       </h2>
@@ -465,7 +464,7 @@ const ContohPeringkasan = () => {
         Seorang guru mencatat data partisipasi siswa dalam kegiatan ekstrakurikuler. Gunakan fungsi <strong>COUNTIF</strong> untuk menghitung jumlah kegiatan dengan jenis "Olahraga". Gunakan fungsi <strong>COUNTIFS</strong> untuk menghitung jumlah siswa perempuan dari kelas 8A yang berpartisipasi dalam kegiatan ekstrakurikuler.
       </p>
 
-      <!-- Tabel 2: Data Partisipasi Ekstrakurikuler -->
+
       <div className="flex flex-col items-center mt-4 responsive-grid">
         <p className="text-gray-600 text-xs sm:text-sm text-center mb-2 italic">Tabel 2. Data Partisipasi Ekstrakurikuler</p>
         <div className="w-full overflow-x-auto">
