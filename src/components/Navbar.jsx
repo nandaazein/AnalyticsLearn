@@ -170,9 +170,8 @@ export const Navbar = () => {
             </div>
             <ChevronDown
               size={16}
-              className={`text-[#255F38] transition-transform duration-200 sm:w-5 sm:h-5 ${
-                isDropdownOpen ? "rotate-180" : ""
-              }`}
+              className={`text-[#255F38] transition-transform duration-200 sm:w-5 sm:h-5 ${isDropdownOpen ? "rotate-180" : ""
+                }`}
             />
           </div>
           {isDropdownOpen && (
