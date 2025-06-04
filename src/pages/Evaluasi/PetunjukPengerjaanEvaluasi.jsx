@@ -28,9 +28,9 @@ export default function PetunjukPengerjaanEvaluasi() {
         console.log("NIS:", user.nis);
         console.log("Token:", token);
 
-        // Fetch scores for the current student
+        // Fetch quiz attempts for the current student
         const response = await axios.get(
-          `${import.meta.env.VITE_API_ENDPOINT}/api/students/scores/${
+          `${import.meta.env.VITE_API_ENDPOINT}/api/students/quiz-attempts/${
             user.nis
           }`,
           {
@@ -38,26 +38,19 @@ export default function PetunjukPengerjaanEvaluasi() {
           }
         );
 
-        const scores = response.data;
-        const kkm = scores.kkm || { evaluasi_akhir: 75 }; // Default KKM 75 untuk Evaluasi Akhir
+        const attempts = response.data;
 
-        // Construct history array for Evaluasi Akhir only
-        const historyData = [];
+        // Log untuk debugging
+        console.log("Quiz attempts:", attempts);
 
-        // Add Evaluasi Akhir attempts only
-        if (
-          scores.evaluasi_akhir !== undefined &&
-          scores.evaluasi_akhir !== null
-        ) {
-          historyData.push({
-            date: scores.updated_at || scores.created_at,
-            percentage: `${scores.evaluasi_akhir}%`,
-            status:
-              scores.evaluasi_akhir >= kkm.evaluasi_akhir
-                ? "Lulus"
-                : "Tidak Lulus",
-          });
-        }
+        // Filter for Evaluasi Akhir attempts (quizNumber === 3) and construct history array
+        const historyData = attempts
+          .filter((attempt) => attempt.quizNumber === 3) // Asumsi Evaluasi Akhir adalah quiz_number 3
+          .map((attempt) => ({
+            date: attempt.attemptTime,
+            percentage: `${attempt.score}%`,
+            status: attempt.score >= attempt.kkm ? "Lulus" : "Tidak Lulus",
+          }));
 
         // Sort by date (newest first)
         historyData.sort((a, b) => new Date(b.date) - new Date(a.date));
