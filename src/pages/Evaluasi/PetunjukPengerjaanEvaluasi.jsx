@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout";
 import axios from "axios";
 
@@ -6,20 +7,26 @@ export default function PetunjukPengerjaanEvaluasi() {
   const [history, setHistory] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   // Fetch evaluation attempt history for Evaluasi Akhir only
   useEffect(() => {
     const fetchEvaluationHistory = async () => {
       try {
         const token = localStorage.getItem("token");
-        if (!token) {
-          throw new Error("Silakan login kembali.");
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        // Periksa token dan user
+        if (!token || !user || !user.nis) {
+          setError("Silakan login kembali.");
+          navigate("/login");
+          return;
         }
 
-        const user = JSON.parse(localStorage.getItem("user"));
-        if (!user || !user.nis) {
-          throw new Error("Data pengguna tidak ditemukan.");
-        }
+        // Log untuk debugging
+        console.log("API Endpoint:", import.meta.env.VITE_API_ENDPOINT);
+        console.log("NIS:", user.nis);
+        console.log("Token:", token);
 
         // Fetch scores for the current student
         const response = await axios.get(
@@ -69,7 +76,22 @@ export default function PetunjukPengerjaanEvaluasi() {
     };
 
     fetchEvaluationHistory();
-  }, []);
+  }, [navigate]);
+
+  // Helper function to format timestamp
+  const formatDate = (dateString) => {
+    if (!dateString) return "-";
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return "-"; // Handle invalid dates
+    return date.toLocaleString("id-ID", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "Asia/Makassar", // WITA timezone
+    });
+  };
 
   return (
     <Layout>
@@ -136,13 +158,7 @@ export default function PetunjukPengerjaanEvaluasi() {
                   {history.map((attempt, index) => (
                     <tr key={index} className="border-b border-gray-200">
                       <td className="px-4 py-3 text-sm">
-                        {new Date(attempt.date).toLocaleString("id-ID", {
-                          day: "2-digit",
-                          month: "long",
-                          year: "numeric",
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })}
+                        {formatDate(attempt.date)}
                       </td>
                       <td className="px-4 py-3 text-sm text-center">
                         {attempt.percentage}
