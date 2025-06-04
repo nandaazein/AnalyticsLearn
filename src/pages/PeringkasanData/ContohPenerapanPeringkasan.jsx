@@ -284,45 +284,45 @@ const ContohPeringkasan = () => {
           <li>Tentukan <strong>kriteria 2</strong> untuk kolom "Jenis Kelamin" (C2:C7) sebagai: "Perempuan".</li>
           <li>Tentukan <strong>kriteria 3</strong> untuk kolom "Partisipasi" (D2:D7) sebagai: "Ya".</li>
           <li>Gunakan rumus: <code className="bg-gray-100 px-2 py-1 rounded text-xs sm:text-sm">=COUNTIFS(B2:B7;"8A";C2:C7;"Perempuan";D2:D7;"Ya")</code></li>
-          <li><strong>Hasil:</strong> Jumlah siswa perempuan dari kelas 8A yang berpartisipasi adalah <strong>2</strong>.</li>
+          <li>Hasil: Jumlah siswa perempuan 8A yang berpartisipasi adalah 2.</li>
         </ul>
         <div className="flex justify-center mt-4">
           <iframe
-            className="w-full sm:w-[80%] responsive-iframe"
-            height="350"
+            width="100%"
+            height="400"
+            className="sm:w-[80%] responsive-iframe"
             style={{ border: '1px solid #e7e7e7' }}
             frameBorder="0"
-            scrolling="auto"
-            src="https://sheet.zohopublic.com/sheet/published/4yfvb546e313018e74fb81db3ef53d0b88e4?mode=embed"
+            scrolling="no"
+            src="https://sheet.zohopublic.com/sheet/published/4yfvb546e313018d74fba81dbe3f53d0a88e4?mode=embed"
           ></iframe>
         </div>
       </div>
 
-      {/* Conclusion Section */}
-      <div className="bg-white p-[0.8rem] sm:p-5 border-t-4 border-[#219653] space-y-4 mt-4 relative responsive-section">
-        <div className="absolute -top-6 left-2 sm:left-4 bg-[#219653] text-white px-2 sm:px-4 py-1 sm:p-2 rounded-t-lg text-base font-bold flex items-center shadow-lg">
-          <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> Kesimpulan
+      <div className="bg-white p-3 sm:p-5 border-gray-300 space-y-4 mt-10 relative responsive-section">
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center">
+          <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> Kesimpulan & Analisis
         </div>
-        <p className="text-gray-700 text-sm sm:text-base mt-4 sm:mt-6 responsive-text">
-          Fungsi <strong>COUNTIF</strong> efektif untuk menghitung data berdasarkan satu kriteria, sedangkan <strong>COUNTIFS</strong> sangat berguna untuk menghitung data dengan beberapa kriteria. Penggunaan fungsi-fungsi ini memungkinkan analisis data yang cepat dan akurat.
+        <p className="text-gray-700 text-sm sm:text-base mt-6 responsive-text">
+          COUNTIF menghitung data dengan satu kriteria, COUNTIFS untuk beberapa kriteria, membantu analisis cepat.
         </p>
-        <ul className="list-disc pl-4 sm:pl-10 text-gray-600 text-sm sm:text-base mt-4 space-y-3 responsive-text">
-          <li><strong>Keunggulan:</strong> Mengurangi risiko kesalahan dibandingkan dengan penghitungan manual.</li>
-          <li><strong>Catatan Penting:</strong> Pastikan ejaan kriteria sesuai dengan data di tabel untuk memastikan hasil yang benar.</li>
+        <ul className="list-disc list-inside text-gray-600 text-sm sm:text-base mt-4 space-y-2 responsive-text">
+          <li>Mengurangi kesalahan hitung manual.</li>
+          <li>Pastikan ejaan kriteria tepat untuk hasil akurat.</li>
         </ul>
       </div>
 
-      {/* Navigation Buttons */}
-      <div className="flex justify-between items-center mt-6 px-2 sm:p-4 responsive-nav-buttons">
+      {/* Tombol Navigasi */}
+      <div className="flex justify-between mt-8 px-4 responsive-nav-buttons">
         <button
-          className="px-3 sm:px-4 py-2 sm:py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200 text-sm sm:text-sm md:text-base font-semibold shadow-sm responsive-text"
           onClick={() => navigate("/pencarian-lookup")}
+          className="bg-gray-500 text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer responsive-button"
         >
           ← Sebelumnya
         </button>
         <button
-          className="px-3 sm:px-4 py-2 sm:py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200 text-sm sm:text-sm md:text-base font-semibold shadow-sm responsive-text"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/aktivitas-lookup")}
+          className="bg-green-800 text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer responsive-button"
         >
           Selanjutnya →
         </button>
