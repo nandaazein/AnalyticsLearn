@@ -315,13 +315,13 @@ const ContohPeringkasan = () => {
       {/* Tombol Navigasi */}
       <div className="flex justify-between mt-8 px-4 responsive-nav-buttons">
         <button
-          onClick={() => navigate("/pencarian-lookup")}
+          onClick={() => navigate("/peringkasan-data")}
           className="bg-gray-500 text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer responsive-button"
         >
           ← Sebelumnya
         </button>
         <button
-          onClick={() => navigate("/aktivitas-lookup")}
+          onClick={() => navigate("//aktivitas-peringkasan")}
           className="bg-green-800 text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer responsive-button"
         >
           Selanjutnya →
