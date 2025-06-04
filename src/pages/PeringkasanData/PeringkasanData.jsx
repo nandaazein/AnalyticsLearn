@@ -1927,19 +1927,19 @@ export default function PeringkasanData() {
 
           {/* Tombol Periksa dan Reset */}
           <div className="mt-4 flex space-x-2">
-            <button
-              onClick={checkAnswers}
-              className="bg-[#1B5E20] text-white px-5 py-2 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
-            >
-              Periksa
-            </button>
-            <button
-              onClick={resetSteps}
-              className="bg-[#D32F2F] text-white px-5 py-2 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
-            >
-              Hapus
-            </button>
-          </div>
+  <button
+    onClick={checkAnswers}
+    className="bg-[#1B5E20] text-white px-5 py-2 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
+  >
+    Periksa
+  </button>
+  <button
+    onClick={resetSteps}
+    className="bg-[#D32F2F] text-white px-5 py-2 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
+  >
+    Hapus
+  </button>
+</div>
 
           {/* Umpan Balik */}
           {feedbackDrag && (
