@@ -183,15 +183,7 @@ export default function ChartLesson() {
       await axios.post(
         `${import.meta.env.VITE_API_ENDPOINT}/api/students/scores/${nis}`,
         {
-          latihan1: null,
           latihan2: score,
-          latihan3: null,
-          latihan4: null,
-          kuis1: null,
-          kuis2: null,
-          kuis3: null,
-          kuis4: null,
-          evaluasi_akhir: null,
         },
         { headers: { Authorization: `Bearer ${token}` } }
       );

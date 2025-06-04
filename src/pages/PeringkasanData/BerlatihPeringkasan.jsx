@@ -86,15 +86,7 @@ export default function SummaryLesson() {
       await axios.post(
         `${import.meta.env.VITE_API_ENDPOINT}/api/students/scores/${nis}`,
         {
-          latihan1: null,
-          latihan2: null,
           latihan3: score,
-          latihan4: null,
-          kuis1: null,
-          kuis2: null,
-          kuis3: null,
-          kuis4: null,
-          evaluasi_akhir: null,
         },
         { headers: { Authorization: `Bearer ${token}` } }
       );
