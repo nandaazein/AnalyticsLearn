@@ -1222,20 +1222,20 @@ export default function PeringkasanData() {
       </div>
 
       {/* Tombol Navigasi */}
-      <div className="flex justify-between mt-8 px-4">
-        <button
-          onClick={() => navigate("/feedback2")}
-          className="bg-[#555757] text-white px-5 py-2 rounded hover:bg-gray-600 transition duration-300 cursor-pointer"
-        >
-          ← Sebelumnya
-        </button>
-        <button
-          onClick={() => navigate("/penerapan-peringkasan")}
-          className="bg-[#255F38] text-white px-5 py-2 rounded hover:bg-[#1E4D2E] transition duration-300 cursor-pointer"
-        >
-          Selanjutnya →
-        </button>
-      </div>
+     <div className="flex justify-between items-center mt-6 px-2 sm:px-4"> {/* Removed 'responsive-nav-buttons' if undefined */}
+  <button
+    onClick={() => navigate("/feedback2")}
+    className="bg-[#555757] text-white px-5 py-2 rounded hover:bg-gray-600 transition duration-300 cursor-pointer"
+  >
+    ← Sebelumnya
+  </button>
+  <button
+    onClick={() => navigate("/penerapan-peringkasan")}
+    className="bg-[#255F38] text-white px-5 py-2 rounded hover:bg-[#1E4D2E] transition duration-300 cursor-pointer"
+  >
+    Selanjutnya →
+  </button>
+</div>
     </Layout>
   );
 }
