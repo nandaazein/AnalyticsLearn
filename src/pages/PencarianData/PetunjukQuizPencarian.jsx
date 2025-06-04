@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Tambahkan useNavigate
+import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout";
 import axios from "axios";
 
@@ -7,7 +7,7 @@ export default function Pendahuluan() {
   const [history, setHistory] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate(); // Inisialisasi navigate
+  const navigate = useNavigate();
 
   // Fetch quiz attempt history for Kuis 1 only
   useEffect(() => {
@@ -19,13 +19,20 @@ export default function Pendahuluan() {
         // Periksa token dan user
         if (!token || !user || !user.nis) {
           setError("Silakan login kembali.");
-          navigate("/login"); // Redirect ke halaman login
+          navigate("/login");
           return;
         }
 
+        // Log untuk debugging
+        console.log("API Endpoint:", import.meta.env.VITE_API_ENDPOINT);
+        console.log("NIS:", user.nis);
+        console.log("Token:", token);
+
         // Fetch quiz attempts for the current student
         const response = await axios.get(
-          `${import.meta.env.VITE_API_ENDPOINT}/api/quiz-attempts/${user.nis}`,
+          `${import.meta.env.VITE_API_ENDPOINT}/api/students/quiz-attempts/${
+            user.nis
+          }`, // Perbaiki endpoint
           {
             headers: { Authorization: `Bearer ${token}` },
           }
