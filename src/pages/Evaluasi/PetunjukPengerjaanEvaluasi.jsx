@@ -45,7 +45,7 @@ export default function PetunjukPengerjaanEvaluasi() {
 
         // Filter for Evaluasi Akhir attempts (quizNumber === 3) and construct history array
         const historyData = attempts
-          .filter((attempt) => attempt.quizNumber === 3) // Asumsi Evaluasi Akhir adalah quiz_number 3
+          .filter((attempt) => attempt.quizNumber === 5) // Asumsi Evaluasi Akhir adalah quiz_number 3
           .map((attempt) => ({
             date: attempt.attemptTime,
             percentage: `${attempt.score}%`,
