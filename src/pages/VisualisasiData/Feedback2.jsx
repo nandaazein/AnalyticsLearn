@@ -206,9 +206,10 @@ const FeedbackVisualisasiData = () => {
       try {
         const token = localStorage.getItem('token');
         if (!token) throw new Error("Token tidak ditemukan, silakan login kembali.");
-        const response = await axios.get('http://localhost:5000/api/kkm/2', { // Perbaiki endpoint
+        const response = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/api/kkm/2`, { // Perbaiki endpoint
           headers: { Authorization: `Bearer ${token}` }
         });
+        
         setKKM(response.data.kkm || 75);
       } catch (err) {
         console.error('Fetch KKM error:', err);
