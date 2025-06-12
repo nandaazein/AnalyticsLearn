@@ -261,22 +261,22 @@
 // //         A. PENCARIAN DATA
 // //       </div>
 
-// //       <section className="bg-green-100 p-2 sm:p-4 rounded shadow-md mt-2 sm:mt-6 mb-2 sm:mb-6">
+// //       <section className="p-2 mt-2 mb-2 bg-green-100 rounded shadow-md sm:p-4 sm:mt-6 sm:mb-6">
 // //         <h2 className="font-bold text-[#255F38] text-lg">Tujuan Pembelajaran:</h2>
-// //         <div className="ml-4 sm:ml-6 space-y-1 sm:space-y-2 mt-2 text-gray-700">
+// //         <div className="mt-2 ml-4 space-y-1 text-gray-700 sm:ml-6 sm:space-y-2">
 // //           <div className="text-sm md:text-base">1. Peserta didik mampu menggunakan fungsi Lookup dan Reference untuk melakukan pencarian data secara tepat.</div>
 // //           <div className="text-sm md:text-base">2. Peserta didik mampu menerapkan pendekatan Computational Thinking dalam menyelesaikan permasalahan yang berkaitan dengan pencarian data.</div>
 // //         </div>
 // //       </section>
 
-// //       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-2 sm:px-6">
+// //       <p className="px-2 text-sm leading-relaxed text-justify text-gray-700 md:text-base sm:px-6">
 // //         Dalam proses pencarian data, terdapat dua jenis utama fungsi pencarian: Lookup dan Reference. Fungsi Lookup digunakan untuk mencari nilai tertentu dalam tabel atau array dan mengembalikan hasil yang sesuai berdasarkan kunci pencarian. Fungsi ini sering diterapkan dalam spreadsheet untuk menemukan data terkait dengan nilai tertentu. Sementara itu, fungsi Reference digunakan untuk mengambil nilai berdasarkan referensi sel atau alamat memori, sehingga lebih fleksibel saat posisi data berubah. Dengan kedua metode ini, pencarian data menjadi lebih cepat dan akurat dibandingkan pencarian manual. Hasil pencarian memiliki dua kemungkinan:
 // //       </p>
-// //       <div className="mt-1 sm:mt-2 ml-6 px-2 sm:px-6 space-y-1 sm:space-y-2">
-// //         <div className="text-sm md:text-base text-justify">
+// //       <div className="px-2 mt-1 ml-6 space-y-1 sm:mt-2 sm:px-6 sm:space-y-2">
+// //         <div className="text-sm text-justify md:text-base">
 // //           <strong>1. Data ditemukan</strong> → Data yang dicari sesuai dengan data dalam tabel.
 // //         </div>
-// //         <div className="text-sm md:text-base text-justify">
+// //         <div className="text-sm text-justify md:text-base">
 // //           <strong>2. Data tidak ditemukan</strong> → Data yang dicari tidak ada dalam tabel.
 // //         </div>
 // //       </div>
@@ -284,68 +284,68 @@
 // //       <div className="p-2 sm:p-4 bg-[#255F38] text-white font-bold text-lg mt-2 sm:mt-6">
 // //         1. Pencarian Lookup
 // //       </div>
-// //       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-2 sm:px-6 mt-2 sm:mt-4">
+// //       <p className="px-2 mt-2 text-sm leading-relaxed text-justify text-gray-700 md:text-base sm:px-6 sm:mt-4">
 // //         Dalam kehidupan sehari-hari, kita sering melakukan pencarian data, seperti mencari nomor telepon di kontak ponsel atau informasi barang di daftar inventaris. Dalam dunia digital, pencarian data dapat dilakukan lebih cepat dan efisien dengan menggunakan fungsi Lookup di aplikasi lembar kerja.
 // //       </p>
-// //       <p className="text-gray-700 text-sm md:text-base font-semibold text-justify leading-relaxed px-2 sm:px-6">Fungsi Lookup digunakan untuk:</p>
-// //       <div className="mt-1 sm:mt-2 ml-6 px-2 sm:px-6 space-y-1 sm:space-y-2">
-// //         <div className="text-sm md:text-base text-justify">
+// //       <p className="px-2 text-sm font-semibold leading-relaxed text-justify text-gray-700 md:text-base sm:px-6">Fungsi Lookup digunakan untuk:</p>
+// //       <div className="px-2 mt-1 ml-6 space-y-1 sm:mt-2 sm:px-6 sm:space-y-2">
+// //         <div className="text-sm text-justify md:text-base">
 // //           <strong>1. Mencari data</strong> dalam tabel → Membantu menemukan informasi di daftar besar.
 // //         </div>
-// //         <div className="text-sm md:text-base text-justify">
+// //         <div className="text-sm text-justify md:text-base">
 // //           <strong>2. Mengambil informasi</strong> berdasarkan referensi → Memungkinkan pencarian dengan kunci tertentu.
 // //         </div>
-// //         <div className="text-sm md:text-base text-justify">
+// //         <div className="text-sm text-justify md:text-base">
 // //           <strong>3. Mempermudah pengolahan</strong> data → Efektif untuk menangani data dalam jumlah banyak.
 // //         </div>
 // //       </div>
 
 // //       <div className="flex justify-center mt-4">
-// //         <img 
-// //           src={ilustrasi1} 
-// //           alt="Siswa Mengelola Data" 
-// //           className="w-full max-w-sm sm:max-w-xs md:max-w-sm lg:max-w-md rounded-lg shadow-md h-auto"
+// //         <img
+// //           src={ilustrasi1}
+// //           alt="Siswa Mengelola Data"
+// //           className="w-full h-auto max-w-sm rounded-lg shadow-md sm:max-w-xs md:max-w-sm lg:max-w-md"
 // //         />
 // //       </div>
-// //       <p className="text-center text-sm italic text-gray-500 mt-2">Gambar 2. Pencarian dengan VLOOKUP</p>
-// //       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-2 sm:px-6 mt-4"> Pada gambar 2, fungsi <strong>VLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam sebuah tabel di rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>kolom pertama tabel</strong> (kolom B). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari kolom ke-3</strong> (yaitu kolom D) yang sejajar atau sebaris dengan simbol tersebut. Angka 3 ini disebut <em>col index num</em>, yaitu posisi kolom yang diambil datanya. Karena menggunakan <code>FALSE</code>, artinya hanya akan cocok jika simbol yang dicari benar-benar sama persis. Jadi, jika simbol <code>*</code> ada di kolom B, maka nilai yang diambil dari kolom D adalah <code>@</code>. </p>
+// //       <p className="mt-2 text-sm italic text-center text-gray-500">Gambar 2. Pencarian dengan VLOOKUP</p>
+// //       <p className="px-2 mt-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base sm:px-6"> Pada gambar 2, fungsi <strong>VLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam sebuah tabel di rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>kolom pertama tabel</strong> (kolom B). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari kolom ke-3</strong> (yaitu kolom D) yang sejajar atau sebaris dengan simbol tersebut. Angka 3 ini disebut <em>col index num</em>, yaitu posisi kolom yang diambil datanya. Karena menggunakan <code>FALSE</code>, artinya hanya akan cocok jika simbol yang dicari benar-benar sama persis. Jadi, jika simbol <code>*</code> ada di kolom B, maka nilai yang diambil dari kolom D adalah <code>@</code>. </p>
 
 // //       <div className="flex justify-center mt-4">
-// //         <img 
-// //           src={ilustrasi2} 
-// //           alt="Siswa Mengelola Data" 
-// //           className="w-full max-w-sm sm:max-w-xs md:max-w-sm lg:max-w-md rounded-lg shadow-md h-auto"
+// //         <img
+// //           src={ilustrasi2}
+// //           alt="Siswa Mengelola Data"
+// //           className="w-full h-auto max-w-sm rounded-lg shadow-md sm:max-w-xs md:max-w-sm lg:max-w-md"
 // //         />
 // //       </div>
-// //       <p className="text-center text-sm italic text-gray-500 mt-2">Gambar 3. Pencarian dengan HLOOKUP</p>
-// //       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-2 sm:px-6 mt-4"> Pada Gambar 3, fungsi <strong>HLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam tabel pada rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>baris pertama tabel</strong> (yaitu baris 5). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari baris ke-4</strong> dalam tabel (yaitu baris 8), di kolom yang sama. Angka 4 ini disebut <em>row index num</em>, yaitu posisi baris yang datanya ingin diambil. Karena kita memakai <code>FALSE</code>, maka pencarian hanya akan berhasil jika simbol yang dicari benar-benar sama. Jadi, jika simbol <code>*</code> ditemukan di baris 5, maka nilai dari baris 8 di kolom yang sama akan diambil, misalnya <code>@</code>. </p>
+// //       <p className="mt-2 text-sm italic text-center text-gray-500">Gambar 3. Pencarian dengan HLOOKUP</p>
+// //       <p className="px-2 mt-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base sm:px-6"> Pada Gambar 3, fungsi <strong>HLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam tabel pada rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>baris pertama tabel</strong> (yaitu baris 5). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari baris ke-4</strong> dalam tabel (yaitu baris 8), di kolom yang sama. Angka 4 ini disebut <em>row index num</em>, yaitu posisi baris yang datanya ingin diambil. Karena kita memakai <code>FALSE</code>, maka pencarian hanya akan berhasil jika simbol yang dicari benar-benar sama. Jadi, jika simbol <code>*</code> ditemukan di baris 5, maka nilai dari baris 8 di kolom yang sama akan diambil, misalnya <code>@</code>. </p>
 
-// //       <div className="bg-white p-3 sm:p-5 border-gray-300 space-y-2 sm:space-y-4 mt-6 sm:mt-12 relative">
-// //         <div className="absolute -top-4 sm:-top-6 left-2 sm:left-4 bg-green-800 text-white px-3 sm:px-5 py-1 sm:py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-// //           <Lightbulb className="mr-1 sm:mr-2 w-4 h-4 md:w-5 md:h-5" /> Dekomposisi
+// //       <div className="relative p-3 mt-6 space-y-2 bg-white border-gray-300 sm:p-5 sm:space-y-4 sm:mt-12">
+// //         <div className="absolute flex items-center px-3 py-1 text-lg font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-4 sm:-top-6 left-2 sm:left-4 sm:px-5 sm:py-2">
+// //           <Lightbulb className="w-4 h-4 mr-1 sm:mr-2 md:w-5 md:h-5" /> Dekomposisi
 // //         </div>
-// //         <p className="text-gray-700 text-sm md:text-base mt-4 sm:mt-6 text-justify">
-// //           Sebelum melakukan pencarian dengan fungsi Lookup, kita perlu memahami <span className="font-semibold">komponen utama</span> dalam pencarian data dan memecahnya menjadi <span className="font-semibold">bagian-bagian kecil</span>. 
-// //           Pencarian data dalam tabel lembar kerja dapat dipecah menjadi beberapa langkah berikut: 
+// //         <p className="mt-4 text-sm text-justify text-gray-700 md:text-base sm:mt-6">
+// //           Sebelum melakukan pencarian dengan fungsi Lookup, kita perlu memahami <span className="font-semibold">komponen utama</span> dalam pencarian data dan memecahnya menjadi <span className="font-semibold">bagian-bagian kecil</span>.
+// //           Pencarian data dalam tabel lembar kerja dapat dipecah menjadi beberapa langkah berikut:
 // //         </p>
-// //         <ul className="list-disc list-inside ml-4 sm:ml-6 text-gray-700 space-y-1 sm:space-y-2">
-// //           <li className="text-sm md:text-base text-justify">
+// //         <ul className="ml-4 space-y-1 text-gray-700 list-disc list-inside sm:ml-6 sm:space-y-2">
+// //           <li className="text-sm text-justify md:text-base">
 // //             <strong>Identifikasi data</strong> yang akan dicari → Data harus memiliki nilai unik sebagai referensi (misalnya, kode barang atau kode siswa).
 // //           </li>
-// //           <li className="text-sm md:text-base text-justify">
+// //           <li className="text-sm text-justify md:text-base">
 // //             <strong>Menentukan tabel</strong> referensi → Data harus tersedia dalam tabel dengan format yang benar.
 // //           </li>
-// //           <li className="text-sm md:text-base text-justify">
+// //           <li className="text-sm text-justify md:text-base">
 // //             <strong>Menentukan jenis</strong> fungsi lookup → Pilih fungsi yang sesuai dengan kebutuhan:
-// //             <div className="ml-2 sm:ml-4 mt-1 sm:mt-2 space-y-2">
-// //               <section className="bg-gray-100 rounded p-2 sm:p-4 shadow-lg">
+// //             <div className="mt-1 ml-2 space-y-2 sm:ml-4 sm:mt-2">
+// //               <section className="p-2 bg-gray-100 rounded shadow-lg sm:p-4">
 // //                 <h3 className="font-semibold text-[#255F38] text-sm md:text-base">1. VLOOKUP</h3>
-// //                 <p className="text-gray-700 text-sm md:text-base">Fungsi VLOOKUP (Vertical Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam kolom pertama dari sebuah tabel atau rentang data secara vertical (dari atas ke bawah).</p>
-// //                 <pre className="bg-gray-200 p-1 sm:p-2 rounded text-gray-800 overflow-x-auto whitespace-normal break-words text-xs sm:text-sm">
+// //                 <p className="text-sm text-gray-700 md:text-base">Fungsi VLOOKUP (Vertical Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam kolom pertama dari sebuah tabel atau rentang data secara vertical (dari atas ke bawah).</p>
+// //                 <pre className="p-1 overflow-x-auto text-xs text-gray-800 break-words whitespace-normal bg-gray-200 rounded sm:p-2 sm:text-sm">
 // //                   =VLOOKUP(<span className="italic">lookup_value;table_array;col_index_num;[range_lookup]</span>)
 // //                 </pre>
-// //                 <p className="text-gray-700 text-sm md:text-base">Keterangan:</p>
-// //                 <ul className="list-disc list-inside ml-4 sm:ml-6 text-gray-700">
+// //                 <p className="text-sm text-gray-700 md:text-base">Keterangan:</p>
+// //                 <ul className="ml-4 text-gray-700 list-disc list-inside sm:ml-6">
 // //                   <li className="text-sm md:text-base"><strong>lookup_value:</strong> Nilai yang akan dicari dalam kolom pertama tabel.</li>
 // //                   <li className="text-sm md:text-base"><strong>table_array:</strong> Rentang tabel tempat pencarian dilakukan.</li>
 // //                   <li className="text-sm md:text-base"><strong>col_index_num:</strong> Nomor kolom dari mana nilai yang ingin diambil.</li>
@@ -353,14 +353,14 @@
 // //                 </ul>
 // //               </section>
 
-// //               <section className="bg-gray-100 rounded p-2 sm:p-4 shadow-lg">
+// //               <section className="p-2 bg-gray-100 rounded shadow-lg sm:p-4">
 // //                 <h3 className="font-semibold text-[#255F38] text-sm md:text-base">2. HLOOKUP</h3>
-// //                 <p className="text-gray-700 text-sm md:text-base">Fungsi HLOOKUP (Horizontal Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam baris pertama dari sebuah tabel atau rentang data secara horizontal (dari kiri ke kanan).</p>
-// //                 <pre className="bg-gray-200 p-1 sm:p-2 rounded text-gray-800 overflow-x-auto whitespace-normal break-words text-xs sm:text-sm">
+// //                 <p className="text-sm text-gray-700 md:text-base">Fungsi HLOOKUP (Horizontal Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam baris pertama dari sebuah tabel atau rentang data secara horizontal (dari kiri ke kanan).</p>
+// //                 <pre className="p-1 overflow-x-auto text-xs text-gray-800 break-words whitespace-normal bg-gray-200 rounded sm:p-2 sm:text-sm">
 // //                   =HLOOKUP(<span className="italic">lookup_value;table_array;row_index_num;[range_lookup]</span>)
 // //                 </pre>
-// //                 <p className="text-gray-700 text-sm md:text-base">Keterangan:</p>
-// //                 <ul className="list-disc list-inside ml-4 sm:ml-6 text-gray-700">
+// //                 <p className="text-sm text-gray-700 md:text-base">Keterangan:</p>
+// //                 <ul className="ml-4 text-gray-700 list-disc list-inside sm:ml-6">
 // //                   <li className="text-sm md:text-base"><strong>lookup_value:</strong> Nilai yang akan dicari dalam baris pertama tabel.</li>
 // //                   <li className="text-sm md:text-base"><strong>table_array:</strong> Rentang tabel tempat pencarian dilakukan.</li>
 // //                   <li className="text-sm md:text-base"><strong>row_index_num:</strong> Nomor baris dari mana nilai yang ingin diambil.</li>
@@ -375,10 +375,10 @@
 // //           <h3 className="font-semibold text-[#2E7D32] text-sm md:text-base mb-2">
 // //             Latihan Pemahaman: Memecah Masalah Pencarian Kode Barang
 // //           </h3>
-// //           <p className="text-gray-700 text-sm md:text-base text-justify mb-2">
+// //           <p className="mb-2 text-sm text-justify text-gray-700 md:text-base">
 // //             Bantulah toko untuk memecah masalah pencarian data barang berdasarkan kode. Daftar barang memiliki kolom kode, nama, dan harga. Tentukan langkah-langkah yang tepat untuk memecah masalah ini:
 // //           </p>
-// //           <div className="ml-4 sm:ml-6 text-gray-700 space-y-1 sm:space-y-2">
+// //           <div className="ml-4 space-y-1 text-gray-700 sm:ml-6 sm:space-y-2">
 // //             <div className="text-sm md:text-base">
 // //               <label className="flex items-center">
 // //                 <input
@@ -413,7 +413,7 @@
 // //               </label>
 // //             </div>
 // //           </div>
-// //           <div className="mt-4 flex space-x-2">
+// //           <div className="flex mt-4 space-x-2">
 // //             <button
 // //               onClick={checkDekomposisiAnswers}
 // //               className="bg-[#1B5E20] text-white px-3 py-1 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
@@ -439,98 +439,98 @@
 // //         </div>
 // //       </div>
 
-// //       <div className="bg-white p-3 sm:p-5 border-gray-300 space-y-2 sm:space-y-4 mt-4 sm:mt-10 relative">
-// //         <div className="absolute -top-4 sm:-top-6 left-2 sm:left-4 bg-green-800 text-white px-3 sm:px-5 py-1 sm:py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-// //           <BarChart className="mr-1 sm:mr-2 w-4 h-4 md:w-5 md:h-5" /> PENGENALAN POLA
+// //       <div className="relative p-3 mt-4 space-y-2 bg-white border-gray-300 sm:p-5 sm:space-y-4 sm:mt-10">
+// //         <div className="absolute flex items-center px-3 py-1 text-lg font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-4 sm:-top-6 left-2 sm:left-4 sm:px-5 sm:py-2">
+// //           <BarChart className="w-4 h-4 mr-1 sm:mr-2 md:w-5 md:h-5" /> PENGENALAN POLA
 // //         </div>
-// //         <p className="text-gray-700 text-sm md:text-base mt-4 sm:mt-6 text-justify">
+// //         <p className="mt-4 text-sm text-justify text-gray-700 md:text-base sm:mt-6">
 // //           Setelah memecah permasalahan, kita perlu mengidentifikasi <span className="font-bold">pola dalam data</span> untuk memastikan pencarian dilakukan secara efisien.
 // //         </p>
-// //         <p className="text-gray-700 text-sm md:text-base mt-1 sm:mt-2 text-justify">📌 Pola umum dalam pencarian data menggunakan Lookup meliputi:</p>
-// //         <div className="ml-4 sm:ml-6 text-gray-700 space-y-1 sm:space-y-2">
-// //           <div className="text-sm md:text-base text-justify">
+// //         <p className="mt-1 text-sm text-justify text-gray-700 md:text-base sm:mt-2">📌 Pola umum dalam pencarian data menggunakan Lookup meliputi:</p>
+// //         <div className="ml-4 space-y-1 text-gray-700 sm:ml-6 sm:space-y-2">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>1. Nilai referensi</strong> bersifat unik dalam tabel referensi.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>2. Data dalam tabel</strong> referensi harus tersusun dengan benar sesuai urutan pencarian.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>3. Pencarian dilakukan</strong> dengan mencocokkan nilai referensi dengan baris atau kolom pertama dalam tabel referensi.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>4. Jika tabel tidak terurut</strong> maka parameter range_lookup harus bernilai FALSE untuk mencari kecocokan persis.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>5. Jika tabel terurut</strong> maka range_lookup bisa bernilai TRUE untuk pencarian nilai terdekat.
 // //           </div>
 // //         </div>
 // //       </div>
 
-// //       <div className="bg-white p-3 sm:p-5 border-gray-300 space-y-2 sm:space-y-4 mt-4 sm:mt-10 relative">
-// //         <div className="absolute -top-4 sm:-top-6 left-2 sm:left-4 bg-green-800 text-white px-3 sm:px-5 py-1 sm:py-2 rounded-t-lg text-lg font-bold flex items-center">
-// //           <Filter className="mr-2 w-4 h-4 md:w-5 md:h-5" /> ABSTRAKSI
+// //       <div className="relative p-3 mt-4 space-y-2 bg-white border-gray-300 sm:p-5 sm:space-y-4 sm:mt-10">
+// //         <div className="absolute flex items-center px-3 py-1 text-lg font-bold text-white bg-green-800 rounded-t-lg -top-4 sm:-top-6 left-2 sm:left-4 sm:px-5 sm:py-2">
+// //           <Filter className="w-4 h-4 mr-2 md:w-5 md:h-5" /> ABSTRAKSI
 // //         </div>
-// //         <p className="text-gray-600 text-sm md:text-base mt-2 sm:mt-4 text-justify">
+// //         <p className="mt-2 text-sm text-justify text-gray-600 md:text-base sm:mt-4">
 // //           Setelah mengidentifikasi pola, kita dapat <span className="font-semibold">menyederhanakan masalah</span> dengan <span className="font-semibold">mengabaikan</span> informasi yang tidak perlu dan fokus pada elemen penting untuk pencarian.
 // //         </p>
-// //         <p className="text-gray-700 text-sm md:text-base mt-1 sm:mt-2 text-justify">📌 Bagian yang harus diperhatikan:</p>
-// //         <div className="ml-4 sm:ml-6 text-gray-700 space-y-1 sm:space-y-2">
-// //           <div className="text-sm md:text-base text-justify">
+// //         <p className="mt-1 text-sm text-justify text-gray-700 md:text-base sm:mt-2">📌 Bagian yang harus diperhatikan:</p>
+// //         <div className="ml-4 space-y-1 text-gray-700 sm:ml-6 sm:space-y-2">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>1. Kolom atau baris pertama</strong> dalam tabel referensi harus berisi nilai referensi (lookup_value).
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>2. Posisi kolom atau baris</strong> tempat data yang akan diambil harus diketahui.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             <strong>3. Gunakan tanda dolar</strong> atau absolute reference ($) untuk membuat referensi tabel tetap saat menyalin rumus.
 // //           </div>
 // //         </div>
 // //       </div>
 
-// //       <div className="bg-white p-3 sm:p-5 border-gray-300 space-y-2 sm:space-y-4 mt-4 sm:mt-10 relative">
-// //         <div className="absolute -top-4 sm:-top-6 left-2 sm:left-4 bg-green-800 text-white px-3 sm:px-5 py-1 sm:py-2 rounded-t-lg text-lg font-bold flex items-center">
-// //           <Code className="mr-2 w-4 h-4 md:w-5 md:h-5" /> ALGORITMA
+// //       <div className="relative p-3 mt-4 space-y-2 bg-white border-gray-300 sm:p-5 sm:space-y-4 sm:mt-10">
+// //         <div className="absolute flex items-center px-3 py-1 text-lg font-bold text-white bg-green-800 rounded-t-lg -top-4 sm:-top-6 left-2 sm:left-4 sm:px-5 sm:py-2">
+// //           <Code className="w-4 h-4 mr-2 md:w-5 md:h-5" /> ALGORITMA
 // //         </div>
-// //         <p className="text-gray-600 text-sm md:text-base mt-2 sm:mt-4 text-justify">
+// //         <p className="mt-2 text-sm text-justify text-gray-600 md:text-base sm:mt-4">
 // //           Setelah memahami dan menyederhanakan masalah, kita dapat <span className="font-semibold">menyusun langkah-langkah sistematis</span> untuk pencarian menggunakan VLOOKUP atau HLOOKUP.
 // //         </p>
-// //         <p className="text-gray-700 text-sm md:text-base mt-1 sm:mt-2 text-justify">📌 Langkah-langkah penggunaan fungsi Lookup:</p>
-// //         <div className="ml-4 sm:ml-6 text-gray-700 space-y-1 sm:space-y-2">
-// //           <div className="text-sm md:text-base text-justify">
+// //         <p className="mt-1 text-sm text-justify text-gray-700 md:text-base sm:mt-2">📌 Langkah-langkah penggunaan fungsi Lookup:</p>
+// //         <div className="ml-4 space-y-1 text-gray-700 sm:ml-6 sm:space-y-2">
+// //           <div className="text-sm text-justify md:text-base">
 // //             1. Tentukan nilai referensi (lookup_value) yang akan dicari.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             2. Pilih tabel referensi (table_array) yang berisi data pencarian.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             3. Tentukan nomor kolom atau baris yang berisi data yang ingin diambil.
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             4. Pilih metode pencarian:
-// //             <div className="ml-4 sm:ml-6 mt-1">
+// //             <div className="mt-1 ml-4 sm:ml-6">
 // //               <div className="text-sm md:text-base">a. Jika tabel tidak terurut, kita harus menggunakan FALSE agar VLOOKUP mencari kecocokan yang persis.</div>
 // //               <div className="text-sm md:text-base">b. Jika tabel terurut, kita bisa menggunakan TRUE untuk mencari nilai terdekat atau mendekati.</div>
 // //             </div>
 // //           </div>
-// //           <div className="text-sm md:text-base text-justify">
+// //           <div className="text-sm text-justify md:text-base">
 // //             5. Gunakan rumus VLOOKUP atau HLOOKUP dengan format yang benar.
 // //           </div>
 // //         </div>
 
 // //         <div className="bg-[#F0FFF4] p-3 sm:p-4 border border-[#81C784] rounded mt-4 shadow-md">
 // //           <h3 className="text-lg font-bold text-[#255F38] mb-2">MARI MENGAMATI</h3>
-// //           <p className="text-gray-700 text-sm md:text-base text-justify mb-2">
+// //           <p className="mb-2 text-sm text-justify text-gray-700 md:text-base">
 // //            Perhatikan tabel data yang berisi kolom kode barang dan harga, di mana harga untuk kode C002 masih kosong. Gunakan fungsi LOOKUP untuk mencari harga C002 pada tabel referensi yang memuat daftar kode barang dan harganya, lalu isi harga yang sesuai di tabel data.
 // //           </p>
 // //           <div className="flex justify-center gap-6 mt-2">
 // //             <div>
-// //               <p className="text-gray-700 text-sm md:text-base text-center mb-2">Tabel Data</p>
-// //               <table className="border-collapse border border-green-800 mx-auto max-w-xs sm:max-w-sm md:max-w-md">
+// //               <p className="mb-2 text-sm text-center text-gray-700 md:text-base">Tabel Data</p>
+// //               <table className="max-w-xs mx-auto border border-collapse border-green-800 sm:max-w-sm md:max-w-md">
 // //                 <thead>
 // //                   <tr className="bg-[#255F38] text-white">
-// //                     <th className="border border-green-600 px-2 py-1">Kode</th>
-// //                     <th className="border border-green-600 px-2 py-1">Nama</th>
-// //                     <th className="border border-green-600 px-2 py-1">Harga</th>
+// //                     <th className="px-2 py-1 border border-green-600">Kode</th>
+// //                     <th className="px-2 py-1 border border-green-600">Nama</th>
+// //                     <th className="px-2 py-1 border border-green-600">Harga</th>
 // //                   </tr>
 // //                 </thead>
 // //                 <tbody>
@@ -554,7 +554,7 @@
 // //                       >
 // //                         {row.kode}
 // //                       </td>
-// //                       <td className="border border-green-600 px-2 py-1">{row.nama}</td>
+// //                       <td className="px-2 py-1 border border-green-600">{row.nama}</td>
 // //                       <td
 // //                         className={`border border-green-600 px-2 py-1 ${
 // //                           isLookupStarted &&
@@ -577,13 +577,13 @@
 // //               </table>
 // //             </div>
 // //             <div>
-// //               <p className="text-gray-700 text-sm md:text-base text-center mb-2">Tabel Referensi</p>
-// //               <table className="border-collapse border border-green-800 mx-auto max-w-xs sm:max-w-sm md:max-w-md">
+// //               <p className="mb-2 text-sm text-center text-gray-700 md:text-base">Tabel Referensi</p>
+// //               <table className="max-w-xs mx-auto border border-collapse border-green-800 sm:max-w-sm md:max-w-md">
 // //                 <thead>
 // //                   <tr className="bg-[#255F38] text-white">
-// //                     <th className="border border-green-600 px-2 py-1">Kode</th>
-// //                     <th className="border border-green-600 px-2 py-1">Nama</th>
-// //                     <th className="border border-green-600 px-2 py-1">Harga</th>
+// //                     <th className="px-2 py-1 border border-green-600">Kode</th>
+// //                     <th className="px-2 py-1 border border-green-600">Nama</th>
+// //                     <th className="px-2 py-1 border border-green-600">Harga</th>
 // //                   </tr>
 // //                 </thead>
 // //                 <tbody>
@@ -607,7 +607,7 @@
 // //                       >
 // //                         {row.kode}
 // //                       </td>
-// //                       <td className="border border-green-600 px-2 py-1">{row.nama}</td>
+// //                       <td className="px-2 py-1 border border-green-600">{row.nama}</td>
 // //                       <td
 // //                         className={`border border-green-600 px-2 py-1 ${
 // //                           isLookupStarted &&
@@ -629,15 +629,15 @@
 // //               </table>
 // //             </div>
 // //           </div>
-// //           <p className="text-gray-700 text-sm md:text-base text-center mt-2">
+// //           <p className="mt-2 text-sm text-center text-gray-700 md:text-base">
 // //             Langkah saat ini: <strong>{isLookupStarted ? lookupSteps[lookupStep].description : "Tekan 'Mulai' untuk memulai visualisasi"}</strong>
 // //           </p>
 // //           {isLookupStarted && lookupSteps[lookupStep].result && (
-// //             <p className="text-gray-700 text-sm md:text-base text-center mt-2">
+// //             <p className="mt-2 text-sm text-center text-gray-700 md:text-base">
 // //               Hasil: <strong>{lookupSteps[lookupStep].result}</strong>
 // //             </p>
 // //           )}
-// //           <div className="mt-4 flex space-x-2 justify-center">
+// //           <div className="flex justify-center mt-4 space-x-2">
 // //             {!isLookupStarted ? (
 // //               <button
 // //                 onClick={() => {
@@ -668,23 +668,23 @@
 // //         </div>
 // //       </div>
 
-// //       <div className="bg-white p-3 sm:p-5 border-gray-300 space-y-2 sm:space-y-4 mt-6 sm:mt-12">
+// //       <div className="p-3 mt-6 space-y-2 bg-white border-gray-300 sm:p-5 sm:space-y-4 sm:mt-12">
 // //         <h3 className="font-semibold text-[#255F38] text-lg mb-2">Kuis Pemahaman: Pencarian Data dengan Fungsi Lookup</h3>
-// //         <p className="text-gray-700 text-sm md:text-base text-justify">
+// //         <p className="text-sm text-justify text-gray-700 md:text-base">
 // //           Jawab pertanyaan berikut untuk menguji pemahaman Anda tentang konsep pencarian data menggunakan fungsi Lookup:
 // //         </p>
-// //         <div className="bg-yellow-50 p-3 sm:p-4 border border-yellow-300 rounded mt-4 shadow-md">
-// //           <div className="absolute -top-4 sm:-top-6 left-2 sm:left-4 bg-yellow-800 text-white px-3 sm:px-5 py-1 sm:py-2 rounded-t-lg text-lg font-bold flex items-center">
-// //             <Lightbulb className="mr-2 w-4 h-4 md:w-5 md:h-5" /> Soal {currentQuestion} dari 5
+// //         <div className="p-3 mt-4 border border-yellow-300 rounded shadow-md bg-yellow-50 sm:p-4">
+// //           <div className="absolute flex items-center px-3 py-1 text-lg font-bold text-white bg-yellow-800 rounded-t-lg -top-4 sm:-top-6 left-2 sm:left-4 sm:px-5 sm:py-2">
+// //             <Lightbulb className="w-4 h-4 mr-2 md:w-5 md:h-5" /> Soal {currentQuestion} dari 5
 // //           </div>
 // //           <div className="mt-8">
-// //             <h4 className="font-semibold text-yellow-800 text-sm md:text-base mb-2">
+// //             <h4 className="mb-2 text-sm font-semibold text-yellow-800 md:text-base">
 // //               {questions[currentQuestion - 1].question}
 // //             </h4>
-// //             <div className="ml-4 sm:ml-6 text-gray-700 space-y-1 sm:space-y-2">
+// //             <div className="ml-4 space-y-1 text-gray-700 sm:ml-6 sm:space-y-2">
 // //               {questions[currentQuestion - 1].options.map((option, index) => (
 // //                 <div key={index} className="text-sm md:text-base">
-// //                   <label className="flex items-center border border-gray-300 p-2 mb-2 rounded">
+// //                   <label className="flex items-center p-2 mb-2 border border-gray-300 rounded">
 // //                     <input
 // //                       type="radio"
 // //                       name={`quiz${currentQuestion}`}
@@ -707,7 +707,7 @@
 // //                 {feedback[currentQuestion]}
 // //               </p>
 // //             )}
-// //             <div className="mt-4 flex justify-between">
+// //             <div className="flex justify-between mt-4">
 // //               <div className="flex space-x-2">
 // //                 <button
 // //                   onClick={goToPrevious}
@@ -744,7 +744,7 @@
 // //         </div>
 // //       </div>
 
-// //       <div className="flex justify-between items-center px-2 sm:px-6 py-2 mt-4">
+// //       <div className="flex items-center justify-between px-2 py-2 mt-4 sm:px-6">
 // //         <button
 // //           onClick={() => window.location.href = "/penerapan-ct"}
 // //           className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 text-center min-w-[100px] cursor-pointer"
@@ -1025,22 +1025,22 @@
 //         A. PENCARIAN DATA
 //       </div>
 
-//       <section className="bg-green-100 p-1 sm:p-2 md:p-4 rounded shadow-md mt-1 sm:mt-2 md:mt-6 mb-1 sm:mb-2 md:mb-6">
+//       <section className="p-1 mt-1 mb-1 bg-green-100 rounded shadow-md sm:p-2 md:p-4 sm:mt-2 md:mt-6 sm:mb-2 md:mb-6">
 //         <h2 className="font-bold text-[#255F38] text-sm sm:text-base md:text-lg">Tujuan Pembelajaran:</h2>
-//         <div className="ml-2 sm:ml-4 md:ml-6 space-y-1 sm:space-y-1 md:space-y-2 mt-1 sm:mt-1 md:mt-2 text-gray-700">
+//         <div className="mt-1 ml-2 space-y-1 text-gray-700 sm:ml-4 md:ml-6 sm:space-y-1 md:space-y-2 sm:mt-1 md:mt-2">
 //           <div className="text-xs sm:text-sm md:text-base">1. Peserta didik mampu menggunakan fungsi Lookup dan Reference untuk melakukan pencarian data secara tepat.</div>
 //           <div className="text-xs sm:text-sm md:text-base">2. Peserta didik mampu menerapkan pendekatan Computational Thinking dalam menyelesaikan permasalahan yang berkaitan dengan pencarian data.</div>
 //         </div>
 //       </section>
 
-//       <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-1 sm:px-2 md:px-6">
+//       <p className="px-1 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6">
 //         Dalam proses pencarian data, terdapat dua jenis utama fungsi pencarian: Lookup dan Reference. Fungsi Lookup digunakan untuk mencari nilai tertentu dalam tabel atau array dan mengembalikan hasil yang sesuai berdasarkan kunci pencarian. Fungsi ini sering diterapkan dalam spreadsheet untuk menemukan data terkait dengan nilai tertentu. Sementara itu, fungsi Reference digunakan untuk mengambil nilai berdasarkan referensi sel atau alamat memori, sehingga lebih fleksibel saat posisi data berubah. Dengan kedua metode ini, pencarian data menjadi lebih cepat dan akurat dibandingkan pencarian manual. Hasil pencarian memiliki dua kemungkinan:
 //       </p>
-//       <div className="mt-1 sm:mt-1 md:mt-2 ml-4 sm:ml-6 md:ml-6 px-1 sm:px-2 md:px-6 space-y-1 sm:space-y-1 md:space-y-2">
-//         <div className="text-xs sm:text-sm md:text-base text-justify">
+//       <div className="px-1 mt-1 ml-4 space-y-1 sm:mt-1 md:mt-2 sm:ml-6 md:ml-6 sm:px-2 md:px-6 sm:space-y-1 md:space-y-2">
+//         <div className="text-xs text-justify sm:text-sm md:text-base">
 //           <strong>1. Data ditemukan</strong> → Data yang dicari sesuai dengan data dalam tabel.
 //         </div>
-//         <div className="text-xs sm:text-sm md:text-base text-justify">
+//         <div className="text-xs text-justify sm:text-sm md:text-base">
 //           <strong>2. Data tidak ditemukan</strong> → Data yang dicari tidak ada dalam tabel.
 //         </div>
 //       </div>
@@ -1048,18 +1048,18 @@
 //       <div className="p-1 sm:p-2 md:p-4 bg-[#255F38] text-white font-bold text-sm sm:text-base md:text-lg mt-1 sm:mt-2 md:mt-6">
 //         1. Pencarian Lookup
 //       </div>
-//       <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-1 sm:px-2 md:px-6 mt-1 sm:mt-2 md:mt-4">
+//       <p className="px-1 mt-1 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6 sm:mt-2 md:mt-4">
 //         Dalam kehidupan sehari-hari, kita sering melakukan pencarian data, seperti mencari nomor telepon di kontak ponsel atau informasi barang di daftar inventaris. Dalam dunia digital, pencarian data dapat dilakukan lebih cepat dan efisien dengan menggunakan fungsi Lookup di aplikasi lembar kerja.
 //       </p>
-//       <p className="text-gray-700 text-xs sm:text-sm md:text-base font-semibold text-justify leading-relaxed px-1 sm:px-2 md:px-6">Fungsi Lookup digunakan untuk:</p>
-//       <div className="mt-1 sm:mt-1 md:mt-2 ml-4 sm:ml-6 md:ml-6 px-1 sm:px-2 md:px-6 space-y-1 sm:space-y-1 md:space-y-2">
-//         <div className="text-xs sm:text-sm md:text-base text-justify">
+//       <p className="px-1 text-xs font-semibold leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6">Fungsi Lookup digunakan untuk:</p>
+//       <div className="px-1 mt-1 ml-4 space-y-1 sm:mt-1 md:mt-2 sm:ml-6 md:ml-6 sm:px-2 md:px-6 sm:space-y-1 md:space-y-2">
+//         <div className="text-xs text-justify sm:text-sm md:text-base">
 //           <strong>1. Mencari data</strong> dalam tabel → Membantu menemukan informasi di daftar besar.
 //         </div>
-//         <div className="text-xs sm:text-sm md:text-base text-justify">
+//         <div className="text-xs text-justify sm:text-sm md:text-base">
 //           <strong>2. Mengambil informasi</strong> berdasarkan referensi → Memungkinkan pencarian dengan kunci tertentu.
 //         </div>
-//         <div className="text-xs sm:text-sm md:text-base text-justify">
+//         <div className="text-xs text-justify sm:text-sm md:text-base">
 //           <strong>3. Mempermudah pengolahan</strong> data → Efektif untuk menangani data dalam jumlah banyak.
 //         </div>
 //       </div>
@@ -1068,11 +1068,11 @@
 //         <img
 //           src={ilustrasi1}
 //           alt="Siswa Mengelola Data"
-//           className="w-full max-w-xs sm:max-w-xs md:max-w-sm lg:max-w-md rounded-lg shadow-md h-auto object-contain"
+//           className="object-contain w-full h-auto max-w-xs rounded-lg shadow-md sm:max-w-xs md:max-w-sm lg:max-w-md"
 //         />
 //       </div>
-//       <p className="text-center text-xs sm:text-sm md:text-base italic text-gray-500 mt-1 sm:mt-1 md:mt-2">Gambar 2. Pencarian dengan VLOOKUP</p>
-//       <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-1 sm:px-2 md:px-6 mt-2 sm:mt-2 md:mt-4">
+//       <p className="mt-1 text-xs italic text-center text-gray-500 sm:text-sm md:text-base sm:mt-1 md:mt-2">Gambar 2. Pencarian dengan VLOOKUP</p>
+//       <p className="px-1 mt-2 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6 sm:mt-2 md:mt-4">
 //         Pada gambar 2, fungsi <strong>VLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam sebuah tabel di rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>kolom pertama tabel</strong> (kolom B). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari kolom ke-3</strong> (yaitu kolom D) yang sejajar atau sebaris dengan simbol tersebut. Angka 3 ini disebut <em>col index num</em>, yaitu posisi kolom yang diambil datanya. Karena menggunakan <code>FALSE</code>, artinya hanya akan cocok jika simbol yang dicari benar-benar sama persis. Jadi, jika simbol <code>*</code> ada di kolom B, maka nilai yang diambil dari kolom D adalah <code>@</code>.
 //       </p>
 
@@ -1080,40 +1080,40 @@
 //         <img
 //           src={ilustrasi2}
 //           alt="Siswa Mengelola Data"
-//           className="w-full max-w-xs sm:max-w-xs md:max-w-sm lg:max-w-md rounded-lg shadow-md h-auto object-contain"
+//           className="object-contain w-full h-auto max-w-xs rounded-lg shadow-md sm:max-w-xs md:max-w-sm lg:max-w-md"
 //         />
 //       </div>
-//       <p className="text-center text-xs sm:text-sm md:text-base italic text-gray-500 mt-1 sm:mt-1 md:mt-2">Gambar 3. Pencarian dengan HLOOKUP</p>
-//       <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-1 sm:px-2 md:px-6 mt-2 sm:mt-2 md:mt-4">
+//       <p className="mt-1 text-xs italic text-center text-gray-500 sm:text-sm md:text-base sm:mt-1 md:mt-2">Gambar 3. Pencarian dengan HLOOKUP</p>
+//       <p className="px-1 mt-2 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6 sm:mt-2 md:mt-4">
 //         Pada Gambar 3, fungsi <strong>HLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam tabel pada rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>baris pertama tabel</strong> (yaitu baris 5). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari baris ke-4</strong> dalam tabel (yaitu baris 8), di kolom yang sama. Angka 4 ini disebut <em>row index num</em>, yaitu posisi baris yang datanya ingin diambil. Karena kita memakai <code>FALSE</code>, maka pencarian hanya akan berhasil jika simbol yang dicari benar-benar sama. Jadi, jika simbol <code>*</code> ditemukan di baris 5, maka nilai dari baris 8 di kolom yang sama akan diambil, misalnya <code>@</code>.
 //       </p>
 
-//       <div className="bg-white p-1 sm:p-2 md:p-4 border-gray-300 space-y-1 sm:space-y-2 md:space-y-4 mt-2 sm:mt-4 md:mt-6 relative">
+//       <div className="relative p-1 mt-2 space-y-1 bg-white border-gray-300 sm:p-2 md:p-4 sm:space-y-2 md:space-y-4 sm:mt-4 md:mt-6">
 //         <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1 sm:left-2 md:left-4 bg-green-800 text-white px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center shadow-lg">
 //           <Lightbulb className="mr-0.5 sm:mr-1 md:mr-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" /> Dekomposisi
 //         </div>
-//         <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-2 sm:mt-3 md:mt-4 text-justify">
+//         <p className="mt-2 text-xs text-justify text-gray-700 sm:text-sm md:text-base sm:mt-3 md:mt-4">
 //           Sebelum melakukan pencarian dengan fungsi Lookup, kita perlu memahami <span className="font-semibold">komponen utama</span> dalam pencarian data dan memecahnya menjadi <span className="font-semibold">bagian-bagian kecil</span>.
 //           Pencarian data dalam tabel lembar kerja dapat dipecah menjadi beberapa langkah berikut:
 //         </p>
 //         <ul className="list-disc list-inside ml-2 sm:ml-4 md:ml-6 text-gray-700 space-y-0.5 sm:space-y-1 md:space-y-2">
-//           <li className="text-xs sm:text-sm md:text-base text-justify">
+//           <li className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>Identifikasi data</strong> yang akan dicari → Data harus memiliki nilai unik sebagai referensi (misalnya, kode barang atau kode siswa).
 //           </li>
-//           <li className="text-xs sm:text-sm md:text-base text-justify">
+//           <li className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>Menentukan tabel</strong> referensi → Data harus tersedia dalam tabel dengan format yang benar.
 //           </li>
-//           <li className="text-xs sm:text-sm md:text-base text-justify">
+//           <li className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>Menentukan jenis</strong> fungsi lookup → Pilih fungsi yang sesuai dengan kebutuhan:
-//             <div className="ml-2 sm:ml-4 md:ml-4 mt-1 sm:mt-1 md:mt-2 space-y-1 sm:space-y-2">
-//               <section className="bg-gray-100 rounded p-1 sm:p-2 md:p-4 shadow-lg">
+//             <div className="mt-1 ml-2 space-y-1 sm:ml-4 md:ml-4 sm:mt-1 md:mt-2 sm:space-y-2">
+//               <section className="p-1 bg-gray-100 rounded shadow-lg sm:p-2 md:p-4">
 //                 <h3 className="font-semibold text-[#255F38] text-xs sm:text-sm md:text-base">1. VLOOKUP</h3>
-//                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Fungsi VLOOKUP (Vertical Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam kolom pertama dari sebuah tabel atau rentang data secara vertical (dari atas ke bawah).</p>
+//                 <p className="text-xs text-gray-700 sm:text-sm md:text-base">Fungsi VLOOKUP (Vertical Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam kolom pertama dari sebuah tabel atau rentang data secara vertical (dari atas ke bawah).</p>
 //                 <pre className="bg-gray-200 p-0.5 sm:p-1 md:p-2 rounded text-gray-800 overflow-x-auto whitespace-normal break-words text-xs sm:text-sm md:text-sm">
 //                   =VLOOKUP(<span className="italic">lookup_value;table_array;col_index_num;[range_lookup]</span>)
 //                 </pre>
-//                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Keterangan:</p>
-//                 <ul className="list-disc list-inside ml-2 sm:ml-4 md:ml-6 text-gray-700">
+//                 <p className="text-xs text-gray-700 sm:text-sm md:text-base">Keterangan:</p>
+//                 <ul className="ml-2 text-gray-700 list-disc list-inside sm:ml-4 md:ml-6">
 //                   <li className="text-xs sm:text-sm md:text-base"><strong>lookup_value:</strong> Nilai yang akan dicari dalam kolom pertama tabel.</li>
 //                   <li className="text-xs sm:text-sm md:text-base"><strong>table_array:</strong> Rentang tabel tempat pencarian dilakukan.</li>
 //                   <li className="text-xs sm:text-sm md:text-base"><strong>col_index_num:</strong> Nomor kolom dari mana nilai yang ingin diambil.</li>
@@ -1121,14 +1121,14 @@
 //                 </ul>
 //               </section>
 
-//               <section className="bg-gray-100 rounded p-1 sm:p-2 md:p-4 shadow-lg">
+//               <section className="p-1 bg-gray-100 rounded shadow-lg sm:p-2 md:p-4">
 //                 <h3 className="font-semibold text-[#255F38] text-xs sm:text-sm md:text-base">2. HLOOKUP</h3>
-//                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Fungsi HLOOKUP (Horizontal Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam baris pertama dari sebuah tabel atau rentang data secara horizontal (dari kiri ke kanan).</p>
+//                 <p className="text-xs text-gray-700 sm:text-sm md:text-base">Fungsi HLOOKUP (Horizontal Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam baris pertama dari sebuah tabel atau rentang data secara horizontal (dari kiri ke kanan).</p>
 //                 <pre className="bg-gray-200 p-0.5 sm:p-1 md:p-2 rounded text-gray-800 overflow-x-auto whitespace-normal break-words text-xs sm:text-sm md:text-sm">
 //                   =HLOOKUP(<span className="italic">lookup_value;table_array;row_index_num;[range_lookup]</span>)
 //                 </pre>
-//                 <p className="text-gray-700 text-xs sm:text-sm md:text-base">Keterangan:</p>
-//                 <ul className="list-disc list-inside ml-2 sm:ml-4 md:ml-6 text-gray-700">
+//                 <p className="text-xs text-gray-700 sm:text-sm md:text-base">Keterangan:</p>
+//                 <ul className="ml-2 text-gray-700 list-disc list-inside sm:ml-4 md:ml-6">
 //                   <li className="text-xs sm:text-sm md:text-base"><strong>lookup_value:</strong> Nilai yang akan dicari dalam baris pertama tabel.</li>
 //                   <li className="text-xs sm:text-sm md:text-base"><strong>table_array:</strong> Rentang tabel tempat pencarian dilakukan.</li>
 //                   <li className="text-xs sm:text-sm md:text-base"><strong>row_index_num:</strong> Nomor baris dari mana nilai yang ingin diambil.</li>
@@ -1143,7 +1143,7 @@
 //           <h3 className="font-semibold text-[#2E7D32] text-sm sm:text-base md:text-base mb-1 sm:mb-2 md:mb-2">
 //             Latihan Pemahaman: Memecah Masalah Pencarian Kode Barang
 //           </h3>
-//           <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify mb-1 sm:mb-2 md:mb-2">
+//           <p className="mb-1 text-xs text-justify text-gray-700 sm:text-sm md:text-base sm:mb-2 md:mb-2">
 //             Bantulah toko untuk memecah masalah pencarian data barang berdasarkan kode. Daftar barang memiliki kolom kode, nama, dan harga. Tentukan langkah-langkah yang tepat untuk memecah masalah ini:
 //           </p>
 //           <div className="ml-2 sm:ml-4 md:ml-6 text-gray-700 space-y-0.5 sm:space-y-1 md:space-y-2">
@@ -1181,7 +1181,7 @@
 //               </label>
 //             </div>
 //           </div>
-//           <div className="mt-1 sm:mt-2 md:mt-4 flex space-x-1 sm:space-x-2 md:space-x-2">
+//           <div className="flex mt-1 space-x-1 sm:mt-2 md:mt-4 sm:space-x-2 md:space-x-2">
 //             <button
 //               onClick={checkDekomposisiAnswers}
 //               className="bg-[#1B5E20] text-white px-1 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer w-full sm:w-auto"
@@ -1207,92 +1207,92 @@
 //         </div>
 //       </div>
 
-//       <div className="bg-white p-1 sm:p-2 md:p-4 border-gray-300 space-y-1 sm:space-y-2 md:space-y-4 mt-2 sm:mt-4 md:mt-10 relative">
+//       <div className="relative p-1 mt-2 space-y-1 bg-white border-gray-300 sm:p-2 md:p-4 sm:space-y-2 md:space-y-4 sm:mt-4 md:mt-10">
 //         <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1 sm:left-2 md:left-4 bg-green-800 text-white px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center shadow-lg">
 //           <BarChart className="mr-0.5 sm:mr-1 md:mr-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" /> PENGENALAN POLA
 //         </div>
-//         <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-2 sm:mt-3 md:mt-4 text-justify">
+//         <p className="mt-2 text-xs text-justify text-gray-700 sm:text-sm md:text-base sm:mt-3 md:mt-4">
 //           Setelah memecah permasalahan, kita perlu mengidentifikasi <span className="font-bold">pola dalam data</span> untuk memastikan pencarian dilakukan secara efisien.
 //         </p>
 //         <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-0.5 sm:mt-1 md:mt-2 text-justify">📌 Pola umum dalam pencarian data menggunakan Lookup meliputi:</p>
 //         <div className="ml-2 sm:ml-4 md:ml-6 text-gray-700 space-y-0.5 sm:space-y-1 md:space-y-2">
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>1. Nilai referensi</strong> bersifat unik dalam tabel referensi.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>2. Data dalam tabel</strong> referensi harus tersusun dengan benar sesuai urutan pencarian.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>3. Pencarian dilakukan</strong> dengan mencocokkan nilai referensi dengan baris atau kolom pertama dalam tabel referensi.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>4. Jika tabel tidak terurut</strong> maka parameter range_lookup harus bernilai FALSE untuk mencari kecocokan persis.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>5. Jika tabel terurut</strong> maka range_lookup bisa bernilai TRUE untuk pencarian nilai terdekat.
 //           </div>
 //         </div>
 //       </div>
 
-//       <div className="bg-white p-1 sm:p-2 md:p-4 border-gray-300 space-y-1 sm:space-y-2 md:space-y-4 mt-2 sm:mt-4 md:mt-10 relative">
+//       <div className="relative p-1 mt-2 space-y-1 bg-white border-gray-300 sm:p-2 md:p-4 sm:space-y-2 md:space-y-4 sm:mt-4 md:mt-10">
 //         <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1 sm:left-2 md:left-4 bg-green-800 text-white px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center">
 //           <Filter className="mr-0.5 sm:mr-1 md:mr-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" /> ABSTRAKSI
 //         </div>
-//         <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-1 sm:mt-2 md:mt-2 text-justify">
+//         <p className="mt-1 text-xs text-justify text-gray-600 sm:text-sm md:text-base sm:mt-2 md:mt-2">
 //           Setelah mengidentifikasi pola, kita dapat <span className="font-semibold">menyederhanakan masalah</span> dengan <span className="font-semibold">mengabaikan</span> informasi yang tidak perlu dan fokus pada elemen penting untuk pencarian.
 //         </p>
 //         <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-0.5 sm:mt-1 md:mt-2 text-justify">📌 Bagian yang harus diperhatikan:</p>
 //         <div className="ml-2 sm:ml-4 md:ml-6 text-gray-700 space-y-0.5 sm:space-y-1 md:space-y-2">
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>1. Kolom atau baris pertama</strong> dalam tabel referensi harus berisi nilai referensi (lookup_value).
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>2. Posisi kolom atau baris</strong> tempat data yang akan diambil harus diketahui.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             <strong>3. Gunakan tanda dolar</strong> atau absolute reference ($) untuk membuat referensi tabel tetap saat menyalin rumus.
 //           </div>
 //         </div>
 //       </div>
 
-//       <div className="bg-white p-1 sm:p-2 md:p-4 border-gray-300 space-y-1 sm:space-y-2 md:space-y-4 mt-2 sm:mt-4 md:mt-10 relative">
+//       <div className="relative p-1 mt-2 space-y-1 bg-white border-gray-300 sm:p-2 md:p-4 sm:space-y-2 md:space-y-4 sm:mt-4 md:mt-10">
 //         <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1 sm:left-2 md:left-4 bg-green-800 text-white px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center">
 //           <Code className="mr-0.5 sm:mr-1 md:mr-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" /> ALGORITMA
 //         </div>
-//         <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-1 sm:mt-2 md:mt-2 text-justify">
+//         <p className="mt-1 text-xs text-justify text-gray-600 sm:text-sm md:text-base sm:mt-2 md:mt-2">
 //           Setelah memahami dan menyederhanakan masalah, kita dapat <span className="font-semibold">menyusun langkah-langkah sistematis</span> untuk pencarian menggunakan VLOOKUP atau HLOOKUP.
 //         </p>
 //         <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-0.5 sm:mt-1 md:mt-2 text-justify">📌 Langkah-langkah penggunaan fungsi Lookup:</p>
 //         <div className="ml-2 sm:ml-4 md:ml-6 text-gray-700 space-y-0.5 sm:space-y-1 md:space-y-2">
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             1. Tentukan nilai referensi (lookup_value) yang akan dicari.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             2. Pilih tabel referensi (table_array) yang berisi data pencarian.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             3. Tentukan nomor kolom atau baris yang berisi data yang ingin diambil.
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             4. Pilih metode pencarian:
 //             <div className="ml-2 sm:ml-4 md:ml-4 mt-0.5 sm:mt-1">
 //               <div className="text-xs sm:text-sm md:text-base">a. Jika tabel tidak terurut, kita harus menggunakan FALSE agar VLOOKUP mencari kecocokan yang persis.</div>
 //               <div className="text-xs sm:text-sm md:text-base">b. Jika tabel terurut, kita bisa menggunakan TRUE untuk mencari nilai terdekat atau mendekati.</div>
 //             </div>
 //           </div>
-//           <div className="text-xs sm:text-sm md:text-base text-justify">
+//           <div className="text-xs text-justify sm:text-sm md:text-base">
 //             5. Gunakan rumus VLOOKUP atau HLOOKUP dengan format yang benar.
 //           </div>
 //         </div>
 
 //         <div className="bg-[#F0FFF4] p-1 sm:p-2 md:p-3 border border-[#81C784] rounded mt-2 sm:mt-4 md:mt-4 shadow-md">
 //           <h3 className="text-sm sm:text-base md:text-lg font-bold text-[#255F38] mb-1 sm:mb-1 md:mb-2">MARI MENGAMATI</h3>
-//           <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify mb-1 sm:mb-2 md:mb-2">
+//           <p className="mb-1 text-xs text-justify text-gray-700 sm:text-sm md:text-base sm:mb-2 md:mb-2">
 //             Perhatikan tabel data yang berisi kolom kode barang dan harga, di mana harga untuk kode C002 masih kosong. Gunakan fungsi LOOKUP untuk mencari harga C002 pada tabel referensi yang memuat daftar kode barang dan harganya, lalu isi harga yang sesuai di tabel data.
 //           </p>
-//           <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mt-1 sm:mt-2 md:mt-2">
+//           <div className="flex flex-col justify-center gap-2 mt-1 sm:flex-row sm:gap-4 sm:mt-2 md:mt-2">
 //             <div>
-//               <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mb-1 sm:mb-1 md:mb-2">Tabel Data</p>
+//               <p className="mb-1 text-xs text-center text-gray-700 sm:text-sm md:text-base sm:mb-1 md:mb-2">Tabel Data</p>
 //               <table className="border-collapse border border-green-800 mx-auto max-w-[90%] sm:max-w-xs md:max-w-md">
 //                 <thead>
 //                   <tr className="bg-[#255F38] text-white">
@@ -1345,7 +1345,7 @@
 //               </table>
 //             </div>
 //             <div>
-//               <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mb-1 sm:mb-1 md:mb-2">Tabel Referensi</p>
+//               <p className="mb-1 text-xs text-center text-gray-700 sm:text-sm md:text-base sm:mb-1 md:mb-2">Tabel Referensi</p>
 //               <table className="border-collapse border border-green-800 mx-auto max-w-[90%] sm:max-w-xs md:max-w-md">
 //                 <thead>
 //                   <tr className="bg-[#255F38] text-white">
@@ -1397,15 +1397,15 @@
 //               </table>
 //             </div>
 //           </div>
-//           <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mt-1 sm:mt-1 md:mt-2">
+//           <p className="mt-1 text-xs text-center text-gray-700 sm:text-sm md:text-base sm:mt-1 md:mt-2">
 //             Langkah saat ini: <strong>{isLookupStarted ? lookupSteps[lookupStep].description : "Tekan 'Mulai' untuk memulai visualisasi"}</strong>
 //           </p>
 //           {isLookupStarted && lookupSteps[lookupStep].result && (
-//             <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mt-1 sm:mt-1 md:mt-2">
+//             <p className="mt-1 text-xs text-center text-gray-700 sm:text-sm md:text-base sm:mt-1 md:mt-2">
 //               Hasil: <strong>{lookupSteps[lookupStep].result}</strong>
 //             </p>
 //           )}
-//           <div className="mt-1 sm:mt-2 md:mt-4 flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2 justify-center">
+//           <div className="flex flex-col justify-center mt-1 space-y-1 sm:mt-2 md:mt-4 sm:flex-row sm:space-y-0 sm:space-x-2">
 //             {!isLookupStarted ? (
 //               <button
 //                 onClick={() => {
@@ -1436,17 +1436,17 @@
 //         </div>
 //       </div>
 
-//       <div className="bg-white p-1 sm:p-2 md:p-4 border-gray-300 space-y-1 sm:space-y-2 md:space-y-4 mt-2 sm:mt-4 md:mt-6">
+//       <div className="p-1 mt-2 space-y-1 bg-white border-gray-300 sm:p-2 md:p-4 sm:space-y-2 md:space-y-4 sm:mt-4 md:mt-6">
 //         <h3 className="font-semibold text-[#255F38] text-sm sm:text-base md:text-lg mb-1 sm:mb-1 md:mb-2">Kuis Pemahaman: Pencarian Data dengan Fungsi Lookup</h3>
-//         <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify">
+//         <p className="text-xs text-justify text-gray-700 sm:text-sm md:text-base">
 //           Jawab pertanyaan berikut untuk menguji pemahaman Anda tentang konsep pencarian data menggunakan fungsi Lookup:
 //         </p>
-//         <div className="bg-yellow-50 p-1 sm:p-2 md:p-4 border border-yellow-300 rounded mt-2 sm:mt-4 md:mt-4 shadow-md">
+//         <div className="p-1 mt-2 border border-yellow-300 rounded shadow-md bg-yellow-50 sm:p-2 md:p-4 sm:mt-4 md:mt-4">
 //           <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1 sm:left-2 md:left-4 bg-yellow-800 text-white px-2 sm:px-3 md:px-5 py-0.5 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center">
 //             <Lightbulb className="mr-0.5 sm:mr-1 md:mr-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" /> Soal {currentQuestion} dari 5
 //           </div>
 //           <div className="mt-4 sm:mt-6 md:mt-8">
-//             <h4 className="font-semibold text-yellow-800 text-xs sm:text-sm md:text-base mb-1 sm:mb-1 md:mb-2">
+//             <h4 className="mb-1 text-xs font-semibold text-yellow-800 sm:text-sm md:text-base sm:mb-1 md:mb-2">
 //               {questions[currentQuestion - 1].question}
 //             </h4>
 //             <div className="ml-1 sm:ml-2 md:ml-4 text-gray-700 space-y-0.5 sm:space-y-1 md:space-y-2">
@@ -1475,8 +1475,8 @@
 //                 {feedback[currentQuestion]}
 //               </p>
 //             )}
-//             <div className="mt-1 sm:mt-2 md:mt-2 flex flex-col sm:flex-row justify-between space-y-1 sm:space-y-0 sm:space-x-2">
-//               <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-1 md:space-x-2">
+//             <div className="flex flex-col justify-between mt-1 space-y-1 sm:mt-2 md:mt-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+//               <div className="flex flex-col space-y-1 sm:flex-row sm:space-y-0 sm:space-x-1 md:space-x-2">
 //                 <button
 //                   onClick={goToPrevious}
 //                   className="bg-gray-500 text-white px-1 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1 rounded-lg hover:bg-gray-600 text-center min-w-[80px] sm:min-w-[100px] cursor-pointer"
@@ -1512,7 +1512,7 @@
 //         </div>
 //       </div>
 
-//       <div className="flex flex-col sm:flex-row justify-between items-center px-1 sm:px-2 md:px-6 py-1 sm:py-1 md:py-2 mt-2 sm:mt-4 md:mt-4 space-y-1 sm:space-y-0">
+//       <div className="flex flex-col items-center justify-between px-1 py-1 mt-2 space-y-1 sm:flex-row sm:px-2 md:px-6 sm:py-1 md:py-2 sm:mt-4 md:mt-4 sm:space-y-0">
 //         <button
 //           onClick={() => window.location.href = "/penerapan-ct"}
 //           className="bg-gray-500 text-white px-1 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1 rounded-lg hover:bg-gray-600 text-center min-w-[80px] sm:min-w-[100px] cursor-pointer"
@@ -1565,7 +1565,6 @@
 //     </Layout>
 //   );
 // }
-
 
 import Layout from "../../components/Layout";
 import { Lightbulb, BarChart, Filter, Code } from "lucide-react";
@@ -1624,12 +1623,55 @@ export default function PencarianLookup() {
   const colIndexNum = 3; // Kolom harga (indeks 3, karena dimulai dari 1)
 
   const lookupSteps = [
-    { description: "Pilih range kriteria: Kolom 'Kode' pada tabel data.", highlightedRows: [], highlightedColumn: null, result: null, colorData: null, colorReference: null },
-    { description: "Tetapkan nilai referensi: 'C002'.", highlightedRows: [1], highlightedColumn: 1, result: null, colorData: "bg-yellow-200", colorReference: null },
-    { description: "Cari 'C002' pada kolom 'Kode' di tabel referensi.", highlightedRows: [1], highlightedColumn: 1, result: null, colorData: null, colorReference: "bg-green-200" },
-    { description: "Tentukan kolom harga (indeks 3) untuk mengambil nilai.", highlightedRows: [1], highlightedColumn: 3, result: null, colorData: null, colorReference: "bg-blue-200" },
-    { description: "Pilih metode pencarian: Gunakan FALSE untuk kecocokan persis.", highlightedRows: [], highlightedColumn: null, result: null, colorData: null, colorReference: null },
-    { description: "Hasil ditemukan: Harga untuk 'C002' adalah 2000.", highlightedRows: [1], highlightedColumn: 3, result: 2000, colorData: "bg-orange-200", colorReference: "bg-orange-200" },
+    {
+      description: "Pilih range kriteria: Kolom 'Kode' pada tabel data.",
+      highlightedRows: [],
+      highlightedColumn: null,
+      result: null,
+      colorData: null,
+      colorReference: null,
+    },
+    {
+      description: "Tetapkan nilai referensi: 'C002'.",
+      highlightedRows: [1],
+      highlightedColumn: 1,
+      result: null,
+      colorData: "bg-yellow-200",
+      colorReference: null,
+    },
+    {
+      description: "Cari 'C002' pada kolom 'Kode' di tabel referensi.",
+      highlightedRows: [1],
+      highlightedColumn: 1,
+      result: null,
+      colorData: null,
+      colorReference: "bg-green-200",
+    },
+    {
+      description: "Tentukan kolom harga (indeks 3) untuk mengambil nilai.",
+      highlightedRows: [1],
+      highlightedColumn: 3,
+      result: null,
+      colorData: null,
+      colorReference: "bg-blue-200",
+    },
+    {
+      description:
+        "Pilih metode pencarian: Gunakan FALSE untuk kecocokan persis.",
+      highlightedRows: [],
+      highlightedColumn: null,
+      result: null,
+      colorData: null,
+      colorReference: null,
+    },
+    {
+      description: "Hasil ditemukan: Harga untuk 'C002' adalah 2000.",
+      highlightedRows: [1],
+      highlightedColumn: 3,
+      result: 2000,
+      colorData: "bg-orange-200",
+      colorReference: "bg-orange-200",
+    },
   ];
 
   const nextStep = (currentStep, setStep, maxSteps, setIsStarted) => {
@@ -1647,15 +1689,87 @@ export default function PencarianLookup() {
   // State untuk Kuis Pemahaman
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [answers, setAnswers] = useState({ 1: "", 2: "", 3: "", 4: "", 5: "" });
-  const [feedback, setFeedback] = useState({ 1: "", 2: "", 3: "", 4: "", 5: "" });
-  const [isAnswered, setIsAnswered] = useState({ 1: false, 2: false, 3: false, 4: false, 5: false });
+  const [feedback, setFeedback] = useState({
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+    5: "",
+  });
+  const [isAnswered, setIsAnswered] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+  });
 
   const questions = [
-    { question: "Jika tabel referensi tidak terurut, parameter range_lookup bernilai FALSE pada fungsi VLOOKUP akan ....", options: ["A. Mencari nilai terdekat", "B. Mencari kecocokan persis", "C. Mengurutkan tabel terlebih dahulu", "D. Mengabaikan nilai referensi"], correctAnswer: "B. Mencari kecocokan persis", explanation: "Parameter range_lookup FALSE memastikan VLOOKUP hanya mencari kecocokan yang persis, bukan nilai terdekat." },
-    { question: "Tujuan utama dari langkah abstraksi dalam proses pencarian data menggunakan fungsi Lookup adalah ....", options: ["A. Menghitung total data", "B. Mengurutkan tabel referensi", "C. Mengabaikan informasi yang tidak perlu", "D. Membuat tabel baru"], correctAnswer: "C. Mengabaikan informasi yang tidak perlu", explanation: "Abstraksi membantu menyederhanakan masalah dengan fokus pada data penting dan mengabaikan yang tidak relevan." },
-    { question: "Langkah pertama dalam dekomposisi proses pencarian data menggunakan fungsi Lookup adalah ....", options: ["A. Menentukan tabel referensi", "B. Identifikasi data yang akan dicari", "C. Menentukan jenis fungsi lookup", "D. Mengambil informasi"], correctAnswer: "B. Identifikasi data yang akan dicari", explanation: "Dekomposisi dimulai dengan mengidentifikasi data yang akan dicari, seperti kode barang atau nilai unik lainnya." },
-    { question: "Pola yang umum digunakan dalam pencarian data dengan fungsi Lookup adalah ....", options: ["A. Harga selalu di kolom pertama", "B. Nilai referensi bersifat unik", "C. Tabel tidak perlu terurut", "D. Pencarian dilakukan tanpa referensi"], correctAnswer: "B. Nilai referensi bersifat unik", explanation: "Nilai referensi yang unik memastikan pencarian data akurat dan tidak ada duplikat dalam tabel referensi." },
-    { question: "Jika tabel referensi terurut, pada fungsi VLOOKUP dengan range_lookup bernilai TRUE, maka yang harus dilakukan adalah ....", options: ["A. Mencari kecocokan persis", "B. Mencari nilai terdekat", "C. Mengabaikan urutan tabel", "D. Menggunakan referensi absolut"], correctAnswer: "B. Mencari nilai terdekat", explanation: "Jika tabel terurut dan range_lookup TRUE, VLOOKUP akan mencari nilai terdekat yang kurang dari atau sama dengan lookup_value." },
+    {
+      question:
+        "Jika tabel referensi tidak terurut, parameter range_lookup bernilai FALSE pada fungsi VLOOKUP akan ....",
+      options: [
+        "A. Mencari nilai terdekat",
+        "B. Mencari kecocokan persis",
+        "C. Mengurutkan tabel terlebih dahulu",
+        "D. Mengabaikan nilai referensi",
+      ],
+      correctAnswer: "B. Mencari kecocokan persis",
+      explanation:
+        "Parameter range_lookup FALSE memastikan VLOOKUP hanya mencari kecocokan yang persis, bukan nilai terdekat.",
+    },
+    {
+      question:
+        "Tujuan utama dari langkah abstraksi dalam proses pencarian data menggunakan fungsi Lookup adalah ....",
+      options: [
+        "A. Menghitung total data",
+        "B. Mengurutkan tabel referensi",
+        "C. Mengabaikan informasi yang tidak perlu",
+        "D. Membuat tabel baru",
+      ],
+      correctAnswer: "C. Mengabaikan informasi yang tidak perlu",
+      explanation:
+        "Abstraksi membantu menyederhanakan masalah dengan fokus pada data penting dan mengabaikan yang tidak relevan.",
+    },
+    {
+      question:
+        "Langkah pertama dalam dekomposisi proses pencarian data menggunakan fungsi Lookup adalah ....",
+      options: [
+        "A. Menentukan tabel referensi",
+        "B. Identifikasi data yang akan dicari",
+        "C. Menentukan jenis fungsi lookup",
+        "D. Mengambil informasi",
+      ],
+      correctAnswer: "B. Identifikasi data yang akan dicari",
+      explanation:
+        "Dekomposisi dimulai dengan mengidentifikasi data yang akan dicari, seperti kode barang atau nilai unik lainnya.",
+    },
+    {
+      question:
+        "Pola yang umum digunakan dalam pencarian data dengan fungsi Lookup adalah ....",
+      options: [
+        "A. Harga selalu di kolom pertama",
+        "B. Nilai referensi bersifat unik",
+        "C. Tabel tidak perlu terurut",
+        "D. Pencarian dilakukan tanpa referensi",
+      ],
+      correctAnswer: "B. Nilai referensi bersifat unik",
+      explanation:
+        "Nilai referensi yang unik memastikan pencarian data akurat dan tidak ada duplikat dalam tabel referensi.",
+    },
+    {
+      question:
+        "Jika tabel referensi terurut, pada fungsi VLOOKUP dengan range_lookup bernilai TRUE, maka yang harus dilakukan adalah ....",
+      options: [
+        "A. Mencari kecocokan persis",
+        "B. Mencari nilai terdekat",
+        "C. Mengabaikan urutan tabel",
+        "D. Menggunakan referensi absolut",
+      ],
+      correctAnswer: "B. Mencari nilai terdekat",
+      explanation:
+        "Jika tabel terurut dan range_lookup TRUE, VLOOKUP akan mencari nilai terdekat yang kurang dari atau sama dengan lookup_value.",
+    },
   ];
 
   const handleAnswerChange = (option) => {
@@ -1663,7 +1777,12 @@ export default function PencarianLookup() {
     const currentCorrect = questions[currentQuestion - 1].correctAnswer;
     setFeedback((prev) => ({
       ...prev,
-      [currentQuestion]: option === currentCorrect ? `Benar! ${currentCorrect}. ${questions[currentQuestion - 1].explanation}` : "Jawaban salah, ayo coba lagi.",
+      [currentQuestion]:
+        option === currentCorrect
+          ? `Benar! ${currentCorrect}. ${
+              questions[currentQuestion - 1].explanation
+            }`
+          : "Jawaban salah, ayo coba lagi.",
     }));
     setIsAnswered((prev) => ({ ...prev, [currentQuestion]: true }));
   };
@@ -1679,7 +1798,9 @@ export default function PencarianLookup() {
       setCurrentQuestion(currentQuestion - 1);
       setFeedback((prev) => ({ ...prev, [currentQuestion - 1]: "" }));
       if (isAnswered[currentQuestion - 1]) {
-        alert("Soal ini telah dijawab. Silakan lanjut ke soal berikutnya atau hapus jawaban untuk memilih ulang.");
+        alert(
+          "Soal ini telah dijawab. Silakan lanjut ke soal berikutnya atau hapus jawaban untuk memilih ulang."
+        );
       }
     }
   };
@@ -1711,42 +1832,71 @@ export default function PencarianLookup() {
         A. PENCARIAN DATA
       </div>
 
-      <section className="bg-green-100 p-2 sm:p-2 md:p-4 rounded shadow-md mt-2 sm:mt-2 md:mt-6 mb-2 sm:mb-2 md:mb-6">
-        <h2 className="font-bold text-[#255F38] text-sm sm:text-base md:text-lg">Tujuan Pembelajaran:</h2>
-        <div className="ml-4 sm:ml-4 md:ml-6 space-y-1 mt-1 text-gray-700">
-          <div className="text-xs sm:text-sm md:text-base">1. Peserta didik mampu menggunakan fungsi Lookup dan Reference untuk melakukan pencarian data secara tepat.</div>
-          <div className="text-xs sm:text-sm md:text-base">2. Peserta didik mampu menerapkan pendekatan Computational Thinking dalam menyelesaikan permasalahan yang berkaitan dengan pencarian data.</div>
+      <section className="p-2 mt-2 mb-2 bg-green-100 rounded shadow-md sm:p-2 md:p-4 sm:mt-2 md:mt-6 sm:mb-2 md:mb-6">
+        <h2 className="font-bold text-[#255F38] text-sm sm:text-base md:text-lg">
+          Tujuan Pembelajaran:
+        </h2>
+        <div className="mt-1 ml-4 space-y-1 text-gray-700 sm:ml-4 md:ml-6">
+          <div className="text-xs sm:text-sm md:text-base">
+            1. Peserta didik mampu menggunakan fungsi Lookup dan Reference untuk
+            melakukan pencarian data secara tepat.
+          </div>
+          <div className="text-xs sm:text-sm md:text-base">
+            2. Peserta didik mampu menerapkan pendekatan Computational Thinking
+            dalam menyelesaikan permasalahan yang berkaitan dengan pencarian
+            data.
+          </div>
         </div>
       </section>
 
-      <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-2 sm:px-2 md:px-6">
-        Dalam proses pencarian data, terdapat dua jenis utama fungsi pencarian: Lookup dan Reference. Fungsi Lookup digunakan untuk mencari nilai tertentu dalam tabel atau array dan mengembalikan hasil yang sesuai berdasarkan kunci pencarian. Fungsi ini sering diterapkan dalam spreadsheet untuk menemukan data terkait dengan nilai tertentu. Sementara itu, fungsi Reference digunakan untuk mengambil nilai berdasarkan referensi sel atau alamat memori, sehingga lebih fleksibel saat posisi data berubah. Dengan kedua metode ini, pencarian data menjadi lebih cepat dan akurat dibandingkan pencarian manual. Hasil pencarian memiliki dua kemungkinan:
+      <p className="px-2 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6">
+        Dalam proses pencarian data, terdapat dua jenis utama fungsi pencarian:
+        Lookup dan Reference. Fungsi Lookup digunakan untuk mencari nilai
+        tertentu dalam tabel atau array dan mengembalikan hasil yang sesuai
+        berdasarkan kunci pencarian. Fungsi ini sering diterapkan dalam
+        spreadsheet untuk menemukan data terkait dengan nilai tertentu.
+        Sementara itu, fungsi Reference digunakan untuk mengambil nilai
+        berdasarkan referensi sel atau alamat memori, sehingga lebih fleksibel
+        saat posisi data berubah. Dengan kedua metode ini, pencarian data
+        menjadi lebih cepat dan akurat dibandingkan pencarian manual. Hasil
+        pencarian memiliki dua kemungkinan:
       </p>
-      <div className="mt-1 ml-4 sm:ml-6 md:ml-6 px-2 sm:px-2 md:px-6 space-y-1">
-        <div className="text-xs sm:text-sm md:text-base text-justify">
-          <strong>1. Data ditemukan</strong> → Data yang dicari sesuai dengan data dalam tabel.
+      <div className="px-2 mt-1 ml-4 space-y-1 sm:ml-6 md:ml-6 sm:px-2 md:px-6">
+        <div className="text-xs text-justify sm:text-sm md:text-base">
+          <strong>1. Data ditemukan</strong> → Data yang dicari sesuai dengan
+          data dalam tabel.
         </div>
-        <div className="text-xs sm:text-sm md:text-base text-justify">
-          <strong>2. Data tidak ditemukan</strong> → Data yang dicari tidak ada dalam tabel.
+        <div className="text-xs text-justify sm:text-sm md:text-base">
+          <strong>2. Data tidak ditemukan</strong> → Data yang dicari tidak ada
+          dalam tabel.
         </div>
       </div>
 
       <div className="p-2 sm:p-2 md:p-4 bg-[#255F38] text-white font-bold text-sm sm:text-base md:text-lg mt-2 sm:mt-2 md:mt-6">
         1. Pencarian Lookup
       </div>
-      <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-2 sm:px-2 md:px-6 mt-2 sm:mt-2 md:mt-4">
-        Dalam kehidupan sehari-hari, kita sering melakukan pencarian data, seperti mencari nomor telepon di kontak ponsel atau informasi barang di daftar inventaris. Dalam dunia digital, pencarian data dapat dilakukan lebih cepat dan efisien dengan menggunakan fungsi Lookup di aplikasi lembar kerja.
+      <p className="px-2 mt-2 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6 sm:mt-2 md:mt-4">
+        Dalam kehidupan sehari-hari, kita sering melakukan pencarian data,
+        seperti mencari nomor telepon di kontak ponsel atau informasi barang di
+        daftar inventaris. Dalam dunia digital, pencarian data dapat dilakukan
+        lebih cepat dan efisien dengan menggunakan fungsi Lookup di aplikasi
+        lembar kerja.
       </p>
-      <p className="text-gray-700 text-xs sm:text-sm md:text-base font-semibold text-justify leading-relaxed px-2 sm:px-2 md:px-6">Fungsi Lookup digunakan untuk:</p>
-      <div className="mt-1 ml-4 sm:ml-6 md:ml-6 px-2 sm:px-2 md:px-6 space-y-1">
-        <div className="text-xs sm:text-sm md:text-base text-justify">
-          <strong>1. Mencari data</strong> dalam tabel → Membantu menemukan informasi di daftar besar.
+      <p className="px-2 text-xs font-semibold leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6">
+        Fungsi Lookup digunakan untuk:
+      </p>
+      <div className="px-2 mt-1 ml-4 space-y-1 sm:ml-6 md:ml-6 sm:px-2 md:px-6">
+        <div className="text-xs text-justify sm:text-sm md:text-base">
+          <strong>1. Mencari data</strong> dalam tabel → Membantu menemukan
+          informasi di daftar besar.
         </div>
-        <div className="text-xs sm:text-sm md:text-base text-justify">
-          <strong>2. Mengambil informasi</strong> berdasarkan referensi → Memungkinkan pencarian dengan kunci tertentu.
+        <div className="text-xs text-justify sm:text-sm md:text-base">
+          <strong>2. Mengambil informasi</strong> berdasarkan referensi →
+          Memungkinkan pencarian dengan kunci tertentu.
         </div>
-        <div className="text-xs sm:text-sm md:text-base text-justify">
-          <strong>3. Mempermudah pengolahan</strong> data → Efektif untuk menangani data dalam jumlah banyak.
+        <div className="text-xs text-justify sm:text-sm md:text-base">
+          <strong>3. Mempermudah pengolahan</strong> data → Efektif untuk
+          menangani data dalam jumlah banyak.
         </div>
       </div>
 
@@ -1757,9 +1907,22 @@ export default function PencarianLookup() {
           className="w-full max-w-[90%] sm:max-w-xs md:max-w-sm lg:max-w-md rounded-lg shadow-md h-auto object-contain"
         />
       </div>
-      <p className="text-center text-xs sm:text-sm md:text-base italic text-gray-500 mt-1">Gambar 2. Pencarian dengan VLOOKUP</p>
-      <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-2 sm:px-2 md:px-6 mt-2">
-        Pada gambar 2, fungsi <strong>VLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam sebuah tabel di rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>kolom pertama tabel</strong> (kolom B). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari kolom ke-3</strong> (yaitu kolom D) yang sejajar atau sebaris dengan simbol tersebut. Angka 3 ini disebut <em>col index num</em>, yaitu posisi kolom yang diambil datanya. Karena menggunakan <code>FALSE</code>, artinya hanya akan cocok jika simbol yang dicari benar-benar sama persis. Jadi, jika simbol <code>*</code> ada di kolom B, maka nilai yang diambil dari kolom D adalah <code>@</code>.
+      <p className="mt-1 text-xs italic text-center text-gray-500 sm:text-sm md:text-base">
+        Gambar 2. Pencarian dengan VLOOKUP
+      </p>
+      <p className="px-2 mt-2 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6">
+        Pada gambar 2, fungsi <strong>VLOOKUP</strong> digunakan untuk mencari
+        sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel
+        G5, dalam sebuah tabel di rentang <strong>B5 sampai E9</strong>. Fungsi
+        ini akan mencari simbol tersebut di <strong>kolom pertama tabel</strong>{" "}
+        (kolom B). Jika simbol <code>*</code> ditemukan, maka fungsi akan
+        mengambil <strong>nilai dari kolom ke-3</strong> (yaitu kolom D) yang
+        sejajar atau sebaris dengan simbol tersebut. Angka 3 ini disebut{" "}
+        <em>col index num</em>, yaitu posisi kolom yang diambil datanya. Karena
+        menggunakan <code>FALSE</code>, artinya hanya akan cocok jika simbol
+        yang dicari benar-benar sama persis. Jadi, jika simbol <code>*</code>{" "}
+        ada di kolom B, maka nilai yang diambil dari kolom D adalah{" "}
+        <code>@</code>.
       </p>
 
       <div className="flex justify-center mt-2">
@@ -1769,56 +1932,133 @@ export default function PencarianLookup() {
           className="w-full max-w-[90%] sm:max-w-xs md:max-w-sm lg:max-w-md rounded-lg shadow-md h-auto object-contain"
         />
       </div>
-      <p className="text-center text-xs sm:text-sm md:text-base italic text-gray-500 mt-1">Gambar 3. Pencarian dengan HLOOKUP</p>
-      <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify leading-relaxed px-2 sm:px-2 md:px-6 mt-2">
-        Pada Gambar 3, fungsi <strong>HLOOKUP</strong> digunakan untuk mencari sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel G5, dalam tabel pada rentang <strong>B5 sampai E9</strong>. Fungsi ini akan mencari simbol tersebut di <strong>baris pertama tabel</strong> (yaitu baris 5). Jika simbol <code>*</code> ditemukan, maka fungsi akan mengambil <strong>nilai dari baris ke-4</strong> dalam tabel (yaitu baris 8), di kolom yang sama. Angka 4 ini disebut <em>row index num</em>, yaitu posisi baris yang datanya ingin diambil. Karena kita memakai <code>FALSE</code>, maka pencarian hanya akan berhasil jika simbol yang dicari benar-benar sama. Jadi, jika simbol <code>*</code> ditemukan di baris 5, maka nilai dari baris 8 di kolom yang sama akan diambil, misalnya <code>@</code>.
+      <p className="mt-1 text-xs italic text-center text-gray-500 sm:text-sm md:text-base">
+        Gambar 3. Pencarian dengan HLOOKUP
+      </p>
+      <p className="px-2 mt-2 text-xs leading-relaxed text-justify text-gray-700 sm:text-sm md:text-base sm:px-2 md:px-6">
+        Pada Gambar 3, fungsi <strong>HLOOKUP</strong> digunakan untuk mencari
+        sebuah nilai tertentu, misalnya simbol <code>*</code> yang ada di sel
+        G5, dalam tabel pada rentang <strong>B5 sampai E9</strong>. Fungsi ini
+        akan mencari simbol tersebut di <strong>baris pertama tabel</strong>{" "}
+        (yaitu baris 5). Jika simbol <code>*</code> ditemukan, maka fungsi akan
+        mengambil <strong>nilai dari baris ke-4</strong> dalam tabel (yaitu
+        baris 8), di kolom yang sama. Angka 4 ini disebut <em>row index num</em>
+        , yaitu posisi baris yang datanya ingin diambil. Karena kita memakai{" "}
+        <code>FALSE</code>, maka pencarian hanya akan berhasil jika simbol yang
+        dicari benar-benar sama. Jadi, jika simbol <code>*</code> ditemukan di
+        baris 5, maka nilai dari baris 8 di kolom yang sama akan diambil,
+        misalnya <code>@</code>.
       </p>
 
-      <div className="bg-white p-2 sm:p-2 md:p-4 border-gray-300 space-y-2 mt-2 sm:mt-4 md:mt-6 relative">
-        <div className="absolute -top-3 sm:-top-3 md:-top-4 left-2 sm:left-2 md:left-4 bg-green-800 text-white px-3 sm:px-3 md:px-5 py-1 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center shadow-lg">
-          <Lightbulb className="mr-1 sm:mr-1 md:mr-2 w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5" /> Dekomposisi
+      <div className="relative p-2 mt-2 space-y-2 bg-white border-gray-300 sm:p-2 md:p-4 sm:mt-4 md:mt-6">
+        <div className="absolute flex items-center px-3 py-1 text-sm font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-3 sm:-top-3 md:-top-4 left-2 sm:left-2 md:left-4 sm:px-3 md:px-5 sm:py-1 md:py-2 sm:text-base md:text-lg">
+          <Lightbulb className="w-4 h-4 mr-1 sm:mr-1 md:mr-2 sm:w-4 md:w-5 sm:h-4 md:h-5" />{" "}
+          Dekomposisi
         </div>
-        <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-6 sm:mt-3 md:mt-4 text-justify">
-          Sebelum melakukan pencarian dengan fungsi Lookup, kita perlu memahami <span className="font-semibold">komponen utama</span> dalam pencarian data dan memecahnya menjadi <span className="font-semibold">bagian-bagian kecil</span>.
-          Pencarian data dalam tabel lembar kerja dapat dipecah menjadi beberapa langkah berikut:
+        <p className="mt-6 text-xs text-justify text-gray-700 sm:text-sm md:text-base sm:mt-3 md:mt-4">
+          Sebelum melakukan pencarian dengan fungsi Lookup, kita perlu memahami{" "}
+          <span className="font-semibold">komponen utama</span> dalam pencarian
+          data dan memecahnya menjadi{" "}
+          <span className="font-semibold">bagian-bagian kecil</span>. Pencarian
+          data dalam tabel lembar kerja dapat dipecah menjadi beberapa langkah
+          berikut:
         </p>
-        <ul className="list-disc list-inside ml-4 sm:ml-4 md:ml-6 text-gray-700 space-y-1">
-          <li className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>Identifikasi data</strong> yang akan dicari → Data harus memiliki nilai unik sebagai referensi (misalnya, kode barang atau kode siswa).
+        <ul className="ml-4 space-y-1 text-gray-700 list-disc list-inside sm:ml-4 md:ml-6">
+          <li className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>Identifikasi data</strong> yang akan dicari → Data harus
+            memiliki nilai unik sebagai referensi (misalnya, kode barang atau
+            kode siswa).
           </li>
-          <li className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>Menentukan tabel</strong> referensi → Data harus tersedia dalam tabel dengan format yang benar.
+          <li className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>Menentukan tabel</strong> referensi → Data harus tersedia
+            dalam tabel dengan format yang benar.
           </li>
-          <li className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>Menentukan jenis</strong> fungsi lookup → Pilih fungsi yang sesuai dengan kebutuhan:
-            <div className="ml-4 sm:ml-4 md:ml-4 mt-1 space-y-2">
-              <section className="bg-gray-100 rounded p-2 sm:p-2 md:p-4 shadow-lg">
-                <h3 className="font-semibold text-[#255F38] text-xs sm:text-sm md:text-base">1. VLOOKUP</h3>
-                <p className="text-gray-700 text-xs sm:text-sm md:text-base">Fungsi VLOOKUP (Vertical Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam kolom pertama dari sebuah tabel atau rentang data secara vertical (dari atas ke bawah).</p>
-                <pre className="bg-gray-200 p-1 sm:p-1 md:p-2 rounded text-gray-800 overflow-x-auto whitespace-normal break-words text-xs sm:text-sm md:text-sm">
-                  =VLOOKUP(<span className="italic">lookup_value;table_array;col_index_num;[range_lookup]</span>)
+          <li className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>Menentukan jenis</strong> fungsi lookup → Pilih fungsi yang
+            sesuai dengan kebutuhan:
+            <div className="mt-1 ml-4 space-y-2 sm:ml-4 md:ml-4">
+              <section className="p-2 bg-gray-100 rounded shadow-lg sm:p-2 md:p-4">
+                <h3 className="font-semibold text-[#255F38] text-xs sm:text-sm md:text-base">
+                  1. VLOOKUP
+                </h3>
+                <p className="text-xs text-gray-700 sm:text-sm md:text-base">
+                  Fungsi VLOOKUP (Vertical Lookup) dalam spreadsheet digunakan
+                  untuk mencari nilai tertentu dalam kolom pertama dari sebuah
+                  tabel atau rentang data secara vertical (dari atas ke bawah).
+                </p>
+                <pre className="p-1 overflow-x-auto text-xs text-gray-800 break-words whitespace-normal bg-gray-200 rounded sm:p-1 md:p-2 sm:text-sm md:text-sm">
+                  =VLOOKUP(
+                  <span className="italic">
+                    lookup_value;table_array;col_index_num;[range_lookup]
+                  </span>
+                  )
                 </pre>
-                <p className="text-gray-700 text-xs sm:text-sm md:text-base">Keterangan:</p>
-                <ul className="list-disc list-inside ml-4 sm:ml-4 md:ml-6 text-gray-700">
-                  <li className="text-xs sm:text-sm md:text-base"><strong>lookup_value:</strong> Nilai yang akan dicari dalam kolom pertama tabel.</li>
-                  <li className="text-xs sm:text-sm md:text-base"><strong>table_array:</strong> Rentang tabel tempat pencarian dilakukan.</li>
-                  <li className="text-xs sm:text-sm md:text-base"><strong>col_index_num:</strong> Nomor kolom dari mana nilai yang ingin diambil.</li>
-                  <li className="text-xs sm:text-sm md:text-base"><strong>range_lookup:</strong> <span className="italic font-bold">TRUE</span> untuk pencarian nilai mendekati, <span className="italic font-bold">FALSE</span> untuk pencarian nilai persis.</li>
+                <p className="text-xs text-gray-700 sm:text-sm md:text-base">
+                  Keterangan:
+                </p>
+                <ul className="ml-4 text-gray-700 list-disc list-inside sm:ml-4 md:ml-6">
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>lookup_value:</strong> Nilai yang akan dicari dalam
+                    kolom pertama tabel.
+                  </li>
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>table_array:</strong> Rentang tabel tempat pencarian
+                    dilakukan.
+                  </li>
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>col_index_num:</strong> Nomor kolom dari mana nilai
+                    yang ingin diambil.
+                  </li>
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>range_lookup:</strong>{" "}
+                    <span className="italic font-bold">TRUE</span> untuk
+                    pencarian nilai mendekati,{" "}
+                    <span className="italic font-bold">FALSE</span> untuk
+                    pencarian nilai persis.
+                  </li>
                 </ul>
               </section>
 
-              <section className="bg-gray-100 rounded p-2 sm:p-2 md:p-4 shadow-lg">
-                <h3 className="font-semibold text-[#255F38] text-xs sm:text-sm md:text-base">2. HLOOKUP</h3>
-                <p className="text-gray-700 text-xs sm:text-sm md:text-base">Fungsi HLOOKUP (Horizontal Lookup) dalam spreadsheet digunakan untuk mencari nilai tertentu dalam baris pertama dari sebuah tabel atau rentang data secara horizontal (dari kiri ke kanan).</p>
-                <pre className="bg-gray-200 p-1 sm:p-1 md:p-2 rounded text-gray-800 overflow-x-auto whitespace-normal break-words text-xs sm:text-sm md:text-sm">
-                  =HLOOKUP(<span className="italic">lookup_value;table_array;row_index_num;[range_lookup]</span>)
+              <section className="p-2 bg-gray-100 rounded shadow-lg sm:p-2 md:p-4">
+                <h3 className="font-semibold text-[#255F38] text-xs sm:text-sm md:text-base">
+                  2. HLOOKUP
+                </h3>
+                <p className="text-xs text-gray-700 sm:text-sm md:text-base">
+                  Fungsi HLOOKUP (Horizontal Lookup) dalam spreadsheet digunakan
+                  untuk mencari nilai tertentu dalam baris pertama dari sebuah
+                  tabel atau rentang data secara horizontal (dari kiri ke
+                  kanan).
+                </p>
+                <pre className="p-1 overflow-x-auto text-xs text-gray-800 break-words whitespace-normal bg-gray-200 rounded sm:p-1 md:p-2 sm:text-sm md:text-sm">
+                  =HLOOKUP(
+                  <span className="italic">
+                    lookup_value;table_array;row_index_num;[range_lookup]
+                  </span>
+                  )
                 </pre>
-                <p className="text-gray-700 text-xs sm:text-sm md:text-base">Keterangan:</p>
-                <ul className="list-disc list-inside ml-4 sm:ml-4 md:ml-6 text-gray-700">
-                  <li className="text-xs sm:text-sm md:text-base"><strong>lookup_value:</strong> NilMathi yang akan dicari dalam baris pertama tabel.</li>
-                  <li className="text-xs sm:text-sm md:text-base"><strong>table_array:</strong> Rentang tabel tempat pencarian dilakukan.</li>
-                  <li className="text-xs sm:text-sm md:text-base"><strong>row_index_num:</strong> Nomor baris dari mana nilai yang ingin diambil.</li>
-                  <li className="text-xs sm:text-sm md:text-base"><strong>range_lookup:</strong> <span className="italic font-bold">TRUE</span> untuk pencarian nilai mendekati, <span className="italic font-bold">FALSE</span> untuk pencarian nilai persis.</li>
+                <p className="text-xs text-gray-700 sm:text-sm md:text-base">
+                  Keterangan:
+                </p>
+                <ul className="ml-4 text-gray-700 list-disc list-inside sm:ml-4 md:ml-6">
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>lookup_value:</strong> NilMathi yang akan dicari
+                    dalam baris pertama tabel.
+                  </li>
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>table_array:</strong> Rentang tabel tempat pencarian
+                    dilakukan.
+                  </li>
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>row_index_num:</strong> Nomor baris dari mana nilai
+                    yang ingin diambil.
+                  </li>
+                  <li className="text-xs sm:text-sm md:text-base">
+                    <strong>range_lookup:</strong>{" "}
+                    <span className="italic font-bold">TRUE</span> untuk
+                    pencarian nilai mendekati,{" "}
+                    <span className="italic font-bold">FALSE</span> untuk
+                    pencarian nilai persis.
+                  </li>
                 </ul>
               </section>
             </div>
@@ -1829,10 +2069,13 @@ export default function PencarianLookup() {
           <h3 className="font-semibold text-[#2E7D32] text-sm sm:text-base md:text-base mb-2">
             Latihan Pemahaman: Memecah Masalah Pencarian Kode Barang
           </h3>
-          <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify mb-2">
-            Bantulah toko untuk memecah masalah pencarian data barang berdasarkan kode. Daftar barang memiliki kolom kode, nama, dan harga. Tentukan langkah-langkah yang tepat untuk memecah masalah ini:
+          <p className="mb-2 text-xs text-justify text-gray-700 sm:text-sm md:text-base">
+            Bantulah toko untuk memecah masalah pencarian data barang
+            berdasarkan kode. Daftar barang memiliki kolom kode, nama, dan
+            harga. Tentukan langkah-langkah yang tepat untuk memecah masalah
+            ini:
           </p>
-          <div className="ml-4 sm:ml-4 md:ml-6 text-gray-700 space-y-1">
+          <div className="ml-4 space-y-1 text-gray-700 sm:ml-4 md:ml-6">
             <div className="text-xs sm:text-sm md:text-base">
               <label className="flex items-center">
                 <input
@@ -1841,7 +2084,8 @@ export default function PencarianLookup() {
                   onChange={() => handleDekomposisiChange("step1")}
                   className="mr-2"
                 />
-                1. Identifikasi data yang akan dicari (misalnya kode barang "B001").
+                1. Identifikasi data yang akan dicari (misalnya kode barang
+                "B001").
               </label>
             </div>
             <div className="text-xs sm:text-sm md:text-base">
@@ -1867,7 +2111,7 @@ export default function PencarianLookup() {
               </label>
             </div>
           </div>
-          <div className="mt-2 flex space-x-2 justify-center">
+          <div className="flex justify-center mt-2 space-x-2">
             <button
               onClick={checkDekomposisiAnswers}
               className="bg-[#1B5E20] text-white px-2 sm:px-2 md:px-3 py-1 sm:py-1 md:py-1 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer text-xs sm:text-sm md:text-base"
@@ -1884,7 +2128,9 @@ export default function PencarianLookup() {
           {dekomposisiFeedback && (
             <p
               className={`text-xs sm:text-sm md:text-base mt-2 font-bold ${
-                dekomposisiFeedback.includes("Benar") ? "text-[#255F38]" : "text-red-600"
+                dekomposisiFeedback.includes("Benar")
+                  ? "text-[#255F38]"
+                  : "text-red-600"
               }`}
             >
               {dekomposisiFeedback}
@@ -1893,99 +2139,144 @@ export default function PencarianLookup() {
         </div>
       </div>
 
-      <div className="bg-white p-2 sm:p-2 md:p-4 border-gray-300 space-y-2 mt-2 sm:mt-4 md:mt-10 relative">
-        <div className="absolute -top-3 sm:-top-3 md:-top-4 left-2 sm:left-2 md:left-4 bg-green-800 text-white px-3 sm:px-3 md:px-5 py-1 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center shadow-lg">
-          <BarChart className="mr-1 sm:mr-1 md:mr-2 w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5" /> PENGENALAN POLA
+      <div className="relative p-2 mt-2 space-y-2 bg-white border-gray-300 sm:p-2 md:p-4 sm:mt-4 md:mt-10">
+        <div className="absolute flex items-center px-3 py-1 text-sm font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-3 sm:-top-3 md:-top-4 left-2 sm:left-2 md:left-4 sm:px-3 md:px-5 sm:py-1 md:py-2 sm:text-base md:text-lg">
+          <BarChart className="w-4 h-4 mr-1 sm:mr-1 md:mr-2 sm:w-4 md:w-5 sm:h-4 md:h-5" />{" "}
+          PENGENALAN POLA
         </div>
-        <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-6 sm:mt-3 md:mt-4 text-justify">
-          Setelah memecah permasalahan, kita perlu mengidentifikasi <span className="font-bold">pola dalam data</span> untuk memastikan pencarian dilakukan secara efisien.
+        <p className="mt-6 text-xs text-justify text-gray-700 sm:text-sm md:text-base sm:mt-3 md:mt-4">
+          Setelah memecah permasalahan, kita perlu mengidentifikasi{" "}
+          <span className="font-bold">pola dalam data</span> untuk memastikan
+          pencarian dilakukan secara efisien.
         </p>
-        <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-1 text-justify">📌 Pola umum dalam pencarian data menggunakan Lookup meliputi:</p>
-        <div className="ml-4 sm:ml-4 md:ml-6 text-gray-700 space-y-1">
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>1. Nilai referensi</strong> bersifat unik dalam tabel referensi.
+        <p className="mt-1 text-xs text-justify text-gray-700 sm:text-sm md:text-base">
+          📌 Pola umum dalam pencarian data menggunakan Lookup meliputi:
+        </p>
+        <div className="ml-4 space-y-1 text-gray-700 sm:ml-4 md:ml-6">
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>1. Nilai referensi</strong> bersifat unik dalam tabel
+            referensi.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>2. Data dalam tabel</strong> referensi harus tersusun dengan benar sesuai urutan pencarian.
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>2. Data dalam tabel</strong> referensi harus tersusun dengan
+            benar sesuai urutan pencarian.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>3. Pencarian dilakukan</strong> dengan mencocokkan nilai referensi dengan baris atau kolom pertama dalam tabel referensi.
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>3. Pencarian dilakukan</strong> dengan mencocokkan nilai
+            referensi dengan baris atau kolom pertama dalam tabel referensi.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>4. Jika tabel tidak terurut</strong> maka parameter range_lookup harus bernilai FALSE untuk mencari kecocokan persis.
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>4. Jika tabel tidak terurut</strong> maka parameter
+            range_lookup harus bernilai FALSE untuk mencari kecocokan persis.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>5. Jika tabel terurut</strong> maka range_lookup bisa bernilai TRUE untuk pencarian nilai terdekat.
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>5. Jika tabel terurut</strong> maka range_lookup bisa
+            bernilai TRUE untuk pencarian nilai terdekat.
           </div>
         </div>
       </div>
 
-      <div className="bg-white p-2 sm:p-2 md:p-4 border-gray-300 space-y-2 mt-2 sm:mt-4 md:mt-10 relative">
-        <div className="absolute -top-3 sm:-top-3 md:-top-4 left-2 sm:left-2 md:left-4 bg-green-800 text-white px-3 sm:px-3 md:px-5 py-1 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center">
-          <Filter className="mr-1 sm:mr-1 md:mr-2 w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5" /> ABSTRAKSI
+      <div className="relative p-5 mt-10 space-y-4 bg-white border-gray-300">
+        <div className="absolute flex items-center px-5 py-2 text-lg font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4">
+          <Filter className="w-5 h-5 mr-2" /> ABSTRAKSI
         </div>
-        <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-6 sm:mt-2 md:mt-2 text-justify">
-          Setelah mengidentifikasi pola, kita dapat <span className="font-semibold">menyederhanakan masalah</span> dengan <span className="font-semibold">mengabaikan</span> informasi yang tidak perlu dan fokus pada elemen penting untuk pencarian.
+        <p className="mt-6 text-xs text-justify text-gray-600 sm:text-sm md:text-base sm:mt-2 md:mt-2">
+          Setelah mengidentifikasi pola, kita dapat{" "}
+          <span className="font-semibold">menyederhanakan masalah</span> dengan{" "}
+          <span className="font-semibold">mengabaikan</span> informasi yang
+          tidak perlu dan fokus pada elemen penting untuk pencarian.
         </p>
-        <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-1 text-justify">📌 Bagian yang harus diperhatikan:</p>
-        <div className="ml-4 sm:ml-4 md:ml-6 text-gray-700 space-y-1">
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>1. Kolom atau baris pertama</strong> dalam tabel referensi harus berisi nilai referensi (lookup_value).
+        <p className="mt-1 text-xs text-justify text-gray-700 sm:text-sm md:text-base">
+          📌 Bagian yang harus diperhatikan:
+        </p>
+        <div className="ml-4 space-y-1 text-gray-700 sm:ml-4 md:ml-6">
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>1. Kolom atau baris pertama</strong> dalam tabel referensi
+            harus berisi nilai referensi (lookup_value).
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>2. Posisi kolom atau baris</strong> tempat data yang akan diambil harus diketahui.
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>2. Posisi kolom atau baris</strong> tempat data yang akan
+            diambil harus diketahui.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            <strong>3. Gunakan tanda dolar</strong> atau absolute reference ($) untuk membuat referensi tabel tetap saat menyalin rumus.
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            <strong>3. Gunakan tanda dolar</strong> atau absolute reference ($)
+            untuk membuat referensi tabel tetap saat menyalin rumus.
           </div>
         </div>
       </div>
 
-      <div className="bg-white p-2 sm:p-2 md:p-4 border-gray-300 space-y-2 mt-2 sm:mt-4 md:mt-10 relative">
-        <div className="absolute -top-3 sm:-top-3 md:-top-4 left-2 sm:left-2 md:left-4 bg-green-800 text-white px-3 sm:px-3 md:px-5 py-1 sm:py-1 md:py-2 rounded-t-lg text-sm sm:text-base md:text-lg font-bold flex items-center">
-          <Code className="mr-1 sm:mr-1 md:mr-2 w-4 sm:w-4 md:w-5 h-4 sm:h-4 md:h-5" /> ALGORITMA
+      <div className="relative p-5 mt-10 space-y-4 bg-white border-gray-300">
+        <div className="absolute flex items-center px-5 py-2 text-lg font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4">
+          <Code className="w-4 h-4 mr-1 sm:mr-1 md:mr-2 sm:w-4 md:w-5 sm:h-4 md:h-5" />{" "}
+          ALGORITMA
         </div>
-        <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-6 sm:mt-2 md:mt-2 text-justify">
-          Setelah memahami dan menyederhanakan masalah, kita dapat <span className="font-semibold">menyusun langkah-langkah sistematis</span> untuk pencarian menggunakan VLOOKUP atau HLOOKUP.
+        <p className="mt-6 text-xs text-justify text-gray-600 sm:text-sm md:text-base sm:mt-2 md:mt-2">
+          Setelah memahami dan menyederhanakan masalah, kita dapat{" "}
+          <span className="font-semibold">
+            menyusun langkah-langkah sistematis
+          </span>{" "}
+          untuk pencarian menggunakan VLOOKUP atau HLOOKUP.
         </p>
-        <p className="text-gray-700 text-xs sm:text-sm md:text-base mt-1 text-justify">📌 Langkah-langkah penggunaan fungsi Lookup:</p>
-        <div className="ml-4 sm:ml-4 md:ml-6 text-gray-700 space-y-1">
-          <div className="text-xs sm:text-sm md:text-base text-justify">
+        <p className="mt-1 text-xs text-justify text-gray-700 sm:text-sm md:text-base">
+          📌 Langkah-langkah penggunaan fungsi Lookup:
+        </p>
+        <div className="ml-4 space-y-1 text-gray-700 sm:ml-4 md:ml-6">
+          <div className="text-xs text-justify sm:text-sm md:text-base">
             1. Tentukan nilai referensi (lookup_value) yang akan dicari.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
+          <div className="text-xs text-justify sm:text-sm md:text-base">
             2. Pilih tabel referensi (table_array) yang berisi data pencarian.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
-            3. Tentukan nomor kolom atau baris yang berisi data yang ingin diambil.
+          <div className="text-xs text-justify sm:text-sm md:text-base">
+            3. Tentukan nomor kolom atau baris yang berisi data yang ingin
+            diambil.
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
+          <div className="text-xs text-justify sm:text-sm md:text-base">
             4. Pilih metode pencarian:
-            <div className="ml-4 sm:ml-4 md:ml-4 mt-1">
-              <div className="text-xs sm:text-sm md:text-base">a. Jika tabel tidak terurut, kita harus menggunakan FALSE agar VLOOKUP mencari kecocokan yang persis.</div>
-              <div className="text-xs sm:text-sm md:text-base">b. Jika tabel terurut, kita bisa menggunakan TRUE untuk mencari nilai terdekat atau mendekati.</div>
+            <div className="mt-1 ml-4 sm:ml-4 md:ml-4">
+              <div className="text-xs sm:text-sm md:text-base">
+                a. Jika tabel tidak terurut, kita harus menggunakan FALSE agar
+                VLOOKUP mencari kecocokan yang persis.
+              </div>
+              <div className="text-xs sm:text-sm md:text-base">
+                b. Jika tabel terurut, kita bisa menggunakan TRUE untuk mencari
+                nilai terdekat atau mendekati.
+              </div>
             </div>
           </div>
-          <div className="text-xs sm:text-sm md:text-base text-justify">
+          <div className="text-xs text-justify sm:text-sm md:text-base">
             5. Gunakan rumus VLOOKUP atau HLOOKUP dengan format yang benar.
           </div>
         </div>
 
         <div className="bg-[#F0FFF4] p-2 sm:p-2 md:p-3 border border-[#81C784] rounded mt-2 sm:mt-4 md:mt-4 shadow-md">
-          <h3 className="text-sm sm:text-base md:text-lg font-bold text-[#255F38] mb-2">MARI MENGAMATI</h3>
-          <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify mb-2">
-            Perhatikan tabel data yang berisi kolom kode barang dan harga, di mana harga untuk kode C002 masih kosong. Gunakan fungsi LOOKUP untuk mencari harga C002 pada tabel referensi yang memuat daftar kode barang dan harganya, lalu isi harga yang sesuai di tabel data.
+          <h3 className="text-sm sm:text-base md:text-lg font-bold text-[#255F38] mb-2">
+            MARI MENGAMATI
+          </h3>
+          <p className="mb-2 text-xs text-justify text-gray-700 sm:text-sm md:text-base">
+            Perhatikan tabel data yang berisi kolom kode barang dan harga, di
+            mana harga untuk kode C002 masih kosong. Gunakan fungsi LOOKUP untuk
+            mencari harga C002 pada tabel referensi yang memuat daftar kode
+            barang dan harganya, lalu isi harga yang sesuai di tabel data.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mt-2">
+          <div className="flex flex-col justify-center gap-2 mt-2 sm:flex-row sm:gap-4">
             <div className="w-full sm:w-auto">
-              <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mb-2">Tabel Data</p>
+              <p className="mb-2 text-xs text-center text-gray-700 sm:text-sm md:text-base">
+                Tabel Data
+              </p>
               <div className="overflow-x-auto">
-                <table className="border-collapse border border-green-800 mx-auto w-full sm:max-w-xs md:max-w-md text-xs sm:text-sm">
+                <table className="w-full mx-auto text-xs border border-collapse border-green-800 sm:max-w-xs md:max-w-md sm:text-sm">
                   <thead>
                     <tr className="bg-[#255F38] text-white">
-                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">Kode</th>
-                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">Nama</th>
-                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">Harga</th>
+                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                        Kode
+                      </th>
+                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                        Nama
+                      </th>
+                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                        Harga
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1993,7 +2284,10 @@ export default function PencarianLookup() {
                       <tr
                         key={index}
                         className={
-                          isLookupStarted && lookupSteps[lookupStep].highlightedRows.includes(index)
+                          isLookupStarted &&
+                          lookupSteps[lookupStep].highlightedRows.includes(
+                            index
+                          )
                             ? lookupSteps[lookupStep].colorData || ""
                             : ""
                         }
@@ -2009,7 +2303,9 @@ export default function PencarianLookup() {
                         >
                           {row.kode}
                         </td>
-                        <td className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">{row.nama}</td>
+                        <td className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                          {row.nama}
+                        </td>
                         <td
                           className={`border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1 ${
                             isLookupStarted &&
@@ -2033,14 +2329,22 @@ export default function PencarianLookup() {
               </div>
             </div>
             <div className="w-full sm:w-auto">
-              <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mb-2">Tabel Referensi</p>
+              <p className="mb-2 text-xs text-center text-gray-700 sm:text-sm md:text-base">
+                Tabel Referensi
+              </p>
               <div className="overflow-x-auto">
-                <table className="border-collapse border border-green-800 mx-auto w-full sm:max-w-xs md:max-w-md text-xs sm:text-sm">
+                <table className="w-full mx-auto text-xs border border-collapse border-green-800 sm:max-w-xs md:max-w-md sm:text-sm">
                   <thead>
                     <tr className="bg-[#255F38] text-white">
-                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">Kode</th>
-                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">Nama</th>
-                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">Harga</th>
+                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                        Kode
+                      </th>
+                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                        Nama
+                      </th>
+                      <th className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                        Harga
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -2048,7 +2352,10 @@ export default function PencarianLookup() {
                       <tr
                         key={index}
                         className={
-                          isLookupStarted && lookupSteps[lookupStep].highlightedRows.includes(index)
+                          isLookupStarted &&
+                          lookupSteps[lookupStep].highlightedRows.includes(
+                            index
+                          )
                             ? lookupSteps[lookupStep].colorReference || ""
                             : ""
                         }
@@ -2064,7 +2371,9 @@ export default function PencarianLookup() {
                         >
                           {row.kode}
                         </td>
-                        <td className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">{row.nama}</td>
+                        <td className="border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1">
+                          {row.nama}
+                        </td>
                         <td
                           className={`border border-green-600 px-2 sm:px-1 md:px-2 py-1 sm:py-0.5 md:py-1 ${
                             isLookupStarted &&
@@ -2072,7 +2381,8 @@ export default function PencarianLookup() {
                             index === 1 &&
                             lookupStep >= 3
                               ? "bg-blue-200"
-                              : lookupSteps[lookupStep].colorReference === "bg-orange-200" && index === 1
+                              : lookupSteps[lookupStep].colorReference ===
+                                  "bg-orange-200" && index === 1
                               ? "bg-orange-200"
                               : ""
                           }`}
@@ -2086,15 +2396,20 @@ export default function PencarianLookup() {
               </div>
             </div>
           </div>
-          <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mt-2">
-            Langkah saat ini: <strong>{isLookupStarted ? lookupSteps[lookupStep].description : "Tekan 'Mulai' untuk memulai visualisasi"}</strong>
+          <p className="mt-2 text-xs text-center text-gray-700 sm:text-sm md:text-base">
+            Langkah saat ini:{" "}
+            <strong>
+              {isLookupStarted
+                ? lookupSteps[lookupStep].description
+                : "Tekan 'Mulai' untuk memulai visualisasi"}
+            </strong>
           </p>
           {isLookupStarted && lookupSteps[lookupStep].result && (
-            <p className="text-gray-700 text-xs sm:text-sm md:text-base text-center mt-2">
+            <p className="mt-2 text-xs text-center text-gray-700 sm:text-sm md:text-base">
               Hasil: <strong>{lookupSteps[lookupStep].result}</strong>
             </p>
           )}
-          <div className="mt-2 flex space-x-2 justify-center">
+          <div className="flex justify-center mt-2 space-x-2">
             {!isLookupStarted ? (
               <button
                 onClick={() => {
@@ -2108,7 +2423,14 @@ export default function PencarianLookup() {
             ) : (
               <>
                 <button
-                  onClick={() => nextStep(lookupStep, setLookupStep, lookupSteps.length, setIsLookupStarted)}
+                  onClick={() =>
+                    nextStep(
+                      lookupStep,
+                      setLookupStep,
+                      lookupSteps.length,
+                      setIsLookupStarted
+                    )
+                  }
                   className="bg-[#1B5E20] text-white px-2 sm:px-2 md:px-3 py-1 sm:py-1 md:py-1 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer text-xs sm:text-sm md:text-base"
                 >
                   Langkah Selanjutnya
@@ -2125,20 +2447,23 @@ export default function PencarianLookup() {
         </div>
       </div>
 
-      <div className="bg-white p-2 sm:p-2 md:p-4 border-gray-300 space-y-2 mt-2 sm:mt-4 md:mt-12 relative">
-        <h3 className="font-semibold text-[#255F38] text-sm sm:text-base md:text-lg mb-2">Kuis Pemahaman: Pencarian Data dengan Fungsi Lookup</h3>
-        <p className="text-gray-700 text-xs sm:text-sm md:text-base text-justify">
-          Jawab pertanyaan berikut untuk menguji pemahaman Anda tentang konsep pencarian data menggunakan fungsi Lookup:
+      <div className="relative p-2 mt-2 space-y-2 bg-white border-gray-300 sm:p-2 md:p-4 sm:mt-4 md:mt-12">
+        <h3 className="font-semibold text-[#255F38] text-sm sm:text-base md:text-lg mb-2">
+          Kuis Pemahaman: Pencarian Data dengan Fungsi Lookup
+        </h3>
+        <p className="text-xs text-justify text-gray-700 sm:text-sm md:text-base">
+          Jawab pertanyaan berikut untuk menguji pemahaman Anda tentang konsep
+          pencarian data menggunakan fungsi Lookup:
         </p>
-        <div className="bg-yellow-50 p-2 sm:p-2 md:p-4 border border-yellow-300 rounded mt-2 sm:mt-4 md:mt-4 shadow-md relative">
+        <div className="relative p-2 mt-2 border border-yellow-300 rounded shadow-md bg-yellow-50 sm:p-2 md:p-4 sm:mt-4 md:mt-4">
           <div className="mt-8 sm:mt-8 md:mt-8">
-            <h4 className="font-semibold text-yellow-800 text-xs sm:text-sm md:text-base mb-2">
+            <h4 className="mb-2 text-xs font-semibold text-yellow-800 sm:text-sm md:text-base">
               {questions[currentQuestion - 1].question}
             </h4>
-            <div className="ml-4 sm:ml-4 md:ml-6 text-gray-700 space-y-1">
+            <div className="ml-4 space-y-1 text-gray-700 sm:ml-4 md:ml-6">
               {questions[currentQuestion - 1].options.map((option, index) => (
                 <div key={index} className="text-xs sm:text-sm md:text-base">
-                  <label className="flex items-center border border-gray-300 p-2 sm:p-2 mb-2 sm:mb-2 rounded">
+                  <label className="flex items-center p-2 mb-2 border border-gray-300 rounded sm:p-2 sm:mb-2">
                     <input
                       type="radio"
                       name={`quiz${currentQuestion}`}
@@ -2155,13 +2480,15 @@ export default function PencarianLookup() {
             {feedback[currentQuestion] && (
               <p
                 className={`text-xs sm:text-sm md:text-base mt-2 font-bold ${
-                  feedback[currentQuestion].includes("Benar") ? "text-[#255F38]" : "text-red-600"
+                  feedback[currentQuestion].includes("Benar")
+                    ? "text-[#255F38]"
+                    : "text-red-600"
                 }`}
               >
                 {feedback[currentQuestion]}
               </p>
             )}
-            <div className="mt-2 flex flex-wrap justify-between items-center gap-2">
+            <div className="flex flex-wrap items-center justify-between gap-2 mt-2">
               <div className="flex space-x-2">
                 <button
                   onClick={goToPrevious}
@@ -2192,15 +2519,15 @@ export default function PencarianLookup() {
         </div>
       </div>
 
-      <div className="flex justify-between items-center px-2 sm:px-2 md:px-6 py-2 sm:py-2 md:py-2 mt-2 sm:mt-4 md:mt-4">
+      <div className="flex items-center justify-between px-2 py-2 mt-2 sm:px-2 md:px-6 sm:py-2 md:py-2 sm:mt-4 md:mt-4">
         <button
-          onClick={() => window.location.href = "/penerapan-ct"}
+          onClick={() => (window.location.href = "/penerapan-ct")}
           className="bg-gray-500 text-white px-3 sm:px-3 md:px-4 py-1 sm:py-1 md:py-2 rounded-lg hover:bg-gray-600 text-xs sm:text-sm md:text-base min-w-[80px] cursor-pointer"
         >
           ← Sebelumnya
         </button>
         <button
-          onClick={() => window.location.href = "/contoh-lookup"}
+          onClick={() => (window.location.href = "/contoh-lookup")}
           className="bg-[#255F38] text-white px-3 sm:px-3 md:px-4 py-1 sm:py-1 md:py-2 rounded-lg hover:bg-[#1E4D2E] text-xs sm:text-sm md:text-base min-w-[80px] cursor-pointer"
         >
           Selanjutnya →

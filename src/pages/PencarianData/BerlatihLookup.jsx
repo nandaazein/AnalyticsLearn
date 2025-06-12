@@ -121,15 +121,13 @@ export default function BerlatihPencarian() {
       </div>
 
       {/* Petunjuk Umum */}
-      <section className="p-4 bg-green-100 rounded shadow-md mb-6">
+      <section className="p-4 mb-6 bg-green-100 rounded shadow-md">
         <h3 className="text-lg font-semibold text-[#255F38] mb-2">
           Petunjuk Umum
         </h3>
-        <ol className="list-decimal list-inside text-gray-700 space-y-1 text-sm md:text-base">
+        <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside md:text-base">
           <li>Bacalah studi kasus di bawah ini dengan saksama.</li>
-          <li>
-            Jawab setiap pertanyaan pada bagian yang telah disediakan.
-          </li>
+          <li>Jawab setiap pertanyaan pada bagian yang telah disediakan.</li>
           <li>
             Setelah selesai menjawab semua pertanyaan, klik tombol{" "}
             <em>“Selesai Latihan”</em> untuk mengumpulkan jawabanmu.
@@ -138,8 +136,8 @@ export default function BerlatihPencarian() {
       </section>
 
       {/* Studi Kasus */}
-      <section className="p-6 bg-white rounded shadow-lg mb-6">
-        <h3 className="text-lg font-semibold text-green-700 mb-3">
+      <section className="p-6 mb-6 bg-white rounded shadow-lg">
+        <h3 className="mb-3 text-lg font-semibold text-green-700">
           Studi Kasus: Berlatih Pencarian Data
         </h3>
         <p className="px-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base">
@@ -151,7 +149,7 @@ export default function BerlatihPencarian() {
           menentukan kategori prestasi dan hadiah menggunakan fungsi VLOOKUP dan
           CHOOSE.
         </p>
-        <div className="w-full flex justify-center px-4 mt-5">
+        <div className="flex justify-center w-full px-4 mt-5">
           <iframe
             width="800"
             height="394"
@@ -200,7 +198,7 @@ export default function BerlatihPencarian() {
           },
           {
             key: "searchVlookup",
-            title: "4a. Membuat Langkah-langkah (Algoritma - VLOOKUP)",
+            title: "4. Membuat Langkah-langkah (Algoritma - VLOOKUP)",
             question:
               "Tulis rumus VLOOKUP untuk mencari kategori prestasi siswa Budi jika poin lomba ada di kolom C dan tabel kategori ada di sel A9:B13.",
             points: [
@@ -210,7 +208,7 @@ export default function BerlatihPencarian() {
           },
           {
             key: "searchChoose",
-            title: "4b. Membuat Langkah-langkah (Algoritma - CHOOSE)",
+            title: "5. Membuat Langkah-langkah (Algoritma - CHOOSE)",
             question:
               "Tulis rumus CHOOSE untuk menampilkan hadiah siswa Budi berdasarkan peringkat di kolom E dan tabel hadiah ada di sel E10:E13.",
             points: [
@@ -219,26 +217,26 @@ export default function BerlatihPencarian() {
             ],
           },
         ].map(({ key, title, question, points }) => (
-          <div key={key} className="p-6 bg-white rounded shadow-lg mb-6">
-            <h4 className="text-md font-semibold text-green-700 mb-3">
+          <div key={key} className="p-6 mb-6 bg-white rounded shadow-lg">
+            <h4 className="mb-3 font-semibold text-green-700 text-md">
               {title}
             </h4>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="leading-relaxed text-gray-700">
               <strong>Pertanyaan:</strong> {question}
             </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <p className="mt-2 leading-relaxed text-gray-700">
               <strong>Petunjuk:</strong>
             </p>
-            <ul className="list-disc ml-6 text-gray-700 mt-1 text-sm md:text-base">
+            <ul className="mt-1 ml-6 text-sm text-gray-700 list-disc md:text-base">
               {points.map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
             </ul>
-            <p className="text-gray-700 mt-3 leading-relaxed">
+            <p className="mt-3 leading-relaxed text-gray-700">
               <strong>Jawaban Anda:</strong>
             </p>
             <input
-              className="border p-2 rounded w-full mt-2"
+              className="w-full p-2 mt-2 border rounded"
               placeholder="Tulis jawabanmu di sini"
               value={answers[key]}
               onChange={(e) => handleChange(key, e.target.value)}
@@ -251,7 +249,7 @@ export default function BerlatihPencarian() {
       <div className="flex justify-center mt-8">
         <button
           onClick={submitLatihan}
-          className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md cursor-pointer"
+          className="px-5 py-2 text-base text-white transition duration-300 bg-green-800 rounded-lg shadow-md cursor-pointer hover:bg-green-700"
         >
           Selesai Latihan
         </button>
