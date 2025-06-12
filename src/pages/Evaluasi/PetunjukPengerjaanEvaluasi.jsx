@@ -91,7 +91,7 @@ export default function PetunjukPengerjaanEvaluasi() {
       <div className="flex items-start justify-center flex-1 p-6 bg-gray-100">
         <div className="w-full max-w-4xl p-8 bg-white rounded-lg shadow-lg">
           <h1 className="text-2xl font-bold text-[#255f38] mb-2">
-            EVALUASI AKHIR - PENGELOLAAN DATA
+            EVALUASI AKHIR 
           </h1>
           <div className="p-6 text-left bg-gray-100 rounded-lg">
             <p className="mb-4 text-gray-600">

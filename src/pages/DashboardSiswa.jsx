@@ -137,13 +137,13 @@ const DashboardSiswa = () => {
               <p className="text-sm text-gray-500">KKM: {scores.kkm?.kuis4 || 75}</p>
             </div>
 
-            {/* Evaluasi Akhir */}
+            {/* Evaluasi Akhir dari Database */}
             <div className="p-4 bg-white border border-green-200 rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold text-gray-700">Evaluasi Akhir</h3>
               <p className="mt-2 text-xl font-bold text-gray-800">
-                Nilai: <span className={scores.evaluasi_akhir >= 75 ? "text-green-600" : "text-red-600"}>{scores.evaluasi_akhir || "Belum tersedia"}</span>
+                Nilai: <span className={scores.evaluasi_akhir >= (scores.kkm?.evaluasi_akhir || 75) ? "text-green-600" : "text-red-600"}>{scores.evaluasi_akhir || "Belum tersedia"}</span>
               </p>
-              <p className="text-sm text-gray-500">KKM: 75</p>
+              <p className="text-sm text-gray-500">KKM: {scores.kkm?.evaluasi_akhir || 75}</p>
             </div>
           </div>
         </div>
