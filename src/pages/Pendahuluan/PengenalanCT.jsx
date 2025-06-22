@@ -40,7 +40,7 @@ const PengenalanCT = () => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Fixed destructuring syntax
     }
     return shuffled;
   };
@@ -63,7 +63,7 @@ const PengenalanCT = () => {
   const cekJawaban = () => {
     if (totalBelanja === "8000") {
       setFeedback(
-        "Jawaban kamu benar! Total belanja Rina adalah Rp8.000, dan ini sesuai dengan anggaran Rp20.000."
+        "Jawaban benar! Total belanja Rina adalah Rp8.000, dan ini sesuai dengan anggaran Rp20.000."
       );
     } else {
       setFeedback("Jawaban salah, ayo coba lagi. Jumlahkan harga pensil (Rp2.000), buku (Rp5.000), dan penghapus (Rp1.000).");
@@ -85,7 +85,7 @@ const PengenalanCT = () => {
     const isCorrect = selectedPattern === correctPattern;
     setPolaFeedback(
       isCorrect
-        ? "Jawaban Anda benar! Harga barang kecil dan mudah dijumlahkan, sehingga membantu Rina menghitung total belanja."
+        ? "Jawaban benar! Harga barang kecil dan mudah dijumlahkan, sehingga membantu Rina menghitung total belanja."
         : "Jawaban salah, ayo coba lagi."
     );
   };
@@ -105,7 +105,7 @@ const PengenalanCT = () => {
     const isCorrect = selectedOption === correctAnswerRadio;
     setAbstraksiFeedback(
       isCorrect
-        ? "Jawaban Anda benar! Harga barang adalah informasi paling relevan untuk menghitung total belanja."
+        ? "Jawaban benar! Harga barang adalah informasi paling relevan untuk menghitung total belanja."
         : "Jawaban salah, ayo coba lagi."
     );
   };
@@ -144,7 +144,7 @@ const PengenalanCT = () => {
     const isCorrect = dropZoneItems.every((item, index) => item === correctOrder[index]);
     setDekomposisiFeedback(
       isCorrect
-        ? "Jawaban Anda benar! Urutan langkah dekomposisi sudah tepat."
+        ? "Jawaban benar! Urutan langkah dekomposisi sudah tepat."
         : "Jawaban salah, ayo coba susun ulang langkah-langkahnya."
     );
   };
@@ -188,7 +188,7 @@ const PengenalanCT = () => {
     const isCorrect = algorithmDropZone.every((item, index) => item === correctOrder[index]);
     setAlgorithmFeedback(
       isCorrect
-        ? "Jawaban Anda benar! Urutan algoritma sudah tepat."
+        ? "Jawaban benar! Urutan algoritma sudah tepat."
         : "Jawaban salah, ayo coba susun ulang langkah-langkahnya."
     );
   };
@@ -288,7 +288,7 @@ const PengenalanCT = () => {
       {/* Dekomposisi */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative">
         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Lightbulb className="mr-2 w-5 h-5" /> Dekomposisi
+          <Lightbulb className="mr-2 w-5 h-5" /> DEKOMPOSISI
         </div>
         <p className="text-gray-700 text-sm md:text-base text-justify font-semibold mt-4">
           Penjelasan: Dekomposisi adalah memecah masalah besar menjadi langkah-langkah kecil yang lebih mudah.
@@ -333,23 +333,21 @@ const PengenalanCT = () => {
         <div className="flex space-x-2 mt-4">
           <button
             onClick={checkDekomposisiAnswers}
-            className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300"
+            className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
           >
             Periksa 
           </button>
           <button
             onClick={resetDekomposisi}
-            className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300"
+            className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
           >
             Hapus
           </button>
         </div>
         {dekomposisiFeedback && (
-          <p
-            className={`text-sm mt-2 font-bold ${
-              dekomposisiFeedback.includes("benar") ? "text-green-700" : "text-red-700"
-            }`}
-          >
+          <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+            dekomposisiFeedback.includes("benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
+          }`}>
             {dekomposisiFeedback}
           </p>
         )}
@@ -358,7 +356,7 @@ const PengenalanCT = () => {
       {/* Pengenalan Pola */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <BarChart className="w-5 h-5 mr-2" /> Pengenalan Pola
+          <BarChart className="w-5 h-5 mr-2" /> PENGENALAN POLA
         </div>
         <p className="text-gray-700 text-sm md:text-base text-justify font-semibold mt-4">
           Penjelasan: Pengenalan Pola adalah mencari kesamaan atau pola dalam data untuk mempermudah penyelesaian.
@@ -393,23 +391,21 @@ const PengenalanCT = () => {
           <div className="flex space-x-2 mt-4 ">
             <button
               onClick={checkPolaAnswers}
-              className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300"
+              className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
             >
               Periksa 
             </button>
             <button
               onClick={resetPolaAnswers}
-              className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300"
+              className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
             >
               Hapus
             </button>
           </div>
           {polaFeedback && (
-            <p
-              className={`text-sm mt-2 font-bold ${
-                polaFeedback.includes("benar") ? "text-green-700" : "text-red-700"
-              }`}
-            >
+            <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+              polaFeedback.includes("benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
+            }`}>
               {polaFeedback}
             </p>
           )}
@@ -419,7 +415,7 @@ const PengenalanCT = () => {
       {/* Abstraksi */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Filter className="w-5 h-5 mr-2" /> Abstraksi
+          <Filter className="w-5 h-5 mr-2" /> ABSTRAKSI
         </div>
         <p className="text-gray-700 text-sm md:text-base text-justify font-semibold mt-4">
           Penjelasan: Abstraksi adalah mengabaikan informasi yang tidak penting dan fokus pada yang relevan.
@@ -454,23 +450,21 @@ const PengenalanCT = () => {
           <div className="flex space-x-2 mt-4">
             <button
               onClick={checkAbstraksiAnswers}
-              className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300"
+              className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
             >
               Periksa 
             </button>
             <button
               onClick={resetAbstraksiAnswers}
-              className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300"
+              className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
             >
               Hapus
             </button>
           </div>
           {abstraksiFeedback && (
-            <p
-              className={`text-sm mt-2 font-bold ${
-                abstraksiFeedback.includes("benar") ? "text-green-700" : "text-red-700"
-              }`}
-            >
+            <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+              abstraksiFeedback.includes("benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
+            }`}>
               {abstraksiFeedback}
             </p>
           )}
@@ -480,7 +474,7 @@ const PengenalanCT = () => {
       {/* Algoritma */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Code className="w-5 h-5 mr-2" /> Algoritma
+          <Code className="w-5 h-5 mr-2" /> ALGORITMA
         </div>
         <p className="text-gray-700 text-sm md:text-base text-justify font-semibold mt-4">
           Penjelasan: Algoritma adalah langkah-langkah berurutan untuk menyelesaikan masalah.
@@ -525,23 +519,21 @@ const PengenalanCT = () => {
         <div className="flex space-x-2 mt-4">
           <button
             onClick={checkAlgorithmAnswers}
-            className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300"
+            className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
           >
             Periksa 
           </button>
           <button
             onClick={resetAlgorithm}
-            className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300"
+            className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
           >
             Hapus
           </button>
         </div>
         {algorithmFeedback && (
-          <p
-            className={`text-sm mt-2 font-bold ${
-              algorithmFeedback.includes("benar") ? "text-green-700" : "text-red-700"
-            }`}
-          >
+          <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+            algorithmFeedback.includes("benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
+          }`}>
             {algorithmFeedback}
           </p>
         )}
@@ -569,23 +561,21 @@ const PengenalanCT = () => {
           <div className="flex space-x-2 mt-3">
             <button
               onClick={cekJawaban}
-              className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300"
+              className="bg-[#1B5E20] text-white px-4 py-2 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
             >
               Periksa 
             </button>
             <button
               onClick={handleHapus}
-              className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300"
+              className="bg-[#D32F2F] text-white px-4 py-2 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
             >
               Hapus
             </button>
           </div>
           {feedback && (
-            <p
-              className={`text-sm mt-2 font-bold ${
-                feedback.includes("benar") ? "text-green-700" : "text-red-700"
-              }`}
-            >
+            <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+              feedback.includes("benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
+            }`}>
               {feedback}
             </p>
           )}
@@ -604,18 +594,18 @@ const PengenalanCT = () => {
 
       {/* Tombol Navigasi */}
       <div className="flex justify-between mt-8 px-4">
-        <a
-          href="/mengenal-analisis"
-          className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-base shadow-md"
+        <button
+          onClick={() => (window.location.href = "/mengenal-analisis")}
+          className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-base shadow-md cursor-pointer"
         >
           ← Sebelumnya
-        </a>
-        <a
-          href="/pencarian-lookup"
-          className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md"
+        </button>
+        <button
+          onClick={() => (window.location.href = "/pencarian-lookup")}
+          className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md cursor-pointer"
         >
           Selanjutnya →
-        </a>
+        </button>
       </div>
     </Layout>
   );

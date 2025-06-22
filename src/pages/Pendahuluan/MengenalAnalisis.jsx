@@ -1,6 +1,7 @@
+
 import Layout from "../../components/Layout";
 import "remixicon/fonts/remixicon.css";
-import { BarChart, Search, Table, Filter, CheckCircle, BookOpen, Lightbulb } from "lucide-react";
+import { BarChart, Search, Table, CheckCircle, Lightbulb } from "lucide-react";
 import { useState } from "react";
 
 const MengenalAnalisisData = () => {
@@ -26,7 +27,6 @@ const MengenalAnalisisData = () => {
     setQuizAnswer("");
     setQuizFeedback("");
   };
-
 
   return (
     <Layout>
@@ -116,29 +116,27 @@ const MengenalAnalisisData = () => {
         <div className="flex space-x-2 mt-4">
           <button
             onClick={checkQuizAnswer}
-            className="bg-green-800 text-white px-4 py-2 rounded hover:bg-green-700"
+            className="bg-green-800 text-white px-4 py-2 rounded hover:bg-green-700 cursor-pointer"
           >
             Periksa
           </button>
           <button
             onClick={resetQuiz}
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 cursor-pointer"
           >
             Hapus
           </button>
         </div>
         {quizFeedback && (
-          <p
-            className={`text-sm mt-2 font-bold ${
-              quizFeedback.includes("Benar") ? "text-[#255F38]" : "text-red-700"
-            }`}
-          >
+          <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+            quizFeedback.includes("Benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
+          }`}>
             {quizFeedback}
           </p>
         )}
       </div>
 
-          {/* Steps of Data Analysis */}
+      {/* Steps of Data Analysis */}
       <div className="bg-white p-5 border-gray-300 mt-4 space-y-4 rounded-lg shadow-md">
         <h2 className="text-xl font-bold text-green-800 flex items-center">
           <Table className="w-5 h-5 mr-2" /> Langkah-Langkah Analisis Data
@@ -162,7 +160,6 @@ const MengenalAnalisisData = () => {
         </ul>
       </div>
 
-
       {/* What You Can Do */}
       <div className="bg-white p-5 border-gray-300 mt-4 space-y-4 rounded-lg shadow-md">
         <h2 className="text-xl font-bold text-green-800 flex items-center">
@@ -184,20 +181,20 @@ const MengenalAnalisisData = () => {
 
       {/* Navigation Buttons */}
       <div className="flex justify-between mt-8 px-4">
-        <a
-          href="/pendahuluan"
-          className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600"
+        <button
+          onClick={() => (window.location.href = "/pendahuluan")}
+          className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 cursor-pointer"
           aria-label="Halaman sebelumnya"
         >
           ← Sebelumnya
-        </a>
-        <a
-          href="/pengenalan-ct"
-          className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E]"
+        </button>
+        <button
+          onClick={() => (window.location.href = "/pengenalan-ct")}
+          className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E] cursor-pointer"
           aria-label="Halaman selanjutnya"
         >
           Selanjutnya →
-        </a>
+        </button>
       </div>
     </Layout>
   );
