@@ -1,6 +1,4 @@
-
 import Layout from "../../components/Layout";
-
 
 const PengantarBab = () => {
   
@@ -36,15 +34,14 @@ const PengantarBab = () => {
           <li>Peserta didik mampu merangkum data menggunakan fungsi peringkasan.</li>
           <li>Peserta didik mampu mengelola data menggunakan teknik Sorting dan Filtering.</li>
           <li>Peserta didik mampu menerapkan pendekatan Computational Thinking dalam menyelesaikan permasalahan yang berkaitan dengan pencarian data, visualisasi data, peringkasan data, dan pengelolaan data.</li>
-
         </ul>
       </div>
 
       {/* Tombol Navigasi */}
       <div className="flex justify-end mt-8 px-4">
-          <a href="/pendahuluan" className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E]">
+          <button onClick={() => (window.location.href = "/pendahuluan")} className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E] cursor-pointer">
             Selanjutnya →
-          </a>
+          </button>
       </div>
     </Layout>
   );

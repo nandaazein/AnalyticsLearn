@@ -149,23 +149,21 @@ const Pendahuluan = () => {
             <div className="mt-4 flex space-x-2">
               <button
                 onClick={checkAnswers}
-                className="bg-[#1B5E20] text-white px-3 py-1 rounded hover:bg-[#145A20] transition duration-300"
+                className="bg-[#1B5E20] text-white px-3 py-1 rounded hover:bg-[#145A20] transition duration-300 cursor-pointer"
               >
                 Periksa 
               </button>
               <button
                 onClick={resetAnswers}
-                className="bg-[#D32F2F] text-white px-3 py-1 rounded hover:bg-[#B71C1C] transition duration-300"
+                className="bg-[#D32F2F] text-white px-3 py-1 rounded hover:bg-[#B71C1C] transition duration-300 cursor-pointer"
               >
                 Hapus
               </button>
             </div>
             {feedback && (
-              <p
-                className={`text-sm mt-2 font-bold ${
-                  feedback.includes("Benar") ? "text-green-700" : "text-red-700"
-                }`}
-              >
+              <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                feedback.includes("Benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
+              }`}>
                 {feedback}
               </p>
             )}
@@ -175,12 +173,12 @@ const Pendahuluan = () => {
 
       {/* Tombol Navigasi */}
       <div className="flex justify-between mt-8 px-4">
-        <a href="/pengantar-bab" className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600">
+        <button onClick={() => (window.location.href = "/pengantar-bab")} className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 cursor-pointer">
           ← Sebelumnya
-        </a>
-        <a href="/mengenal-analisis" className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E]">
+        </button>
+        <button onClick={() => (window.location.href = "/mengenal-analisis")} className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E] cursor-pointer">
           Selanjutnya →
-        </a>
+        </button>
       </div>
     </Layout>
   );
