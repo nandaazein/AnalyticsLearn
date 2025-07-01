@@ -512,7 +512,7 @@ const AktivitasPencarian = () => {
     setIndexFeedback(
       isCorrect
         ? "Jawaban benar! Nilai 85 diambil dari baris ke-2, kolom ke-3 (Bahasa Inggris)."
-        : "❌ Jawaban salah. Pastikan range, baris, dan kolom pada fungsi INDEX sudah tepat."
+        : "Jawaban salah. Pastikan range, baris, dan kolom pada fungsi INDEX sudah tepat."
     );
     if (isCorrect) {
       setIndexFormula("85");

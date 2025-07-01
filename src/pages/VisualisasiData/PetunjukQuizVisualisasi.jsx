@@ -91,7 +91,7 @@ export default function PetunjukPengerjaanVisualisasi() {
               onClick={() => (window.location.href = "/kuis-visualisasi")}
               className="bg-[#255f38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E] cursor-pointer transition duration-300"
             >
-              Mulai
+              Mulai Kuis
             </button>
           </div>
 
