@@ -1,8 +1,640 @@
+// import Layout from "../../components/Layout";
+// import { useEffect } from "react";
+// import { Lightbulb, BarChart, Filter, Code, CheckCircle } from "lucide-react";
+
+// const ContohPengelolaan = () => {
+//   useEffect(() => {
+//     // Tambah stylesheet jika belum ada
+//     if (!document.querySelector('link[href="https://cdn.syncfusion.com/ej2/19.1.56/material.css"]')) {
+//       const link = document.createElement("link");
+//       link.rel = "stylesheet";
+//       link.href = "https://cdn.syncfusion.com/ej2/19.1.56/material.css";
+//       document.head.appendChild(link);
+//     }
+
+//     // Tambah script jika belum ada
+//     if (!document.querySelector('script[src="https://cdn.syncfusion.com/ej2/19.1.56/dist/ej2.min.js"]')) {
+//       const script = document.createElement("script");
+//       script.src = "https://cdn.syncfusion.com/ej2/19.1.56/dist/ej2.min.js";
+//       script.async = true;
+//       script.onload = () => {
+//         if (window.ej && window.ej.spreadsheet && !document.querySelector("#spreadsheet1 .e-spreadsheet")) {
+//           // Spreadsheet untuk Sorting (Lomba Pidato)
+//           new window.ej.spreadsheet.Spreadsheet({
+//             sheets: [
+//               {
+//                 name: "Sheet1",
+//                 columns: [
+//                   { width: 120 },
+//                   { width: 120 },
+//                   { width: 120 },
+//                 ],
+//                 rows: [
+//                   {
+//                     cells: [
+//                       {
+//                         value: "Nama Siswa",
+//                         style: {
+//                           fontWeight: "bold",
+//                           color: "white",
+//                           backgroundColor: "darkgreen",
+//                           textAlign: "center",
+//                         },
+//                       },
+//                       {
+//                         value: "Kelas",
+//                         style: {
+//                           fontWeight: "bold",
+//                           color: "white",
+//                           backgroundColor: "darkgreen",
+//                           textAlign: "center",
+//                         },
+//                       },
+//                       {
+//                         value: "Skor",
+//                         style: {
+//                           fontWeight: "bold",
+//                           color: "white",
+//                           backgroundColor: "darkgreen",
+//                           textAlign: "center",
+//                         },
+//                       },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Rani", style: { textAlign: "center" } },
+//                       { value: "8A", style: { textAlign: "center" } },
+//                       { value: 92, format: "#,##0", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Adi", style: { textAlign: "center" } },
+//                       { value: "8B", style: { textAlign: "center" } },
+//                       { value: 78, format: "#,##0", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Siti", style: { textAlign: "center" } },
+//                       { value: "8C", style: { textAlign: "center" } },
+//                       { value: 85, format: "#,##0", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Dedi", style: { textAlign: "center" } },
+//                       { value: "8A", style: { textAlign: "center" } },
+//                       { value: 88, format: "#,##0", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Eka", style: { textAlign: "center" } },
+//                       { value: "8B", style: { textAlign: "center" } },
+//                       { value: 75, format: "#,##0", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Fani", style: { textAlign: "center" } },
+//                       { value: "8C", style: { textAlign: "center" } },
+//                       { value: 90, format: "#,##0", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                 ],
+//               },
+//             ],
+//           }).appendTo("#spreadsheet1");
+//         }
+
+//         if (window.ej && window.ej.spreadsheet && !document.querySelector("#spreadsheet2 .e-spreadsheet")) {
+//           // Spreadsheet untuk Filtering (Ekstrakurikuler Basket)
+//           new window.ej.spreadsheet.Spreadsheet({
+//             sheets: [
+//               {
+//                 name: "Sheet1",
+//                 columns: [
+//                   { width: 120 },
+//                   { width: 120 },
+//                   { width: 150 },
+//                 ],
+//                 rows: [
+//                   {
+//                     cells: [
+//                       {
+//                         value: "Nama Siswa",
+//                         style: {
+//                           fontWeight: "bold",
+//                           color: "white",
+//                           backgroundColor: "darkgreen",
+//                           textAlign: "center",
+//                         },
+//                       },
+//                       {
+//                         value: "Kelas",
+//                         style: {
+//                           fontWeight: "bold",
+//                           color: "white",
+//                           backgroundColor: "darkgreen",
+//                           textAlign: "center",
+//                         },
+//                       },
+//                       {
+//                         value: "Ekstrakurikuler",
+//                         style: {
+//                           fontWeight: "bold",
+//                           color: "white",
+//                           backgroundColor: "darkgreen",
+//                           textAlign: "center",
+//                         },
+//                       },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Bima", style: { textAlign: "center" } },
+//                       { value: "8A", style: { textAlign: "center" } },
+//                       { value: "Basket", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Lusi", style: { textAlign: "center" } },
+//                       { value: "8B", style: { textAlign: "center" } },
+//                       { value: "Pramuka", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Tono", style: { textAlign: "center" } },
+//                       { value: "8A", style: { textAlign: "center" } },
+//                       { value: "Basket", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Rina", style: { textAlign: "center" } },
+//                       { value: "8C", style: { textAlign: "center" } },
+//                       { value: "Basket", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Deni", style: { textAlign: "center" } },
+//                       { value: "8B", style: { textAlign: "center" } },
+//                       { value: "Pramuka", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                   {
+//                     cells: [
+//                       { value: "Sari", style: { textAlign: "center" } },
+//                       { value: "8A", style: { textAlign: "center" } },
+//                       { value: "Basket", style: { textAlign: "center" } },
+//                     ],
+//                   },
+//                 ],
+//               },
+//             ],
+//           }).appendTo("#spreadsheet2");
+//         }
+//       };
+//       document.body.appendChild(script);
+//     }
+//   }, []);
+
+//   return (
+//     <Layout>
+//       {/* Header judul */}
+//       <h1 className="text-xl md:text-2xl text-center sm:text-lg font-bold mb-12 p-4 bg-[#255F38] text-white">
+//         Contoh Penerapan Sorting dan Filtering Data
+//       </h1>
+
+//       {/* Studi Kasus 1: Sorting - Mengurutkan Data Peringkat Lomba Pidato Sekolah */}
+//       <h2 className="text-lg md:text-xl font-bold mt-8 mb-4 px-4 text-gray-800">
+//         Studi Kasus 1: Sorting - Mengurutkan Data Peringkat Lomba Pidato Sekolah
+//       </h2>
+//       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4">
+//         Budi, seorang siswa SMP, diminta oleh gurunya untuk mengelola data hasil lomba pidato antar kelas di sekolah. Data berisi nama siswa, kelas, dan skor. Budi ingin mengurutkan data berdasarkan skor dari tertinggi ke terendah (descending, Z ke A) untuk menentukan pemenang lomba. Dengan sorting, Budi dapat dengan cepat melihat peringkat siswa berdasarkan skor mereka. <strong>Penjelasan</strong>: Urutan "A ke Z" (ascending) mengurutkan dari nilai terkecil ke terbesar, sedangkan "Z ke A" (descending) mengurutkan dari nilai terbesar ke terkecil.
+//       </p>
+
+//       {/* Tabel Data Lomba Pidato */}
+//       <div className="flex flex-col items-center mt-6">
+//         <p className="text-gray-600 text-sm text-center mb-2 italic">
+//           Tabel 13. Data Hasil Lomba Pidato
+//         </p>
+//         <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center">
+//           <thead>
+//             <tr className="bg-[#255F38] text-white">
+//               <th className="border border-green-600 px-4 py-2">Nama Siswa</th>
+//               <th className="border border-green-600 px-4 py-2">Kelas</th>
+//               <th className="border border-green-600 px-4 py-2">Skor</th>
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {[
+//               ["Rani", "8A", 92],
+//               ["Adi", "8B", 78],
+//               ["Siti", "8C", 85],
+//               ["Dedi", "8A", 88],
+//               ["Eka", "8B", 75],
+//               ["Fani", "8C", 90],
+//             ].map((row, index) => (
+//               <tr
+//                 key={index}
+//                 className={index % 2 === 0 ? "bg-green-50" : "bg-white"}
+//               >
+//                 {row.map((cell, i) => (
+//                   <td key={i} className="border border-green-600 px-4 py-2">
+//                     {cell}
+//                   </td>
+//                 ))}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//       </div>
+
+//       {/* Penyelesaian dengan Computational Thinking - Sorting */}
+//       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4 mt-6">
+//         Penyelesaian dengan{" "}
+//         <span className="font-semibold italic">Computational Thinking:</span>
+//       </p>
+
+//       {/* DEKOMPOSISI - Sorting */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <Lightbulb className="mr-2 w-5 h-5" /> Dekomposisi
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li className="list-none -ml-6">
+//             Sebelum melakukan sorting, kita perlu membagi masalah menjadi langkah-langkah kecil:
+//           </li>
+//           <li>Mengumpulkan data hasil lomba pidato dalam bentuk tabel.</li>
+//           <li>
+//             Menentukan kolom yang akan diurutkan, yaitu kolom Skor.
+//           </li>
+//           <li>
+//             Menggunakan fitur sorting di spreadsheet untuk mengurutkan data dari terbesar ke terkecil (descending, Z ke A).
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Pengenalan Pola - Sorting */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <BarChart className="w-5 h-5 mr-2" /> PENGENALAN POLA
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li>
+//             Setelah sorting, skor tertinggi akan berada di posisi atas.
+//           </li>
+//           <li>
+//             Data akan tersusun secara berurutan dari skor terbesar ke terkecil, memudahkan identifikasi pemenang lomba.
+//           </li>
+//           <li>
+//             Pola ini membantu Budi melihat peringkat siswa dengan jelas untuk menentukan pemenang.
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Abstraksi - Sorting */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <Filter className="w-5 h-5 mr-2" /> ABSTRAKSI
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li>
+//             Fokus hanya pada kolom Skor untuk mengurutkan data.
+//           </li>
+//           <li>
+//             Informasi seperti nama siswa dan kelas hanya diperlukan setelah pengurutan untuk mengidentifikasi pemenang.
+//           </li>
+//           <li>
+//             Abaikan detail lain yang tidak relevan untuk tujuan sorting.
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Algoritma - Sorting */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <Code className="w-5 h-5 mr-2" /> ALGORITMA
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li className="list-none -ml-6">
+//             Untuk mengurutkan data di spreadsheet, ikuti langkah-langkah berikut:
+//           </li>
+//           <li>Blok seluruh data, termasuk judul kolom (header), misalnya kolom Nama Siswa, Kelas, dan Skor.</li>
+//           <li>Klik kanan pada data yang sudah diblok.</li>
+//           <li>Pilih menu Sort dari daftar yang muncul.</li>
+//           <li>
+//             Jika hanya ingin mengurutkan satu kolom, pilih Sort A to Z (dari kecil ke besar) atau Sort Z to A (dari besar ke kecil).
+//           </li>
+//           <li>
+//             Jika ingin mengurutkan berdasarkan lebih dari satu kolom, pilih Custom Sort.
+//           </li>
+//           <li>Misalnya, mengurutkan data pada tabel berdasarkan kolom Skor agar siswa dengan skor tertinggi muncul di atas.</li>
+//         </ul>
+
+//         <div className="w-full flex justify-center px-4">
+//           <div
+//             id="spreadsheet1"
+//             className="w-full max-w-full md:max-w-screen-md"
+//             style={{ height: "400px" }}
+//           ></div>
+//         </div>
+//       </div>
+
+//       {/* Kesimpulan dan Analisis - Sorting */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <CheckCircle className="w-5 h-5 mr-2" /> KESIMPULAN & ANALISIS
+//         </div>
+//         <p className="text-gray-600 text-sm md:text-base mt-6">
+//           Dengan sorting, Budi dapat dengan cepat mengidentifikasi pemenang lomba pidato tanpa perlu memeriksa data secara manual.
+//         </p>
+//         <p className="text-gray-600 text-sm font-semibold md:text-base">
+//           Analisis
+//         </p>
+//         <ul className="list-disc list-inside text-gray-600 text-sm md:text-base mt-4 space-y-2">
+//           <li
+//             className="text-justify"
+//             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
+//           >
+//             Setelah sorting (Z ke A), Rani (92), Fani (90), Dedi (88), Siti (85), Adi (78), dan Eka (75) adalah peringkat siswa berdasarkan skor.
+//           </li>
+//           <li
+//             className="text-justify"
+//             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
+//           >
+//             Sorting dengan urutan descending (Z ke A) membuat data lebih terorganisir, memudahkan Budi menentukan pemenang lomba pidato.
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Studi Kasus 2: Filtering - Menampilkan Data Siswa yang Mengikuti Ekstrakurikuler Basket */}
+//       <h2 className="text-lg md:text-xl font-bold mt-12 mb-4 px-4 text-gray-800">
+//         Studi Kasus 2: Filtering - Menampilkan Data Siswa yang Mengikuti Ekstrakurikuler Basket
+//       </h2>
+//       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4">
+//         Sari, seorang siswa SMP dan anggota tim basket sekolah, diminta mengelola data kegiatan ekstrakurikuler siswa yang berisi nama siswa, kelas, dan ekstrakurikuler. Sari ingin menyaring siswa yang mengikuti ekstrakurikuler Basket untuk membuat daftar anggota tim. Dengan filtering, Sari dapat dengan cepat memilih siswa yang relevan tanpa memeriksa setiap entri secara manual.
+//       </p>
+
+//       {/* Tabel Data Ekstrakurikuler */}
+//       <div className="flex flex-col items-center mt-6">
+//         <p className="text-gray-600 text-sm text-center mb-2 italic">
+//           Tabel 14. Data Kegiatan Ekstrakurikuler
+//         </p>
+//         <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center">
+//           <thead>
+//             <tr className="bg-[#255F38] text-white">
+//               <th className="border border-green-600 px-4 py-2">Nama Siswa</th>
+//               <th className="border border-green-600 px-4 py-2">Kelas</th>
+//               <th className="border border-green-600 px-4 py-2">Ekstrakurikuler</th>
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {[
+//               ["Bima", "8A", "Basket"],
+//               ["Lusi", "8B", "Pramuka"],
+//               ["Tono", "8A", "Basket"],
+//               ["Rina", "8C", "Basket"],
+//               ["Deni", "8B", "Pramuka"],
+//               ["Sari", "8A", "Basket"],
+//             ].map((row, index) => (
+//               <tr
+//                 key={index}
+//                 className={index % 2 === 0 ? "bg-green-50" : "bg-white"}
+//               >
+//                 {row.map((cell, i) => (
+//                   <td key={i} className="border border-green-600 px-4 py-2">
+//                     {cell}
+//                   </td>
+//                 ))}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//       </div>
+
+//       {/* Penyelesaian dengan Computational Thinking - Filtering */}
+//       <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4 mt-6">
+//         Penyelesaian dengan{" "}
+//         <span className="font-semibold italic">Computational Thinking:</span>
+//       </p>
+
+//       {/* DEKOMPOSISI - Filtering */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <Lightbulb className="mr-2 w-5 h-5" /> Dekomposisi
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li className="list-none -ml-6">
+//             Sebelum melakukan filtering, kita perlu membagi masalah menjadi langkah-langkah kecil:
+//           </li>
+//           <li>Mengumpulkan data kegiatan ekstrakurikuler dalam bentuk tabel.</li>
+//           <li>
+//             Menentukan kriteria penyaringan, yaitu ekstrakurikuler "Basket".
+//           </li>
+//           <li>
+//             Menggunakan fitur filtering di spreadsheet untuk menampilkan hanya siswa yang mengikuti ekstrakurikuler Basket.
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Pengenalan Pola - Filtering */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <BarChart className="w-5 h-5 mr-2" /> PENGENALAN POLA
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li>
+//             Setelah filtering, hanya siswa dengan ekstrakurikuler Basket yang ditampilkan.
+//           </li>
+//           <li>
+//             Data menunjukkan pola: hanya siswa yang relevan dengan tim basket yang muncul.
+//           </li>
+//           <li>
+//             Pola ini membantu Sari fokus pada anggota tim basket untuk keperluan daftar.
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Abstraksi - Filtering */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <Filter className="w-5 h-5 mr-2" /> ABSTRAKSI
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li>
+//             Fokus hanya pada kolom Ekstrakurikuler untuk menyaring siswa yang mengikuti Basket.
+//           </li>
+//           <li>
+//             Informasi seperti kelas diabaikan karena tidak relevan untuk tujuan filtering.
+//           </li>
+//           <li>
+//             Nama siswa hanya diperlukan setelah penyaringan untuk membuat daftar anggota tim.
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Algoritma - Filtering */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <Code className="w-5 h-5 mr-2" /> ALGORITMA
+//         </div>
+//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+//           <li className="list-none -ml-6">
+//             Untuk menyaring data di spreadsheet, ikuti langkah-langkah berikut:
+//           </li>
+//           <li>Blok seluruh data, termasuk judul kolom (header), agar semua data bisa difilter dengan benar.</li>
+//           <li>Klik kanan pada kolom "Ekstrakurikuler", lalu pilih opsi Filter.</li>
+//           <li>
+//             Pilih kriteria filter → Misalnya, jika ingin menampilkan hanya siswa dari ekstrakurikuler Basket, centang "Basket" saja.
+//           </li>
+//           <li>Jika ingin menampilkan semua ekstrakurikuler, centang "Select All".</li>
+//         </ul>
+
+//         <div className="w-full flex justify-center px-4">
+//           <div
+//             id="spreadsheet2"
+//             className="w-full max-w-full md:max-w-screen-md"
+//             style={{ height: "400px" }}
+//           ></div>
+//         </div>
+//       </div>
+
+//       {/* Kesimpulan dan Analisis - Filtering */}
+//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
+//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
+//           <CheckCircle className="w-5 h-5 mr-2" /> KESIMPULAN & ANALISIS
+//         </div>
+//         <p className="text-gray-600 text-sm md:text-base mt-6">
+//           Dengan filtering, Sari dapat dengan cepat mengidentifikasi siswa yang mengikuti ekstrakurikuler Basket untuk membuat daftar anggota tim tanpa perlu memeriksa setiap entri secara manual.
+//         </p>
+//         <p className="text-gray-600 text-sm font-semibold md:text-base">
+//           Analisis
+//         </p>
+//         <ul className="list-disc list-inside text-gray-600 text-sm md:text-base mt-4 space-y-2">
+//           <li
+//             className="text-justify"
+//             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
+//           >
+//             Setelah filtering, hanya Bima, Tono, Rina, dan Sari yang ditampilkan sebagai anggota tim Basket.
+//           </li>
+//           <li
+//             className="text-justify"
+//             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
+//           >
+//             Filtering menghemat waktu Sari dalam memilih siswa yang relevan dan memastikan daftar anggota tim fokus pada ekstrakurikuler yang diinginkan.
+//           </li>
+//         </ul>
+//       </div>
+
+//       {/* Tombol Navigasi */}
+//       <div className="flex justify-between mt-8">
+//         <a
+//           href="/pengelolaan-data"
+//           className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-base shadow-md"
+//         >
+//           ← Sebelumnya
+//         </a>
+//         <a
+//           href="/aktivitas-pengelolaan"
+//           className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md"
+//         >
+//           Selanjutnya →
+//         </a>
+//       </div>
+//     </Layout>
+//   );
+// };
+
+// export default ContohPengelolaan;
+
 import Layout from "../../components/Layout";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Lightbulb, BarChart, Filter, Code, CheckCircle } from "lucide-react";
 
 const ContohPengelolaan = () => {
+  // State untuk input siswa
+  const [inputs, setInputs] = useState({
+    sorting: {
+      dekomposisi: [""],
+      pengenalanPola: [""],
+      abstraksi: ["", ""],
+    },
+    filtering: {
+      dekomposisi: [""],
+      pengenalanPola: [""],
+      abstraksi: ["", ""],
+    },
+  });
+
+  // Jawaban benar untuk validasi
+  const correctAnswers = {
+    sorting: {
+      dekomposisi: ["Nilai"],
+      pengenalanPola: ["atas"],
+      abstraksi: ["Alamat", "Nama"],
+    },
+    filtering: {
+      dekomposisi: ["Kelas"],
+      pengenalanPola: ["8A"],
+      abstraksi: ["Alamat", "Kelas"],
+    },
+  };
+
+  // Handler untuk input teks
+  const handleInputChange = (section, category, index, value) => {
+    const normalizedValue = value.trim();
+    setInputs((prev) => ({
+      ...prev,
+      [section]: {
+        ...prev[section],
+        [category]: prev[section][category].map((item, i) =>
+          i === index ? normalizedValue : item
+        ),
+      },
+    }));
+  };
+
+  // State untuk langkah algoritma
+  const [sortingStep, setSortingStep] = useState(0);
+  const [filteringStep, setFilteringStep] = useState(0);
+
+  // Langkah-langkah algoritma
+  const sortingAlgorithmSteps = [
+    "Blok semua data, termasuk header (Nama Siswa, Nilai, Kelas).",
+    "Klik kanan pada kolom Nilai, pilih Sort.",
+    'Pilih "Sort Z to A" untuk mengurutkan dari nilai tertinggi ke terendah.',
+    "Periksa hasil: Data diurutkan dengan nilai tertinggi di atas.",
+  ];
+
+  const filteringAlgorithmSteps = [
+    "Blok semua data, termasuk header (Nama Siswa, Nilai, Kelas).",
+    "Klik kanan pada kolom Kelas, pilih Filter.",
+    'Centang "8A" untuk menampilkan hanya siswa kelas 8A.',
+    "Periksa hasil: Hanya data siswa kelas 8A yang ditampilkan.",
+  ];
+
+  // Handler untuk tombol langkah
+  const handleNextStep = (currentStep, setStep, totalSteps) => {
+    if (currentStep < totalSteps - 1) {
+      setStep(currentStep + 1);
+    } else {
+      setStep(0);
+    }
+  };
+
+  const handlePreviousStep = (currentStep, setStep) => {
+    if (currentStep > 0) {
+      setStep(currentStep - 1);
+    }
+  };
+
   useEffect(() => {
     // Tambah stylesheet jika belum ada
     if (!document.querySelector('link[href="https://cdn.syncfusion.com/ej2/19.1.56/material.css"]')) {
@@ -18,186 +650,152 @@ const ContohPengelolaan = () => {
       script.src = "https://cdn.syncfusion.com/ej2/19.1.56/dist/ej2.min.js";
       script.async = true;
       script.onload = () => {
-        if (window.ej && window.ej.spreadsheet && !document.querySelector("#spreadsheet1 .e-spreadsheet")) {
-          // Spreadsheet untuk Sorting (Lomba Pidato)
-          new window.ej.spreadsheet.Spreadsheet({
-            sheets: [
-              {
-                name: "Sheet1",
-                columns: [
-                  { width: 120 },
-                  { width: 120 },
-                  { width: 120 },
-                ],
-                rows: [
-                  {
-                    cells: [
-                      {
-                        value: "Nama Siswa",
-                        style: {
-                          fontWeight: "bold",
-                          color: "white",
-                          backgroundColor: "darkgreen",
-                          textAlign: "center",
+        if (window.ej && window.ej.spreadsheet) {
+          // Spreadsheet untuk Algoritma Sorting
+          if (!document.querySelector("#spreadsheet3 .e-spreadsheet")) {
+            new window.ej.spreadsheet.Spreadsheet({
+              sheets: [
+                {
+                  name: "Sheet1",
+                  columns: [{ width: 120 }, { width: 120 }, { width: 120 }],
+                  rows: [
+                    {
+                      cells: [
+                        {
+                          value: "Nama Siswa",
+                          style: {
+                            fontWeight: "bold",
+                            color: "white",
+                            backgroundColor: "darkgreen",
+                            textAlign: "center",
+                          },
                         },
-                      },
-                      {
-                        value: "Kelas",
-                        style: {
-                          fontWeight: "bold",
-                          color: "white",
-                          backgroundColor: "darkgreen",
-                          textAlign: "center",
+                        {
+                          value: "Nilai",
+                          style: {
+                            fontWeight: "bold",
+                            color: "white",
+                            backgroundColor: "darkgreen",
+                            textAlign: "center",
+                          },
                         },
-                      },
-                      {
-                        value: "Skor",
-                        style: {
-                          fontWeight: "bold",
-                          color: "white",
-                          backgroundColor: "darkgreen",
-                          textAlign: "center",
+                        {
+                          value: "Kelas",
+                          style: {
+                            fontWeight: "bold",
+                            color: "white",
+                            backgroundColor: "darkgreen",
+                            textAlign: "center",
+                          },
                         },
-                      },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Rani", style: { textAlign: "center" } },
-                      { value: "8A", style: { textAlign: "center" } },
-                      { value: 92, format: "#,##0", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Adi", style: { textAlign: "center" } },
-                      { value: "8B", style: { textAlign: "center" } },
-                      { value: 78, format: "#,##0", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Siti", style: { textAlign: "center" } },
-                      { value: "8C", style: { textAlign: "center" } },
-                      { value: 85, format: "#,##0", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Dedi", style: { textAlign: "center" } },
-                      { value: "8A", style: { textAlign: "center" } },
-                      { value: 88, format: "#,##0", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Eka", style: { textAlign: "center" } },
-                      { value: "8B", style: { textAlign: "center" } },
-                      { value: 75, format: "#,##0", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Fani", style: { textAlign: "center" } },
-                      { value: "8C", style: { textAlign: "center" } },
-                      { value: 90, format: "#,##0", style: { textAlign: "center" } },
-                    ],
-                  },
-                ],
-              },
-            ],
-          }).appendTo("#spreadsheet1");
-        }
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Aisyah", style: { textAlign: "center" } },
+                        { value: 85, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8A", style: { textAlign: "center" } },
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Budi", style: { textAlign: "center" } },
+                        { value: 70, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8B", style: { textAlign: "center" } },
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Citra", style: { textAlign: "center" } },
+                        { value: 95, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8A", style: { textAlign: "center" } },
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Dani", style: { textAlign: "center" } },
+                        { value: 60, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8B", style: { textAlign: "center" } },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            }).appendTo("#spreadsheet3");
+          }
 
-        if (window.ej && window.ej.spreadsheet && !document.querySelector("#spreadsheet2 .e-spreadsheet")) {
-          // Spreadsheet untuk Filtering (Ekstrakurikuler Basket)
-          new window.ej.spreadsheet.Spreadsheet({
-            sheets: [
-              {
-                name: "Sheet1",
-                columns: [
-                  { width: 120 },
-                  { width: 120 },
-                  { width: 150 },
-                ],
-                rows: [
-                  {
-                    cells: [
-                      {
-                        value: "Nama Siswa",
-                        style: {
-                          fontWeight: "bold",
-                          color: "white",
-                          backgroundColor: "darkgreen",
-                          textAlign: "center",
+          // Spreadsheet untuk Algoritma Filtering
+          if (!document.querySelector("#spreadsheet4 .e-spreadsheet")) {
+            new window.ej.spreadsheet.Spreadsheet({
+              sheets: [
+                {
+                  name: "Sheet1",
+                  columns: [{ width: 120 }, { width: 120 }, { width: 120 }],
+                  rows: [
+                    {
+                      cells: [
+                        {
+                          value: "Nama Siswa",
+                          style: {
+                            fontWeight: "bold",
+                            color: "white",
+                            backgroundColor: "darkgreen",
+                            textAlign: "center",
+                          },
                         },
-                      },
-                      {
-                        value: "Kelas",
-                        style: {
-                          fontWeight: "bold",
-                          color: "white",
-                          backgroundColor: "darkgreen",
-                          textAlign: "center",
+                        {
+                          value: "Nilai",
+                          style: {
+                            fontWeight: "bold",
+                            color: "white",
+                            backgroundColor: "darkgreen",
+                            textAlign: "center",
+                          },
                         },
-                      },
-                      {
-                        value: "Ekstrakurikuler",
-                        style: {
-                          fontWeight: "bold",
-                          color: "white",
-                          backgroundColor: "darkgreen",
-                          textAlign: "center",
+                        {
+                          value: "Kelas",
+                          style: {
+                            fontWeight: "bold",
+                            color: "white",
+                            backgroundColor: "darkgreen",
+                            textAlign: "center",
+                          },
                         },
-                      },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Bima", style: { textAlign: "center" } },
-                      { value: "8A", style: { textAlign: "center" } },
-                      { value: "Basket", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Lusi", style: { textAlign: "center" } },
-                      { value: "8B", style: { textAlign: "center" } },
-                      { value: "Pramuka", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Tono", style: { textAlign: "center" } },
-                      { value: "8A", style: { textAlign: "center" } },
-                      { value: "Basket", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Rina", style: { textAlign: "center" } },
-                      { value: "8C", style: { textAlign: "center" } },
-                      { value: "Basket", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Deni", style: { textAlign: "center" } },
-                      { value: "8B", style: { textAlign: "center" } },
-                      { value: "Pramuka", style: { textAlign: "center" } },
-                    ],
-                  },
-                  {
-                    cells: [
-                      { value: "Sari", style: { textAlign: "center" } },
-                      { value: "8A", style: { textAlign: "center" } },
-                      { value: "Basket", style: { textAlign: "center" } },
-                    ],
-                  },
-                ],
-              },
-            ],
-          }).appendTo("#spreadsheet2");
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Aisyah", style: { textAlign: "center" } },
+                        { value: 85, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8A", style: { textAlign: "center" } },
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Budi", style: { textAlign: "center" } },
+                        { value: 70, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8B", style: { textAlign: "center" } },
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Citra", style: { textAlign: "center" } },
+                        { value: 95, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8A", style: { textAlign: "center" } },
+                      ],
+                    },
+                    {
+                      cells: [
+                        { value: "Dani", style: { textAlign: "center" } },
+                        { value: 60, format: "#,##0", style: { textAlign: "center" } },
+                        { value: "8B", style: { textAlign: "center" } },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            }).appendTo("#spreadsheet4");
+          }
         }
       };
       document.body.appendChild(script);
@@ -207,73 +805,99 @@ const ContohPengelolaan = () => {
   return (
     <Layout>
       {/* Header judul */}
-      <h1 className="text-xl md:text-2xl text-center sm:text-lg font-bold mb-12 p-4 bg-[#255F38] text-white">
-        Contoh Penerapan Sorting dan Filtering Data
-      </h1>
-
-      {/* Studi Kasus 1: Sorting - Mengurutkan Data Peringkat Lomba Pidato Sekolah */}
-      <h2 className="text-lg md:text-xl font-bold mt-8 mb-4 px-4 text-gray-800">
-        Studi Kasus 1: Sorting - Mengurutkan Data Peringkat Lomba Pidato Sekolah
-      </h2>
-      <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4">
-        Budi, seorang siswa SMP, diminta oleh gurunya untuk mengelola data hasil lomba pidato antar kelas di sekolah. Data berisi nama siswa, kelas, dan skor. Budi ingin mengurutkan data berdasarkan skor dari tertinggi ke terendah (descending, Z ke A) untuk menentukan pemenang lomba. Dengan sorting, Budi dapat dengan cepat melihat peringkat siswa berdasarkan skor mereka. <strong>Penjelasan</strong>: Urutan "A ke Z" (ascending) mengurutkan dari nilai terkecil ke terbesar, sedangkan "Z ke A" (descending) mengurutkan dari nilai terbesar ke terkecil.
-      </p>
-
-      {/* Tabel Data Lomba Pidato */}
-      <div className="flex flex-col items-center mt-6">
-        <p className="text-gray-600 text-sm text-center mb-2 italic">
-          Tabel 13. Data Hasil Lomba Pidato
-        </p>
-        <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center">
-          <thead>
-            <tr className="bg-[#255F38] text-white">
-              <th className="border border-green-600 px-4 py-2">Nama Siswa</th>
-              <th className="border border-green-600 px-4 py-2">Kelas</th>
-              <th className="border border-green-600 px-4 py-2">Skor</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["Rani", "8A", 92],
-              ["Adi", "8B", 78],
-              ["Siti", "8C", 85],
-              ["Dedi", "8A", 88],
-              ["Eka", "8B", 75],
-              ["Fani", "8C", 90],
-            ].map((row, index) => (
-              <tr
-                key={index}
-                className={index % 2 === 0 ? "bg-green-50" : "bg-white"}
-              >
-                {row.map((cell, i) => (
-                  <td key={i} className="border border-green-600 px-4 py-2">
-                    {cell}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="flex justify-center">
+        <div className="p-4 bg-[#255F38] text-white font-bold text-lg sm:text-xl text-center rounded-lg shadow-lg mx-4 w-full max-w-[calc(100%-2rem)]">
+          CONTOH PENERAPAN SORTING DAN FILTERING DATA
+        </div>
       </div>
 
-      {/* Penyelesaian dengan Computational Thinking - Sorting */}
-      <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4 mt-6">
-        Penyelesaian dengan{" "}
-        <span className="font-semibold italic">Computational Thinking:</span>
+      {/* Instruksi untuk Siswa */}
+      <div className="flex justify-center mt-8">
+        <div className="bg-green-50 p-4 sm:p-6 mx-2 rounded-lg shadow-md mb-8 w-full max-w-[calc(100%-1rem)] sm:max-w-4xl">
+          <h3 className="text-green-800 text-base sm:text-lg font-semibold mb-3">
+            Instruksi:
+          </h3>
+          <ul className="text-green-700 text-xs sm:text-sm md:text-base space-y-2">
+            <li>1. Isi kotak kosong berdasarkan petunjuk.</li>
+            <li>2. Klik di luar kotak atau tekan Enter untuk memeriksa jawaban.</li>
+            <li>3. Kotak akan berubah hijau jika benar, merah jika salah, atau abu-abu jika kosong.</li>
+            <li>4. Gunakan spreadsheet di bagian Algoritma untuk mencoba sorting dan filtering.</li>
+            <li>5. Gunakan tombol "Langkah Selanjutnya" atau "Langkah Sebelumnya" untuk mempelajari algoritma.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Studi Kasus: Sorting */}
+      <h2 className="text-lg md:text-xl font-bold mt-10 mb-4 px-4 text-gray-800">
+        Studi Kasus 1: Sorting - Mengurutkan Data Nilai Siswa
+      </h2>
+      <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4">
+        Seorang guru ingin mengurutkan data nilai siswa untuk menentukan peringkat. Data berisi nama siswa, nilai, dan kelas. Guru ingin mengurutkan data berdasarkan nilai dari tertinggi ke terendah (Z ke A) untuk melihat siswa dengan nilai terbaik. Dengan sorting, guru dapat dengan cepat mengidentifikasi peringkat siswa. <strong>Penjelasan</strong>: Urutan "A ke Z" (ascending) mengurutkan dari nilai terkecil ke terbesar, sedangkan "Z ke A" (descending) mengurutkan dari nilai terbesar ke terkecil.
       </p>
 
-      {/* DEKOMPOSISI - Sorting */}
-      <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Lightbulb className="mr-2 w-5 h-5" /> Dekomposisi
+      {/* Tabel: Data Siswa */}
+      <div className="flex flex-col items-center mt-2">
+        <p className="text-gray-600 text-xs sm:text-sm text-center mb-2 italic">Tabel. Data Nilai Siswa</p>
+        <div className="w-full overflow-x-auto flex justify-center">
+          <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center text-xs sm:text-sm">
+            <thead>
+              <tr className="bg-[#255F38] text-white">
+                <th className="border border-green-600 px-4 py-2">Nama Siswa</th>
+                <th className="border border-green-600 px-4 py-2">Nilai</th>
+                <th className="border border-green-600 px-4 py-2">Kelas</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Aisyah", 85, "8A"],
+                ["Budi", 70, "8B"],
+                ["Citra", 95, "8A"],
+                ["Dani", 60, "8B"],
+              ].map((row, index) => (
+                <tr key={index} className={index % 2 === 0 ? "bg-green-50" : "bg-white"}>
+                  {row.map((cell, i) => (
+                    <td key={i} className="border border-green-600 px-4 py-2">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+      </div>
+
+      <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4 mt-6">
+        Penyelesaian dengan <span className="font-semibold italic">Computational Thinking:</span>
+      </p>
+
+      {/* DEKOMPOSISI SORTING */}
+      <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative">
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <Lightbulb className="mr-2 w-4 sm:w-5 h-4 sm:h-5" /> DEKOMPOSISI SORTING
+        </div>
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li className="list-none -ml-6">
             Sebelum melakukan sorting, kita perlu membagi masalah menjadi langkah-langkah kecil:
           </li>
-          <li>Mengumpulkan data hasil lomba pidato dalam bentuk tabel.</li>
+          <li>Mengumpulkan data nilai siswa dalam bentuk tabel.</li>
           <li>
-            Menentukan kolom yang akan diurutkan, yaitu kolom Skor.
+            Menentukan kolom yang akan diurutkan, yaitu kolom "
+            <input
+              type="text"
+              value={inputs.sorting.dekomposisi[0]}
+              onChange={(e) => handleInputChange("sorting", "dekomposisi", 0, e.target.value)}
+              onBlur={(e) => handleInputChange("sorting", "dekomposisi", 0, e.target.value)}
+              className={`border-2 rounded px-1 mx-1 text-xs sm:text-sm md:text-base ${
+                inputs.sorting.dekomposisi[0].toLowerCase() === "nilai" && inputs.sorting.dekomposisi[0]
+                  ? "border-green-500"
+                  : inputs.sorting.dekomposisi[0]
+                  ? "border-red-500"
+                  : "border-gray-300"
+              }`}
+              placeholder="Isi jawaban"
+            />
+            ".
           </li>
           <li>
             Menggunakan fitur sorting di spreadsheet untuk mengurutkan data dari terbesar ke terkecil (descending, Z ke A).
@@ -281,269 +905,343 @@ const ContohPengelolaan = () => {
         </ul>
       </div>
 
-      {/* Pengenalan Pola - Sorting */}
+      {/* PENGENALAN POLA SORTING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <BarChart className="w-5 h-5 mr-2" /> PENGENALAN POLA
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <BarChart className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> PENGENALAN POLA SORTING
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li>
-            Setelah sorting, skor tertinggi akan berada di posisi atas.
+            Sorting akan mengurutkan data siswa berdasarkan kolom Nilai dari Z ke A (descending).
           </li>
           <li>
-            Data akan tersusun secara berurutan dari skor terbesar ke terkecil, memudahkan identifikasi pemenang lomba.
-          </li>
-          <li>
-            Pola ini membantu Budi melihat peringkat siswa dengan jelas untuk menentukan pemenang.
+            Setelah sorting, nilai tertinggi akan berada di posisi "
+            <input
+              type="text"
+              value={inputs.sorting.pengenalanPola[0]}
+              onChange={(e) => handleInputChange("sorting", "pengenalanPola", 0, e.target.value)}
+              onBlur={(e) => handleInputChange("sorting", "pengenalanPola", 0, e.target.value)}
+              className={`border-2 rounded px-1 mx-1 text-xs sm:text-sm md:text-base ${
+                inputs.sorting.pengenalanPola[0].toLowerCase() === "atas" && inputs.sorting.pengenalanPola[0]
+                  ? "border-green-500"
+                  : inputs.sorting.pengenalanPola[0]
+                  ? "border-red-500"
+                  : "border-gray-300"
+              }`}
+              placeholder="Isi jawaban"
+            />
+            ".
           </li>
         </ul>
       </div>
 
-      {/* Abstraksi - Sorting */}
+      {/* ABSTRAKSI SORTING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Filter className="w-5 h-5 mr-2" /> ABSTRAKSI
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <Filter className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ABSTRAKSI SORTING
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li>
-            Fokus hanya pada kolom Skor untuk mengurutkan data.
+            Abaikan kolom yang tidak relevan
+            
           </li>
           <li>
-            Informasi seperti nama siswa dan kelas hanya diperlukan setelah pengurutan untuk mengidentifikasi pemenang.
-          </li>
-          <li>
-            Abaikan detail lain yang tidak relevan untuk tujuan sorting.
+            Fokus pada kolom "
+            <input
+              type="text"
+              value={inputs.sorting.abstraksi[1]}
+              onChange={(e) => handleInputChange("sorting", "abstraksi", 1, e.target.value)}
+              onBlur={(e) => handleInputChange("sorting", "abstraksi", 1, e.target.value)}
+              className={`border-2 rounded px-1 mx-1 text-xs sm:text-sm md:text-base ${
+                inputs.sorting.abstraksi[1].toLowerCase() === "nama" && inputs.sorting.abstraksi[1]
+                  ? "border-green-500"
+                  : inputs.sorting.abstraksi[1]
+                  ? "border-red-500"
+                  : "border-gray-300"
+              }`}
+              placeholder="Isi jawaban"
+            />
+            " dan "Nilai".
           </li>
         </ul>
       </div>
 
-      {/* Algoritma - Sorting */}
+      {/* ALGORITMA SORTING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Code className="w-5 h-5 mr-2" /> ALGORITMA
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <Code className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ALGORITMA SORTING
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
-          <li className="list-none -ml-6">
-            Untuk mengurutkan data di spreadsheet, ikuti langkah-langkah berikut:
-          </li>
-          <li>Blok seluruh data, termasuk judul kolom (header), misalnya kolom Nama Siswa, Kelas, dan Skor.</li>
-          <li>Klik kanan pada data yang sudah diblok.</li>
-          <li>Pilih menu Sort dari daftar yang muncul.</li>
+        <p className="text-gray-700 text-xs sm:text-sm md:text-base px-4 mt-2">
+          Gunakan spreadsheet di bawah dan ikuti langkah-langkah sorting satu per satu!
+        </p>
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li>
-            Jika hanya ingin mengurutkan satu kolom, pilih Sort A to Z (dari kecil ke besar) atau Sort Z to A (dari besar ke kecil).
+            <span className="font-semibold">Langkah {sortingStep + 1} dari {sortingAlgorithmSteps.length}</span>
+            <br />
+            {sortingAlgorithmSteps[sortingStep]}
           </li>
-          <li>
-            Jika ingin mengurutkan berdasarkan lebih dari satu kolom, pilih Custom Sort.
-          </li>
-          <li>Misalnya, mengurutkan data pada tabel berdasarkan kolom Skor agar siswa dengan skor tertinggi muncul di atas.</li>
         </ul>
-
-        <div className="w-full flex justify-center px-4">
+        <div className="flex justify-center mt-4 space-x-2">
+          <button
+            onClick={() => handlePreviousStep(sortingStep, setSortingStep)}
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base cursor-pointer"
+          >
+            Langkah Sebelumnya
+          </button>
+          <button
+            onClick={() => handleNextStep(sortingStep, setSortingStep, sortingAlgorithmSteps.length)}
+            className="bg-green-800 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base cursor-pointer"
+          >
+            {sortingStep < sortingAlgorithmSteps.length - 1 ? "Langkah Selanjutnya" : "Ulangi"}
+          </button>
+        </div>
+        <div className="w-full flex justify-center px-4 mt-4">
           <div
-            id="spreadsheet1"
+            id="spreadsheet3"
             className="w-full max-w-full md:max-w-screen-md"
             style={{ height: "400px" }}
           ></div>
         </div>
       </div>
 
-      {/* Kesimpulan dan Analisis - Sorting */}
+      {/* KESIMPULAN & ANALISIS SORTING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <CheckCircle className="w-5 h-5 mr-2" /> KESIMPULAN & ANALISIS
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> KESIMPULAN & ANALISIS SORTING
         </div>
-        <p className="text-gray-600 text-sm md:text-base mt-6">
-          Dengan sorting, Budi dapat dengan cepat mengidentifikasi pemenang lomba pidato tanpa perlu memeriksa data secara manual.
+        <p className="text-gray-700 text-xs sm:text-sm md:text-base px-4 mt-6">
+          Dengan sorting, guru dapat dengan cepat mengidentifikasi siswa dengan nilai tertinggi tanpa memeriksa data secara manual.
         </p>
-        <p className="text-gray-600 text-sm font-semibold md:text-base">
-          Analisis
-        </p>
-        <ul className="list-disc list-inside text-gray-600 text-sm md:text-base mt-4 space-y-2">
+        <h4 className="text-gray-800 font-semibold px-4">Analisis</h4>
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 text-xs sm:text-sm md:text-base">
           <li
             className="text-justify"
             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
           >
-            Setelah sorting (Z ke A), Rani (92), Fani (90), Dedi (88), Siti (85), Adi (78), dan Eka (75) adalah peringkat siswa berdasarkan skor.
+            Setelah sorting (Z ke A), Citra (95), Aisyah (85), Budi (70), dan Dani (60) adalah peringkat siswa berdasarkan nilai.
           </li>
           <li
             className="text-justify"
             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
           >
-            Sorting dengan urutan descending (Z ke A) membuat data lebih terorganisir, memudahkan Budi menentukan pemenang lomba pidato.
+            Sorting dengan urutan descending (Z ke A) membuat data lebih terorganisir, memudahkan guru menentukan peringkat siswa.
           </li>
         </ul>
       </div>
 
-      {/* Studi Kasus 2: Filtering - Menampilkan Data Siswa yang Mengikuti Ekstrakurikuler Basket */}
+      {/* Studi Kasus: Filtering */}
       <h2 className="text-lg md:text-xl font-bold mt-12 mb-4 px-4 text-gray-800">
-        Studi Kasus 2: Filtering - Menampilkan Data Siswa yang Mengikuti Ekstrakurikuler Basket
+        Studi Kasus 2: Filtering - Menampilkan Data Siswa Kelas 8A
       </h2>
-      <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4">
-        Sari, seorang siswa SMP dan anggota tim basket sekolah, diminta mengelola data kegiatan ekstrakurikuler siswa yang berisi nama siswa, kelas, dan ekstrakurikuler. Sari ingin menyaring siswa yang mengikuti ekstrakurikuler Basket untuk membuat daftar anggota tim. Dengan filtering, Sari dapat dengan cepat memilih siswa yang relevan tanpa memeriksa setiap entri secara manual.
+      <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4">
+        Guru ingin menyaring data siswa untuk hanya menampilkan siswa dari kelas 8A guna analisis nilai kelas tersebut. Data berisi nama siswa, nilai, dan kelas. Dengan filtering, guru dapat dengan cepat memilih siswa yang relevan tanpa memeriksa setiap entri secara manual.
       </p>
 
-      {/* Tabel Data Ekstrakurikuler */}
-      <div className="flex flex-col items-center mt-6">
-        <p className="text-gray-600 text-sm text-center mb-2 italic">
-          Tabel 14. Data Kegiatan Ekstrakurikuler
-        </p>
-        <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center">
-          <thead>
-            <tr className="bg-[#255F38] text-white">
-              <th className="border border-green-600 px-4 py-2">Nama Siswa</th>
-              <th className="border border-green-600 px-4 py-2">Kelas</th>
-              <th className="border border-green-600 px-4 py-2">Ekstrakurikuler</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["Bima", "8A", "Basket"],
-              ["Lusi", "8B", "Pramuka"],
-              ["Tono", "8A", "Basket"],
-              ["Rina", "8C", "Basket"],
-              ["Deni", "8B", "Pramuka"],
-              ["Sari", "8A", "Basket"],
-            ].map((row, index) => (
-              <tr
-                key={index}
-                className={index % 2 === 0 ? "bg-green-50" : "bg-white"}
-              >
-                {row.map((cell, i) => (
-                  <td key={i} className="border border-green-600 px-4 py-2">
-                    {cell}
-                  </td>
-                ))}
+      {/* Tabel: Data Siswa */}
+      <div className="flex flex-col items-center mt-2">
+        <p className="text-gray-600 text-xs sm:text-sm text-center mb-2 italic">Tabel. Data Nilai Siswa</p>
+        <div className="w-full overflow-x-auto flex justify-center">
+          <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center text-xs sm:text-sm">
+            <thead>
+              <tr className="bg-[#255F38] text-white">
+                <th className="border border-green-600 px-4 py-2">Nama Siswa</th>
+                <th className="border border-green-600 px-4 py-2">Nilai</th>
+                <th className="border border-green-600 px-4 py-2">Kelas</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {[
+                ["Aisyah", 85, "8A"],
+                ["Budi", 70, "8B"],
+                ["Citra", 95, "8A"],
+                ["Dani", 60, "8B"],
+              ].map((row, index) => (
+                <tr key={index} className={index % 2 === 0 ? "bg-green-50" : "bg-white"}>
+                  {row.map((cell, i) => (
+                    <td key={i} className="border border-green-600 px-4 py-2">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      {/* Penyelesaian dengan Computational Thinking - Filtering */}
-      <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4 mt-6">
-        Penyelesaian dengan{" "}
-        <span className="font-semibold italic">Computational Thinking:</span>
+      <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4 mt-6">
+        Penyelesaian dengan <span className="font-semibold italic">Computational Thinking:</span>
       </p>
 
-      {/* DEKOMPOSISI - Filtering */}
+      {/* DEKOMPOSISI FILTERING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Lightbulb className="mr-2 w-5 h-5" /> Dekomposisi
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <Lightbulb className="mr-2 w-4 sm:w-5 h-4 sm:h-5" /> DEKOMPOSISI FILTERING
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li className="list-none -ml-6">
             Sebelum melakukan filtering, kita perlu membagi masalah menjadi langkah-langkah kecil:
           </li>
-          <li>Mengumpulkan data kegiatan ekstrakurikuler dalam bentuk tabel.</li>
+          <li>Mengumpulkan data siswa dalam bentuk tabel.</li>
           <li>
-            Menentukan kriteria penyaringan, yaitu ekstrakurikuler "Basket".
+            Menentukan kriteria penyaringan, yaitu kolom "
+            <input
+              type="text"
+              value={inputs.filtering.dekomposisi[0]}
+              onChange={(e) => handleInputChange("filtering", "dekomposisi", 0, e.target.value)}
+              onBlur={(e) => handleInputChange("filtering", "dekomposisi", 0, e.target.value)}
+              className={`border-2 rounded px-1 mx-1 text-xs sm:text-sm md:text-base ${
+                inputs.filtering.dekomposisi[0].toLowerCase() === "kelas" && inputs.filtering.dekomposisi[0]
+                  ? "border-green-500"
+                  : inputs.filtering.dekomposisi[0]
+                  ? "border-red-500"
+                  : "border-gray-300"
+              }`}
+              placeholder="Isi jawaban"
+            />
+            ".
           </li>
           <li>
-            Menggunakan fitur filtering di spreadsheet untuk menampilkan hanya siswa yang mengikuti ekstrakurikuler Basket.
+            Menggunakan fitur filtering di spreadsheet untuk menampilkan hanya siswa kelas 8A.
           </li>
         </ul>
       </div>
 
-      {/* Pengenalan Pola - Filtering */}
+      {/* PENGENALAN POLA FILTERING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <BarChart className="w-5 h-5 mr-2" /> PENGENALAN POLA
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <BarChart className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> PENGENALAN POLA FILTERING
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li>
-            Setelah filtering, hanya siswa dengan ekstrakurikuler Basket yang ditampilkan.
+            Filtering akan menyaring data siswa berdasarkan kolom Kelas.
           </li>
           <li>
-            Data menunjukkan pola: hanya siswa yang relevan dengan tim basket yang muncul.
-          </li>
-          <li>
-            Pola ini membantu Sari fokus pada anggota tim basket untuk keperluan daftar.
+            Setelah filtering, hanya siswa kelas "
+            <input
+              type="text"
+              value={inputs.filtering.pengenalanPola[0]}
+              onChange={(e) => handleInputChange("filtering", "pengenalanPola", 0, e.target.value)}
+              onBlur={(e) => handleInputChange("filtering", "pengenalanPola", 0, e.target.value)}
+              className={`border-2 rounded px-1 mx-1 text-xs sm:text-sm md:text-base ${
+                inputs.filtering.pengenalanPola[0].toLowerCase() === "8a" && inputs.filtering.pengenalanPola[0]
+                  ? "border-green-500"
+                  : inputs.filtering.pengenalanPola[0]
+                  ? "border-red-500"
+                  : "border-gray-300"
+              }`}
+              placeholder="Isi jawaban"
+            />
+            " yang ditampilkan.
           </li>
         </ul>
       </div>
 
-      {/* Abstraksi - Filtering */}
+      {/* ABSTRAKSI FILTERING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Filter className="w-5 h-5 mr-2" /> ABSTRAKSI
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <Filter className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ABSTRAKSI FILTERING
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li>
-            Fokus hanya pada kolom Ekstrakurikuler untuk menyaring siswa yang mengikuti Basket.
+            Abaikan kolom yang tidak relevan
           </li>
           <li>
-            Informasi seperti kelas diabaikan karena tidak relevan untuk tujuan filtering.
-          </li>
-          <li>
-            Nama siswa hanya diperlukan setelah penyaringan untuk membuat daftar anggota tim.
+            Fokus pada kolom "
+            <input
+              type="text"
+              value={inputs.filtering.abstraksi[1]}
+              onChange={(e) => handleInputChange("filtering", "abstraksi", 1, e.target.value)}
+              onBlur={(e) => handleInputChange("filtering", "abstraksi", 1, e.target.value)}
+              className={`border-2 rounded px-1 mx-1 text-xs sm:text-sm md:text-base ${
+                inputs.filtering.abstraksi[1].toLowerCase() === "kelas" && inputs.filtering.abstraksi[1]
+                  ? "border-green-500"
+                  : inputs.filtering.abstraksi[1]
+                  ? "border-red-500"
+                  : "border-gray-300"
+              }`}
+              placeholder="Isi jawaban"
+            />
+            " dan "Nama".
           </li>
         </ul>
       </div>
 
-      {/* Algoritma - Filtering */}
+      {/* ALGORITMA FILTERING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <Code className="w-5 h-5 mr-2" /> ALGORITMA
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <Code className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ALGORITMA FILTERING
         </div>
-        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6">
-          <li className="list-none -ml-6">
-            Untuk menyaring data di spreadsheet, ikuti langkah-langkah berikut:
-          </li>
-          <li>Blok seluruh data, termasuk judul kolom (header), agar semua data bisa difilter dengan benar.</li>
-          <li>Klik kanan pada kolom "Ekstrakurikuler", lalu pilih opsi Filter.</li>
+        <p className="text-gray-700 text-xs sm:text-sm md:text-base px-4 mt-2">
+          Gunakan spreadsheet di bawah dan ikuti langkah-langkah filtering satu per satu!
+        </p>
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
           <li>
-            Pilih kriteria filter → Misalnya, jika ingin menampilkan hanya siswa dari ekstrakurikuler Basket, centang "Basket" saja.
+            <span className="font-semibold">Langkah {filteringStep + 1} dari {filteringAlgorithmSteps.length}</span>
+            <br />
+            {filteringAlgorithmSteps[filteringStep]}
           </li>
-          <li>Jika ingin menampilkan semua ekstrakurikuler, centang "Select All".</li>
         </ul>
-
-        <div className="w-full flex justify-center px-4">
+        <div className="flex justify-center mt-4 space-x-2">
+          <button
+            onClick={() => handlePreviousStep(filteringStep, setFilteringStep)}
+            className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base cursor-pointer"
+          >
+            Langkah Sebelumnya
+          </button>
+          <button
+            onClick={() => handleNextStep(filteringStep, setFilteringStep, filteringAlgorithmSteps.length)}
+            className="bg-green-800 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base cursor-pointer"
+          >
+            {filteringStep < filteringAlgorithmSteps.length - 1 ? "Langkah Selanjutnya" : "Ulangi"}
+          </button>
+        </div>
+        <div className="w-full flex justify-center px-4 mt-4">
           <div
-            id="spreadsheet2"
+            id="spreadsheet4"
             className="w-full max-w-full md:max-w-screen-md"
             style={{ height: "400px" }}
           ></div>
         </div>
+        
       </div>
 
-      {/* Kesimpulan dan Analisis - Filtering */}
+      {/* KESIMPULAN & ANALISIS FILTERING */}
       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-        <div className="absolute -top-6 left-4 bg-green-800 text-white px-5 py-2 rounded-t-lg text-lg font-bold flex items-center shadow-lg">
-          <CheckCircle className="w-5 h-5 mr-2" /> KESIMPULAN & ANALISIS
+        <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
+          <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> KESIMPULAN & ANALISIS FILTERING
         </div>
-        <p className="text-gray-600 text-sm md:text-base mt-6">
-          Dengan filtering, Sari dapat dengan cepat mengidentifikasi siswa yang mengikuti ekstrakurikuler Basket untuk membuat daftar anggota tim tanpa perlu memeriksa setiap entri secara manual.
+        <p className="text-gray-700 text-xs sm:text-sm md:text-base px-4 mt-6">
+          Dengan filtering, guru dapat dengan cepat mengidentifikasi siswa kelas 8A untuk analisis nilai tanpa memeriksa setiap entri secara manual.
         </p>
-        <p className="text-gray-600 text-sm font-semibold md:text-base">
-          Analisis
-        </p>
-        <ul className="list-disc list-inside text-gray-600 text-sm md:text-base mt-4 space-y-2">
+        <h4 className="text-gray-800 font-semibold px-4">Analisis</h4>
+        <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 text-xs sm:text-sm md:text-base">
           <li
             className="text-justify"
             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
           >
-            Setelah filtering, hanya Bima, Tono, Rina, dan Sari yang ditampilkan sebagai anggota tim Basket.
+            Setelah filtering, hanya Aisyah dan Citra ditampilkan sebagai siswa kelas 8A.
           </li>
           <li
             className="text-justify"
             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
           >
-            Filtering menghemat waktu Sari dalam memilih siswa yang relevan dan memastikan daftar anggota tim fokus pada ekstrakurikuler yang diinginkan.
+            Filtering menghemat waktu guru dalam memilih siswa yang relevan dan memastikan fokus pada kelas yang diinginkan.
           </li>
         </ul>
       </div>
 
       {/* Tombol Navigasi */}
-      <div className="flex justify-between mt-8">
+      <div className="flex flex-row justify-between mt-8 px-4">
         <a
           href="/pengelolaan-data"
-          className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-base shadow-md"
+          className="bg-gray-500 text-white px-3 sm:px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer"
         >
           ← Sebelumnya
         </a>
         <a
           href="/aktivitas-pengelolaan"
-          className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md"
+          className="bg-green-800 text-white px-3 sm:px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer"
         >
           Selanjutnya →
         </a>

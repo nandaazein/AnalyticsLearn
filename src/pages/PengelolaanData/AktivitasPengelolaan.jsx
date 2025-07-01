@@ -1,3 +1,5 @@
+
+
 // import { useState, useEffect } from "react";
 // import Layout from "../../components/Layout";
 
@@ -182,16 +184,6 @@
 //       ));
 //   };
 
-//   // Fungsi untuk memeriksa apakah semua jawaban benar
-//   const semuaJawabanBenar = () => {
-//     const langkahBenar = pesanSoal1 === "Jawaban benar! Langkah-langkah ini mencerminkan cara yang tepat untuk mengurutkan nilai siswa.";
-//     const soal2Benar = pesanSoal2 === "Jawaban benar! Sorting mengurutkan data, sedangkan filtering menyaring data berdasarkan kriteria.";
-//     const soal3Benar = pesanSoal3 === "Jawaban benar! Metode descending digunakan untuk mengurutkan dari nilai terbesar ke terkecil.";
-//     const soal4Benar = pesanSoal4 === "Jawaban benar! Filtering digunakan untuk menampilkan data berdasarkan kategori tertentu.";
-//     const soal5Benar = pesanSoal5 === "Jawaban benar! Filtering menyaring data dan dapat diterapkan pada teks maupun angka.";
-//     return langkahBenar && soal2Benar && soal3Benar && soal4Benar && soal5Benar;
-//   };
-
 //   return (
 //     <Layout>
 //       {/* Judul Halaman */}
@@ -235,13 +227,13 @@
 //             <div className="flex items-center px-0 mb-2">
 //               <button
 //                 onClick={periksaJawabanSoal1}
-//                 className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200"
+//                 className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
 //               >
 //                 Periksa
 //               </button>
 //               <button
 //                 onClick={kosongkanUrutan}
-//                 className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200"
+//                 className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
 //               >
 //                 Hapus
 //               </button>
@@ -293,13 +285,13 @@
 //             <div className="flex items-center px-0 mb-2">
 //               <button
 //                 onClick={periksaJawabanSoal2}
-//                 className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200"
+//                 className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
 //               >
 //                 Periksa
 //               </button>
 //               <button
 //                 onClick={kosongkanJawabanSoal2}
-//                 className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200"
+//                 className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
 //               >
 //                 Hapus
 //               </button>
@@ -336,13 +328,13 @@
 //             />
 //             <button
 //               onClick={periksaJawabanSoal3}
-//               className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200"
+//               className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
 //             >
 //               Periksa
 //             </button>
 //             <button
 //               onClick={kosongkanJawabanSoal3}
-//               className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200"
+//               className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
 //             >
 //               Hapus
 //             </button>
@@ -378,13 +370,13 @@
 //             />
 //             <button
 //               onClick={periksaJawabanSoal4}
-//               className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200"
+//               className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
 //             >
 //               Periksa
 //             </button>
 //             <button
 //               onClick={kosongkanJawabanSoal4}
-//               className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200"
+//               className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
 //             >
 //               Hapus
 //             </button>
@@ -454,13 +446,13 @@
 //             <div className="flex items-center px-0 mb-2">
 //               <button
 //                 onClick={periksaJawabanSoal5}
-//                 className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200"
+//                 className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
 //               >
 //                 Periksa
 //               </button>
 //               <button
 //                 onClick={kosongkanJawabanSoal5}
-//                 className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200"
+//                 className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
 //               >
 //                 Hapus
 //               </button>
@@ -480,21 +472,16 @@
 //         {/* Tombol Navigasi */}
 //         <div className="flex justify-between mt-8 px-4">
 //           <button
-//             onClick={() => (window.location.href = "/aktivitas-peringkasan")}
+//             onClick={() => (window.location.href = "/berlatih-pengelolaan")}
 //             className="px-5 py-2 text-base text-white transition duration-300 bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 cursor-pointer"
 //           >
 //             ← Sebelumnya
 //           </button>
 //           <button
-//             onClick={() => (window.location.href = "/petunjuk-kuis1")}
-//             className={`px-5 py-2 text-base text-white transition duration-300 rounded-lg shadow-md cursor-pointer ${
-//               semuaJawabanBenar()
-//                 ? "bg-[#255F38] hover:bg-green-700"
-//                 : "bg-gray-400 cursor-not-allowed"
-//             }`}
-//             disabled={!semuaJawabanBenar()}
+//             onClick={() => (window.location.href = "/berlatih-pengelolaan")}
+//             className="px-5 py-2 text-base text-white transition duration-300 bg-[#255F38] rounded-lg shadow-md hover:bg-green-700 cursor-pointer"
 //           >
-//             Mulai Kuis →
+//             Selanjutnya →
 //           </button>
 //         </div>
 //       </div>
@@ -503,6 +490,7 @@
 // };
 
 // export default AktivitasPengelolaan;
+
 
 import { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
@@ -529,7 +517,7 @@ const AktivitasPengelolaan = () => {
   const [pesanSoal1, setPesanSoal1] = useState("");
   // State untuk soal nomor 2: jawaban inputan pertama ("mengurutkan")
   const [jawabanSoal2a, setJawabanSoal2a] = useState("");
-  // State untuk soal nomor 2: jawaban inputan kedua ("descending")
+  // State untuk soal nomor 2: jawaban inputan kedua ("menyaring")
   const [jawabanSoal2b, setJawabanSoal2b] = useState("");
   // State untuk soal nomor 2: pesan feedback
   const [pesanSoal2, setPesanSoal2] = useState("");
@@ -564,8 +552,8 @@ const AktivitasPengelolaan = () => {
       langkahDisusun.length === jawabanBenar.length;
     setPesanSoal1(
       isCorrect
-        ? "Jawaban benar! Langkah-langkah ini mencerminkan cara yang tepat untuk mengurutkan nilai siswa."
-        : "Jawaban salah. Ayo coba lagi!"
+        ? "Benar! Urutan langkah cocok untuk sorting."
+        : "Salah. Susun ulang langkah untuk mengurutkan nilai."
     );
   };
 
@@ -583,8 +571,8 @@ const AktivitasPengelolaan = () => {
       jawabanSoal2b.trim().toLowerCase() === "menyaring";
     setPesanSoal2(
       benar
-        ? "Jawaban benar! Sorting mengurutkan data, sedangkan filtering menyaring data berdasarkan kriteria."
-        : "Jawaban salah. Ayo coba lagi!"
+        ? "Benar! Sorting untuk urutan, filtering untuk saring data."
+        : "Salah. Cek istilah untuk mengurutkan dan menyaring data."
     );
   };
 
@@ -600,8 +588,8 @@ const AktivitasPengelolaan = () => {
     const benar = jawabanSoal3.trim().toLowerCase() === "descending";
     setPesanSoal3(
       benar
-        ? "Jawaban benar! Metode descending digunakan untuk mengurutkan dari nilai terbesar ke terkecil."
-        : "Jawaban salah. Ayo coba lagi!"
+        ? "Benar! Descending untuk urutan terbesar ke terkecil."
+        : "Salah. Pikirkan metode untuk urutan terbesar ke terkecil."
     );
   };
 
@@ -616,8 +604,8 @@ const AktivitasPengelolaan = () => {
     const benar = jawabanSoal4.trim().toLowerCase() === "filtering";
     setPesanSoal4(
       benar
-        ? "Jawaban benar! Filtering digunakan untuk menampilkan data berdasarkan kategori tertentu."
-        : "Jawaban salah. Ayo coba lagi!"
+        ? "Benar! Filtering untuk menampilkan data tertentu."
+        : "Salah. Cek fitur untuk memilih data berdasarkan kategori."
     );
   };
 
@@ -636,8 +624,8 @@ const AktivitasPengelolaan = () => {
       !jawabanSoal5.mengubah;
     setPesanSoal5(
       benar
-        ? "Jawaban benar! Filtering menyaring data dan dapat diterapkan pada teks maupun angka."
-        : "Jawaban salah. Ayo coba lagi!"
+        ? "Benar! Filtering saring data untuk teks dan angka."
+        : "Salah. Pilih pernyataan yang sesuai dengan filtering."
     );
   };
 
@@ -674,78 +662,78 @@ const AktivitasPengelolaan = () => {
 
   // Fungsi untuk menampilkan langkah yang bisa diseret (soal nomor 1)
   const renderLangkahSeret = (items) => {
-    return items
-      .filter((item) => !langkahDisusun.includes(item))
-      .map((item, index) => (
-        <div
-          key={index}
-          draggable
-          onDragStart={(e) => handleDrag(e, item)}
-          className="border border-gray-400 p-3 rounded bg-white shadow-sm mb-2 cursor-move text-sm md:text-base text-gray-700"
-        >
-          {item}
-        </div>
-      ));
+    const filteredItems = items.filter((item) => !langkahDisusun.includes(item));
+    return filteredItems.map((item, index) => (
+      <div
+        key={index}
+        draggable
+        onDragStart={(e) => handleDrag(e, item)}
+        className="border border-gray-400 p-2 sm:p-3 rounded bg-white shadow-sm mb-2 cursor-move text-xs sm:text-sm md:text-base text-gray-700"
+      >
+        {item}
+      </div>
+    ));
   };
 
   return (
     <Layout>
       {/* Judul Halaman */}
-      <div className="p-4 bg-[#255F38] mb-4 text-white font-bold text-lg text-center rounded-lg shadow-lg">
+      <div className="p-2 sm:p-4 bg-[#255F38] mb-2 sm:mb-4 text-white font-bold text-sm sm:text-lg text-center rounded-lg shadow-lg">
         AKTIVITAS PENGELOLAAN DATA
       </div>
 
       {/* Konten Utama dengan Latar Belakang Putih */}
-      <div className="p-6 bg-white">
+      <div className="p-2 sm:p-6 bg-white">
         {/* Petunjuk Umum */}
-        <section className="p-4 bg-green-100 rounded shadow-md mb-6">
-          <h3 className="text-lg font-semibold text-[#255F38] mb-2">Petunjuk Umum</h3>
-          <ol className="list-decimal list-inside text-gray-700 space-y-1 text-sm md:text-base">
+        <section className="p-2 sm:p-4 bg-green-100 rounded shadow-md mb-2 sm:mb-6">
+          <h3 className="text-sm sm:text-lg font-semibold text-[#255F38] mb-2">Petunjuk Umum</h3>
+          <ol className="list-decimal list-inside text-gray-700 space-y-1 text-xs sm:text-sm md:text-base">
             <li>Halaman ini terdiri dari lima soal yang masing-masing menguji pemahaman Anda mengenai pengelolaan data.</li>
             <li>Setiap soal memiliki kolom masukan untuk menjawab, tombol Periksa untuk memeriksa jawaban, dan tombol Hapus untuk mengosongkan jawaban jika ingin mencoba lagi.</li>
             <li>Bacalah soal dengan cermat, masukkan jawaban Anda, dan periksa hasilnya untuk mendapatkan umpan balik.</li>
           </ol>
         </section>
+
         {/* Soal 1: Susun langkah-langkah sorting */}
-        <div className="p-6 mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-          <p className="px-4 mb-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base flex items-center">
-            <span className="text-lg font-bold text-green-700 mr-2">1.</span>
+        <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
+          <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
+            <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">1.</span>
             Seret dan susun langkah-langkah berikut agar benar untuk mengurutkan nilai siswa dari tertinggi ke terendah:
           </p>
-          <div className="px-4">
-            <div className="mb-4">{renderLangkahSeret(daftarLangkah)}</div>
+          <div className="px-2 sm:px-4">
+            <div className="mb-2 sm:mb-4">{renderLangkahSeret(daftarLangkah)}</div>
             <div
-              className="border border-gray-400 p-4 rounded mb-4 min-h-[150px] bg-gray-50"
+              className="border border-gray-400 p-2 sm:p-4 rounded mb-2 sm:mb-4 min-h-[150px] bg-gray-50"
               onDrop={handleDrop}
               onDragOver={allowDrop}
             >
               {langkahDisusun.map((item, index) => (
                 <div
                   key={index}
-                  className="border border-gray-400 p-3 rounded bg-white shadow-sm mb-2 text-sm md:text-base text-gray-700"
+                  className="border border-gray-400 p-2 sm:p-3 rounded bg-white shadow-sm mb-2 text-xs sm:text-sm md:text-base text-gray-700"
                 >
                   {index + 1}. {item}
                 </div>
               ))}
             </div>
-            <div className="flex items-center px-0 mb-2">
+            <div className="flex flex-col sm:flex-row items-center px-0 mb-2 sm:mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
               <button
                 onClick={periksaJawabanSoal1}
-                className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 text-xs sm:text-base cursor-pointer"
               >
                 Periksa
               </button>
               <button
                 onClick={kosongkanUrutan}
-                className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
               >
                 Hapus
               </button>
             </div>
             {pesanSoal1 && (
               <p
-                className={`text-sm mt-2 font-bold ${
-                  pesanSoal1.includes("Jawaban benar") ? "text-green-700" : "text-red-700"
+                className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                  pesanSoal1.startsWith("Benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
                 }`}
               >
                 {pesanSoal1}
@@ -755,55 +743,55 @@ const AktivitasPengelolaan = () => {
         </div>
 
         {/* Soal 2: Isi titik-titik */}
-        <div className="p-6 mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-          <p className="px-4 mb-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base flex items-center">
-            <span className="text-lg font-bold text-green-700 mr-2">2.</span>
+        <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
+          <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
+            <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">2.</span>
             Sorting digunakan untuk ... data berdasarkan kriteria tertentu,
             sedangkan filtering digunakan untuk ... data yang tidak memenuhi syarat tertentu.
           </p>
-          <div className="px-4 space-y-3">
-            <div className="flex items-center gap-2">
-              <label className="text-gray-700 text-sm md:text-base font-medium">
+          <div className="px-2 sm:px-4 space-y-3">
+            <div className="flex flex-col sm:flex-row items-center gap-2">
+              <label className="text-gray-700 text-xs sm:text-sm md:text-base font-medium">
                 Jawaban 1:
               </label>
               <input
                 type="text"
-                className="border p-2 rounded-lg w-full max-w-md text-sm md:text-base text-gray-700"
+                className="border p-2 rounded-lg w-full sm:max-w-md text-xs sm:text-sm md:text-base text-gray-700"
                 placeholder="Jawaban..."
                 value={jawabanSoal2a}
                 onChange={(e) => setJawabanSoal2a(e.target.value)}
               />
             </div>
-            <div className="flex items-center gap-2">
-              <label className="text-gray-700 text-sm md:text-base font-medium">
+            <div className="flex flex-col sm:flex-row items-center gap-2">
+              <label className="text-gray-700 text-xs sm:text-sm md:text-base font-medium">
                 Jawaban 2:
               </label>
               <input
                 type="text"
-                className="border p-2 rounded-lg w-full max-w-md text-sm md:text-base text-gray-700"
+                className="border p-2 rounded-lg w-full sm:max-w-md text-xs sm:text-sm md:text-base text-gray-700"
                 placeholder="Jawaban..."
                 value={jawabanSoal2b}
                 onChange={(e) => setJawabanSoal2b(e.target.value)}
               />
             </div>
-            <div className="flex items-center px-0 mb-2">
+            <div className="flex flex-col sm:flex-row items-center px-0 mb-2 sm:mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
               <button
                 onClick={periksaJawabanSoal2}
-                className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 text-xs sm:text-base cursor-pointer"
               >
                 Periksa
               </button>
               <button
                 onClick={kosongkanJawabanSoal2}
-                className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
               >
                 Hapus
               </button>
             </div>
             {pesanSoal2 && (
               <p
-                className={`text-sm mt-2 font-bold ${
-                  pesanSoal2.includes("Jawaban benar") ? "text-green-700" : "text-red-700"
+                className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                  pesanSoal2.startsWith("Benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
                 }`}
               >
                 {pesanSoal2}
@@ -813,40 +801,42 @@ const AktivitasPengelolaan = () => {
         </div>
 
         {/* Soal 3: Isi metode pengurutan */}
-        <div className="p-6 mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-          <p className="px-4 mb-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base flex items-center">
-            <span className="text-lg font-bold text-green-700 mr-2">3.</span>
+        <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
+          <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
+            <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">3.</span>
             Seorang guru ingin mengetahui siswa dengan nilai tertinggi. Ia harus
             mengurutkan data dari nilai terbesar ke terkecil menggunakan metode ...
           </p>
-          <div className="flex items-center px-4 mb-2">
-            <label className="text-gray-700 text-sm md:text-base font-medium">
+          <div className="flex flex-col sm:flex-row items-center px-2 sm:px-4 mb-2 sm:mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
+            <label className="text-gray-700 text-xs sm:text-sm md:text-base font-medium">
               Jawaban:
             </label>
             <input
               type="text"
-              className="border p-2 rounded-lg w-full max-w-md text-sm md:text-base text-gray-700 ml-2"
+              className="border p-2 rounded-lg w-full sm:max-w-md text-xs sm:text-sm md:text-base text-gray-700"
               placeholder="Jawaban..."
               value={jawabanSoal3}
               onChange={(e) => setJawabanSoal3(e.target.value)}
             />
-            <button
-              onClick={periksaJawabanSoal3}
-              className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
-            >
-              Periksa
-            </button>
-            <button
-              onClick={kosongkanJawabanSoal3}
-              className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
-            >
-              Hapus
-            </button>
+            <div className="flex space-x-2">
+              <button
+                onClick={periksaJawabanSoal3}
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 text-xs sm:text-base cursor-pointer"
+              >
+                Periksa
+              </button>
+              <button
+                onClick={kosongkanJawabanSoal3}
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+              >
+                Hapus
+              </button>
+            </div>
           </div>
           {pesanSoal3 && (
             <p
-              className={`text-sm mt-2 font-bold px-4 ${
-                pesanSoal3.includes("Jawaban benar") ? "text-green-700" : "text-red-700"
+              className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                pesanSoal3.startsWith("Benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
               }`}
             >
               {pesanSoal3}
@@ -855,40 +845,42 @@ const AktivitasPengelolaan = () => {
         </div>
 
         {/* Soal 4: Isi fitur yang digunakan */}
-        <div className="p-6 mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-          <p className="px-4 mb-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base flex items-center">
-            <span className="text-lg font-bold text-green-700 mr-2">4.</span>
+        <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
+          <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
+            <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">4.</span>
             Seorang manajer toko ingin menampilkan hanya produk dengan kategori
             "Elektronik". Ia harus menggunakan fitur ...
           </p>
-          <div className="flex items-center px-4 mb-2">
-            <label className="text-gray-700 text-sm md:text-base font-medium">
+          <div className="flex flex-col sm:flex-row items-center px-2 sm:px-4 mb-2 sm:mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
+            <label className="text-gray-700 text-xs sm:text-sm md:text-base font-medium">
               Jawaban:
             </label>
             <input
               type="text"
-              className="border p-2 rounded-lg w-full max-w-md text-sm md:text-base text-gray-700 ml-2"
+              className="border p-2 rounded-lg w-full sm:max-w-md text-xs sm:text-sm md:text-base text-gray-700"
               placeholder="Jawaban..."
               value={jawabanSoal4}
               onChange={(e) => setJawabanSoal4(e.target.value)}
             />
-            <button
-              onClick={periksaJawabanSoal4}
-              className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
-            >
-              Periksa
-            </button>
-            <button
-              onClick={kosongkanJawabanSoal4}
-              className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
-            >
-              Hapus
-            </button>
+            <div className="flex space-x-2">
+              <button
+                onClick={periksaJawabanSoal4}
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 text-xs sm:text-base cursor-pointer"
+              >
+                Periksa
+              </button>
+              <button
+                onClick={kosongkanJawabanSoal4}
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+              >
+                Hapus
+              </button>
+            </div>
           </div>
           {pesanSoal4 && (
             <p
-              className={`text-sm mt-2 font-bold px-4 ${
-                pesanSoal4.includes("Jawaban benar") ? "text-green-700" : "text-red-700"
+              className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                pesanSoal4.startsWith("Benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
               }`}
             >
               {pesanSoal4}
@@ -897,13 +889,13 @@ const AktivitasPengelolaan = () => {
         </div>
 
         {/* Soal 5: Pilih pernyataan yang benar */}
-        <div className="p-6 mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-          <p className="px-4 mb-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base flex items-center">
-            <span className="text-lg font-bold text-green-700 mr-2">5.</span>
+        <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
+          <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
+            <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">5.</span>
             Pilih semua pernyataan yang benar tentang filtering:
           </p>
-          <div className="px-4 flex flex-col space-y-2">
-            <label className="flex items-center">
+          <div className="px-2 sm:px-4 flex flex-col space-y-2">
+            <label className="flex items-center text-xs sm:text-sm md:text-base text-gray-700">
               <input
                 type="checkbox"
                 checked={jawabanSoal5.menghapus}
@@ -914,7 +906,7 @@ const AktivitasPengelolaan = () => {
               />
               Menghapus data yang tidak sesuai.
             </label>
-            <label className="flex items-center">
+            <label className="flex items-center text-xs sm:text-sm md:text-base text-gray-700">
               <input
                 type="checkbox"
                 checked={jawabanSoal5.menyaring}
@@ -925,7 +917,7 @@ const AktivitasPengelolaan = () => {
               />
               Menyaring data berdasarkan kriteria tertentu.
             </label>
-            <label className="flex items-center">
+            <label className="flex items-center text-xs sm:text-sm md:text-base text-gray-700">
               <input
                 type="checkbox"
                 checked={jawabanSoal5.menerapkan}
@@ -936,7 +928,7 @@ const AktivitasPengelolaan = () => {
               />
               Dapat diterapkan pada teks maupun angka.
             </label>
-            <label className="flex items-center">
+            <label className="flex items-center text-xs sm:text-sm md:text-base text-gray-700">
               <input
                 type="checkbox"
                 checked={jawabanSoal5.mengubah}
@@ -947,24 +939,24 @@ const AktivitasPengelolaan = () => {
               />
               Mengubah data yang tidak memenuhi kriteria.
             </label>
-            <div className="flex items-center px-0 mb-2">
+            <div className="flex flex-col sm:flex-row items-center px-0 mb-2 sm:mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
               <button
                 onClick={periksaJawabanSoal5}
-                className="ml-2 px-4 py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 cursor-pointer"
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 text-xs sm:text-base cursor-pointer"
               >
                 Periksa
               </button>
               <button
                 onClick={kosongkanJawabanSoal5}
-                className="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 cursor-pointer"
+                className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
               >
                 Hapus
               </button>
             </div>
             {pesanSoal5 && (
               <p
-                className={`text-sm mt-2 font-bold ${
-                  pesanSoal5.includes("Jawaban benar") ? "text-green-700" : "text-red-700"
+                className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                  pesanSoal5.startsWith("Benar") ? "bg-[#C8E6C9] text-[#1B5E20]" : "bg-[#FFEBEE] text-[#D32F2F]"
                 }`}
               >
                 {pesanSoal5}
@@ -974,16 +966,16 @@ const AktivitasPengelolaan = () => {
         </div>
 
         {/* Tombol Navigasi */}
-        <div className="flex justify-between mt-8 px-4">
+        <div className="flex justify-between mt-4 sm:mt-8 px-2 sm:px-4">
           <button
-            onClick={() => (window.location.href = "/berlatih-pengelolaan")}
-            className="px-5 py-2 text-base text-white transition duration-300 bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 cursor-pointer"
+            onClick={() => (window.location.href = "/contoh-pengelolaan")}
+            className="px-3 sm:px-5 py-1 sm:py-2 text-xs sm:text-base text-white transition duration-300 bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 cursor-pointer"
           >
             ← Sebelumnya
           </button>
           <button
             onClick={() => (window.location.href = "/berlatih-pengelolaan")}
-            className="px-5 py-2 text-base text-white transition duration-300 bg-[#255F38] rounded-lg shadow-md hover:bg-green-700 cursor-pointer"
+            className="px-3 sm:px-5 py-1 sm:py-2 text-xs sm:text-base text-white transition duration-300 bg-[#255F38] rounded-lg shadow-md hover:bg-green-700 cursor-pointer"
           >
             Selanjutnya →
           </button>
