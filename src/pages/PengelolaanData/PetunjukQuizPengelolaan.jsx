@@ -118,7 +118,7 @@ export default function PetunjukPengerjaanPengelolaan() {
               onClick={() => (window.location.href = "/kuis-pengelolaan")}
               className="bg-[#255f38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E] cursor-pointer transition duration-300"
             >
-              Mulai Kuis
+              Mulai
             </button>
           </div>
 

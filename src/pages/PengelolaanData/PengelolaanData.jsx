@@ -236,7 +236,7 @@ export default function PengelolaanData() {
 
   return (
     <Layout>
-      <div className="border-l-4 border-[#255F38] pl-4">
+<div className="border-4 border-[#255F38] p-4 rounded-lg">
         <div className="p-4 bg-[#255F38] mb-4 text-white font-bold text-lg text-center rounded-lg shadow-lg">
         D. PENGELOLAAN DATA
       </div>
