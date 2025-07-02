@@ -492,3 +492,6 @@ const AktivitasPengelolaan = () => {
       
     </Layout>
   );
+};
+
+export default AktivitasPengelolaan;
