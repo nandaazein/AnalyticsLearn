@@ -484,7 +484,7 @@ const AktivitasPencarian = () => {
   const correctOrder = "4,1,3,2";
   const correctIndex = "=INDEX(A2:D3;2;3)";
   const correctMatch = "=MATCH(92;C2:C3;0)";
-  const correctChoose = "=CHOOSE(2;\"Ali\";\"Siti\";\"Budi\")";
+  const correctChoose = '=CHOOSE(2;"Ali";"Siti";"Budi")';
 
   const handleDrop = (e) => {
     e.preventDefault();
@@ -567,7 +567,7 @@ const AktivitasPencarian = () => {
 
   return (
     <Layout>
-      <div className="border-l-4 border-[#255F38] pl-4">
+      <div className="border-4 border-[#255F38] p-4 rounded-lg">
         <div className="p-2 sm:p-4 bg-[#255F38] mb-2 sm:mb-4 text-white font-bold text-sm sm:text-lg text-center rounded-lg shadow-lg">
           AKTIVITAS PENCARIAN DATA
         </div>
@@ -575,19 +575,37 @@ const AktivitasPencarian = () => {
         <div className="p-2 sm:p-6 bg-white">
           {/* Petunjuk Umum */}
           <section className="p-2 sm:p-4 bg-green-100 rounded shadow-md mb-2 sm:mb-6">
-            <h3 className="text-sm sm:text-lg font-semibold text-[#255F38] mb-2">Petunjuk Umum</h3>
+            <h3 className="text-sm sm:text-lg font-semibold text-[#255F38] mb-2">
+              Petunjuk Umum
+            </h3>
             <ol className="list-decimal list-inside text-gray-700 space-y-1 text-xs sm:text-sm md:text-base">
-              <li>Halaman ini terdiri dari lima soal yang masing-masing menguji pemahaman Anda tentang fungsi pencarian data.</li>
-              <li>Setiap soal memiliki kolom masukan untuk menjawab, tombol Periksa untuk memeriksa jawaban, dan tombol Hapus untuk mengosongkan jawaban jika ingin mencoba lagi.</li>
-              <li>Bacalah soal dengan cermat, masukkan jawaban Anda, dan periksa hasilnya untuk mendapatkan umpan balik.</li>
+              <li>
+                Halaman ini terdiri dari lima soal yang masing-masing menguji
+                pemahaman Anda tentang fungsi pencarian data.
+              </li>
+              <li>
+                Setiap soal memiliki kolom masukan untuk menjawab, tombol
+                Periksa untuk memeriksa jawaban, dan tombol Hapus untuk
+                mengosongkan jawaban jika ingin mencoba lagi.
+              </li>
+              <li>
+                Bacalah soal dengan cermat, masukkan jawaban Anda, dan periksa
+                hasilnya untuk mendapatkan umpan balik.
+              </li>
             </ol>
           </section>
 
           {/* Soal 1 */}
           <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
             <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-justify text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">1.</span>
-              Seret dan jatuhkan formula HLOOKUP yang tepat ke dalam kotak di bawah ini untuk mencari status kelulusan siswa Ani berdasarkan nilainya (85), lalu seret rumus tersebut ke bawah untuk secara otomatis mengisi status kelulusan siswa lainnya sesuai dengan nilai mereka menggunakan data dari Tabel 2.
+              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+                1.
+              </span>
+              Seret dan jatuhkan formula HLOOKUP yang tepat ke dalam kotak di
+              bawah ini untuk mencari status kelulusan siswa Ani berdasarkan
+              nilainya (85), lalu seret rumus tersebut ke bawah untuk secara
+              otomatis mengisi status kelulusan siswa lainnya sesuai dengan
+              nilai mereka menggunakan data dari Tabel 2.
             </p>
             <iframe
               width="100%"
@@ -612,7 +630,9 @@ const AktivitasPencarian = () => {
               onDragOver={(e) => e.preventDefault()}
               className="w-full sm:w-80 h-12 sm:h-16 mx-auto mt-2 sm:mt-4 flex items-center justify-center border-2 border-dashed border-gray-500 rounded-lg text-xs sm:text-sm"
             >
-              {selectedFormula || <span className="text-gray-400">Drop formula di sini</span>}
+              {selectedFormula || (
+                <span className="text-gray-400">Drop formula di sini</span>
+              )}
             </div>
             <div className="text-center mt-2 sm:mt-2">
               <button
@@ -622,17 +642,25 @@ const AktivitasPencarian = () => {
                 Periksa
               </button>
               <button
-                onClick={() => clearInputsAndFeedback(setSelectedFormula, setFormulaFeedback, setIsIndexCorrect)}
+                onClick={() =>
+                  clearInputsAndFeedback(
+                    setSelectedFormula,
+                    setFormulaFeedback,
+                    setIsIndexCorrect
+                  )
+                }
                 className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
               >
                 Hapus
               </button>
               {formulaFeedback && (
-                <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
-                  formulaFeedback.includes("benar")
-                    ? "bg-[#C8E6C9] text-[#1B5E20]"
-                    : "bg-[#FFEBEE] text-[#D32F2F]"
-                }`}>
+                <p
+                  className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                    formulaFeedback.includes("benar")
+                      ? "bg-[#C8E6C9] text-[#1B5E20]"
+                      : "bg-[#FFEBEE] text-[#D32F2F]"
+                  }`}
+                >
                   {formulaFeedback}
                 </p>
               )}
@@ -642,7 +670,9 @@ const AktivitasPencarian = () => {
           {/* Soal 2 */}
           <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
             <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-justify text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">2.</span>
+              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+                2.
+              </span>
               Urutkan langkah-langkah penggunaan fungsi Lookup berikut ini:
             </p>
             <div className="overflow-x-auto px-2 sm:px-4 mb-2 sm:mb-2">
@@ -650,35 +680,60 @@ const AktivitasPencarian = () => {
                 <thead>
                   <tr className="bg-gray-200 text-black">
                     <th className="border p-1 sm:p-2 w-8"></th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">A</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">B</th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      A
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      B
+                    </th>
                   </tr>
                   <tr className="bg-[#255F38] text-white">
-                    <th className="border p-1 sm:p-2 text-center font-bold bg-gray-200 text-black">1</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">No</th>
+                    <th className="border p-1 sm:p-2 text-center font-bold bg-gray-200 text-black">
+                      1
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      No
+                    </th>
                     <th className="border p-1 sm:p-2">Langkah</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">2</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      2
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">1</td>
-                    <td className="border p-1 sm:p-2">Tentukan tabel referensi (table array).</td>
+                    <td className="border p-1 sm:p-2">
+                      Tentukan tabel referensi (table array).
+                    </td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">3</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      3
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">2</td>
-                    <td className="border p-1 sm:p-2">Tentukan tipe pencarian: tepat (FALSE) atau mendekati (TRUE).</td>
+                    <td className="border p-1 sm:p-2">
+                      Tentukan tipe pencarian: tepat (FALSE) atau mendekati
+                      (TRUE).
+                    </td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">4</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      4
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">3</td>
-                    <td className="border p-1 sm:p-2">Tentukan kolom hasil pencarian.</td>
+                    <td className="border p-1 sm:p-2">
+                      Tentukan kolom hasil pencarian.
+                    </td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">5</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      5
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">4</td>
-                    <td className="border p-1 sm:p-2">Tentukan nilai yang ingin dicari (lookup value).</td>
+                    <td className="border p-1 sm:p-2">
+                      Tentukan nilai yang ingin dicari (lookup value).
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -699,7 +754,13 @@ const AktivitasPencarian = () => {
                   Periksa
                 </button>
                 <button
-                  onClick={() => clearInputsAndFeedback(setStepOrder, setStepFeedback, setIsIndexCorrect)}
+                  onClick={() =>
+                    clearInputsAndFeedback(
+                      setStepOrder,
+                      setStepFeedback,
+                      setIsIndexCorrect
+                    )
+                  }
                   className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
                 >
                   Hapus
@@ -707,11 +768,13 @@ const AktivitasPencarian = () => {
               </div>
             </div>
             {stepFeedback && (
-              <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
-                stepFeedback.includes("benar")
-                  ? "bg-[#C8E6C9] text-[#1B5E20]"
-                  : "bg-[#FFEBEE] text-[#D32F2F]"
-              }`}>
+              <p
+                className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                  stepFeedback.includes("benar")
+                    ? "bg-[#C8E6C9] text-[#1B5E20]"
+                    : "bg-[#FFEBEE] text-[#D32F2F]"
+                }`}
+              >
                 {stepFeedback}
               </p>
             )}
@@ -720,22 +783,37 @@ const AktivitasPencarian = () => {
           {/* Soal 3 */}
           <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
             <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-justify text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">3.</span>
-              Tuliskan fungsi INDEX untuk menampilkan nilai dari baris ke-2 dan kolom ke-3 dari tabel berikut:
+              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+                3.
+              </span>
+              Tuliskan fungsi INDEX untuk menampilkan nilai dari baris ke-2 dan
+              kolom ke-3 dari tabel berikut:
             </p>
             <div className="overflow-x-auto px-2 sm:px-4 mt-2 mb-2 sm:mb-4">
               <table className="w-full border text-xs sm:text-sm border-gray-400 text-gray-800 rounded-lg">
                 <thead>
                   <tr className="bg-gray-200 text-black">
                     <th className="border p-1 sm:p-2 w-8"></th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">A</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">B</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">C</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">D</th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      A
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      B
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      C
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      D
+                    </th>
                   </tr>
                   <tr className="bg-[#255F38] text-white">
-                    <th className="border p-1 sm:p-2 text-center font-bold bg-gray-200 text-black">1</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">No</th>
+                    <th className="border p-1 sm:p-2 text-center font-bold bg-gray-200 text-black">
+                      1
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      No
+                    </th>
                     <th className="border p-1 sm:p-2">Nama</th>
                     <th className="border p-1 sm:p-2">Matematika</th>
                     <th className="border p-1 sm:p-2">Bahasa Inggris</th>
@@ -743,18 +821,24 @@ const AktivitasPencarian = () => {
                 </thead>
                 <tbody>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">2</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      2
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">1</td>
                     <td className="border p-1 sm:p-2">Ali</td>
                     <td className="border p-1 sm:p-2">90</td>
                     <td className="border p-1 sm:p-2">88</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">3</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      3
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">2</td>
                     <td className="border p-1 sm:p-2">Siti</td>
                     <td className="border p-1 sm:p-2">92</td>
-                    <td className="border p-1 sm:p-2">{isIndexCorrect ? "85" : ""}</td>
+                    <td className="border p-1 sm:p-2">
+                      {isIndexCorrect ? "85" : ""}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -775,7 +859,13 @@ const AktivitasPencarian = () => {
                   Periksa
                 </button>
                 <button
-                  onClick={() => clearInputsAndFeedback(setIndexFormula, setIndexFeedback, setIsIndexCorrect)}
+                  onClick={() =>
+                    clearInputsAndFeedback(
+                      setIndexFormula,
+                      setIndexFeedback,
+                      setIsIndexCorrect
+                    )
+                  }
                   className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
                 >
                   Hapus
@@ -783,11 +873,13 @@ const AktivitasPencarian = () => {
               </div>
             </div>
             {indexFeedback && (
-              <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
-                indexFeedback.includes("benar")
-                  ? "bg-[#C8E6C9] text-[#1B5E20]"
-                  : "bg-[#FFEBEE] text-[#D32F2F]"
-              }`}>
+              <p
+                className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                  indexFeedback.includes("benar")
+                    ? "bg-[#C8E6C9] text-[#1B5E20]"
+                    : "bg-[#FFEBEE] text-[#D32F2F]"
+                }`}
+              >
                 {indexFeedback}
               </p>
             )}
@@ -796,37 +888,56 @@ const AktivitasPencarian = () => {
           {/* Soal 4 */}
           <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
             <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-justify text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">4.</span>
-              Tuliskan fungsi MATCH untuk menemukan posisi nilai 92 pada kolom Matematika berikut:
+              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+                4.
+              </span>
+              Tuliskan fungsi MATCH untuk menemukan posisi nilai 92 pada kolom
+              Matematika berikut:
             </p>
             <div className="overflow-x-auto px-2 sm:px-4 mt-2 mb-2 sm:mb-4">
               <table className="w-full border text-xs sm:text-sm border-gray-400 text-gray-800 rounded-lg">
                 <thead>
                   <tr className="bg-gray-200 text-black">
                     <th className="border p-1 sm:p-2 w-8"></th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">A</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">B</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">C</th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      A
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      B
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      C
+                    </th>
                   </tr>
                   <tr className="bg-[#255F38] text-white">
-                    <th className="border p-1 sm:p-2 text-center font-bold bg-gray-200 text-black">1</th>
-                    <th className="border p-1 sm:p-2 text-center font-bold">No</th>
+                    <th className="border p-1 sm:p-2 text-center font-bold bg-gray-200 text-black">
+                      1
+                    </th>
+                    <th className="border p-1 sm:p-2 text-center font-bold">
+                      No
+                    </th>
                     <th className="border p-1 sm:p-2">Nama</th>
                     <th className="border p-1 sm:p-2">Matematika</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">2</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      2
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">2</td>
                     <td className="border p-1 sm:p-2">Ali</td>
                     <td className="border p-1 sm:p-2">90</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">3</td>
+                    <td className="border p-1 sm:p-2 text-center bg-gray-200 font-bold text-black">
+                      3
+                    </td>
                     <td className="border p-1 sm:p-2 text-center">3</td>
                     <td className="border p-1 sm:p-2">Siti</td>
-                    <td className="border p-1 sm:p-2">{isMatchCorrect ? "92 ✅ Posisi: 2" : "92"}</td>
+                    <td className="border p-1 sm:p-2">
+                      {isMatchCorrect ? "92 ✅ Posisi: 2" : "92"}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -847,7 +958,13 @@ const AktivitasPencarian = () => {
                   Periksa
                 </button>
                 <button
-                  onClick={() => clearInputsAndFeedback(setMatchFormula, setMatchFeedback, setIsMatchCorrect)}
+                  onClick={() =>
+                    clearInputsAndFeedback(
+                      setMatchFormula,
+                      setMatchFeedback,
+                      setIsMatchCorrect
+                    )
+                  }
                   className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
                 >
                   Hapus
@@ -855,11 +972,13 @@ const AktivitasPencarian = () => {
               </div>
             </div>
             {matchFeedback && (
-              <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
-                matchFeedback.includes("benar")
-                  ? "bg-[#C8E6C9] text-[#1B5E20]"
-                  : "bg-[#FFEBEE] text-[#D32F2F]"
-              }`}>
+              <p
+                className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                  matchFeedback.includes("benar")
+                    ? "bg-[#C8E6C9] text-[#1B5E20]"
+                    : "bg-[#FFEBEE] text-[#D32F2F]"
+                }`}
+              >
                 {matchFeedback}
               </p>
             )}
@@ -868,8 +987,11 @@ const AktivitasPencarian = () => {
           {/* Soal 5 */}
           <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
             <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-justify text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">5.</span>
-              Tuliskan fungsi CHOOSE untuk memilih siswa ke-2 dari daftar berikut: Ali, Siti, Budi.
+              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+                5.
+              </span>
+              Tuliskan fungsi CHOOSE untuk memilih siswa ke-2 dari daftar
+              berikut: Ali, Siti, Budi.
             </p>
             <div className="flex flex-col sm:flex-row items-center px-2 sm:px-4 mb-2 sm:mb-2 space-y-2 sm:space-y-0 sm:space-x-2">
               <input
@@ -887,7 +1009,13 @@ const AktivitasPencarian = () => {
                   Periksa
                 </button>
                 <button
-                  onClick={() => clearInputsAndFeedback(setChooseFormula, setChooseFeedback, setIsChooseCorrect)}
+                  onClick={() =>
+                    clearInputsAndFeedback(
+                      setChooseFormula,
+                      setChooseFeedback,
+                      setIsChooseCorrect
+                    )
+                  }
                   className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
                 >
                   Hapus
@@ -895,11 +1023,13 @@ const AktivitasPencarian = () => {
               </div>
             </div>
             {chooseFeedback && (
-              <p className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
-                chooseFeedback.includes("benar")
-                  ? "bg-[#C8E6C9] text-[#1B5E20]"
-                  : "bg-[#FFEBEE] text-[#D32F2F]"
-              }`}>
+              <p
+                className={`text-xs font-bold sm:text-sm md:text-base mt-2 px-3 py-2 rounded-lg ${
+                  chooseFeedback.includes("benar")
+                    ? "bg-[#C8E6C9] text-[#1B5E20]"
+                    : "bg-[#FFEBEE] text-[#D32F2F]"
+                }`}
+              >
                 {chooseFeedback}
               </p>
             )}

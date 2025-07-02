@@ -1,68 +1,206 @@
+// import Layout from "../../components/Layout";
+
+// export default function RangkumanVisualisasiData() {
+//   return (
+//     <Layout>
+//       <div className="p-4 bg-[#255F38] mb-4 text-white font-bold text-lg text-center rounded-lg shadow-lg">
+//         RANGKUMAN VISUALISASI DATA
+//       </div>
+
+//       <section className="p-6 bg-white shadow-lg">
+//         <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4 mb-4">
+//           Materi ini membahas konsep visualisasi data dalam bentuk chart, tabel, atau grafik untuk menyajikan informasi secara jelas dan mudah dipahami menggunakan aplikasi lembar kerja, sehingga informasi lebih cepat dipahami dibandingkan hanya angka atau teks.
+//         </p>
+
+//         <div className="space-y-6 px-4">
+//           {/* Peran Visualisasi Data */}
+//           <div>
+//             <h3 className="text-lg font-semibold text-green-700">1. Peran Visualisasi Data</h3>
+//             <p className="text-gray-700 text-sm md:text-base mt-2 leading-relaxed">
+//               Visualisasi data membantu menyajikan informasi dengan lebih mudah melalui chart, tabel, atau grafik.
+//             </p>
+//             <ul className="list-disc ml-6 text-gray-700 mt-3 text-sm md:text-base space-y-1">
+//               <li>Mengidentifikasi pola dan tren (contoh: nilai ujian siswa meningkat dari 75 ke 90 selama 5 bulan).</li>
+//               <li>Membantu membuat keputusan (contoh: strategi belajar berdasarkan tren nilai).</li>
+//               <li>Menyajikan data lebih ringkas (contoh: penjualan jajanan dalam bentuk Bar Chart).</li>
+//               <li>Meningkatkan komunikasi data (contoh: presentasi data menjadi lebih menarik).</li>
+//               <li>Mendeteksi kesalahan (contoh: menemukan nilai ujian yang tidak wajar).</li>
+//             </ul>
+//           </div>
+
+//           {/* Jenis Visualisasi Data */}
+//           <div>
+//             <h3 className="text-lg font-semibold text-green-700">2. Jenis Visualisasi Data</h3>
+//             <p className="text-gray-700 text-sm md:text-base mt-2 leading-relaxed">
+//               Berbagai jenis chart digunakan untuk menyajikan data sesuai kebutuhan.
+//             </p>
+//             <ul className="list-disc ml-6 text-gray-700 mt-3 text-sm md:text-base space-y-1">
+//               <li><strong>Line Chart:</strong> Menunjukkan perubahan data seiring waktu (contoh: nilai ujian Budi dari Januari 75, Februari 80, Maret 85, April 78, Mei 90).</li>
+//               <li><strong>Bar Chart:</strong> Membandingkan jumlah data (contoh: penjualan jajanan bakpao 50 porsi, siomay 30 porsi, cilok 20 porsi).</li>
+//               <li><strong>Pie Chart:</strong> Menunjukkan persentase (contoh: pilihan ekstrakurikuler Pramuka 40 siswa, Seni Tari 30 siswa, Bola Voli 20 siswa).</li>
+//               <li><strong>Area Chart:</strong> Menampilkan jumlah total atau tren (contoh: jumlah tugas yang dikumpulkan per bulan).</li>
+//               <li><strong>Column Chart:</strong> Membandingkan data antar kategori (contoh: kehadiran siswa Senin 90, Selasa 85, Rabu 88, Kamis 92, Jumat 80).</li>
+//             </ul>
+//           </div>
+
+//           {/* Langkah Membuat Visualisasi Data */}
+//           <div>
+//             <h3 className="text-lg font-semibold text-green-700">3. Langkah Membuat Visualisasi Data</h3>
+//             <p className="text-gray-700 text-sm md:text-base mt-2 leading-relaxed">
+//               Langkah-langkah untuk membuat chart di spreadsheet agar data lebih mudah dipahami:
+//             </p>
+//             <ul className="list-disc ml-6 text-gray-700 mt-3 text-sm md:text-base space-y-1">
+//               <li>Tentukan tujuan visualisasi (contoh: membandingkan penjualan jajanan atau melihat tren nilai ujian).</li>
+//               <li>Kumpulkan data yang dibutuhkan (contoh: nilai ujian Budi dari Januari hingga Mei).</li>
+//               <li>Pilih jenis chart yang tepat (contoh: Line Chart untuk tren, Bar Chart untuk perbandingan).</li>
+//               <li>Siapkan data dalam tabel rapi, blok data, lalu klik "Insert Chart" untuk membuat visualisasi.</li>
+//             </ul>
+//           </div>
+
+//         </div>
+//       </section>
+
+//       {/* Navigasi */}
+//       <div className="flex justify-between mt-10 px-4">
+//         <button
+//           onClick={() => (window.location.href = "/pencarian-data")}
+//           className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 cursor-pointer transition duration-300"
+//         >
+//           Sebelumnya
+//         </button>
+//         <button
+//           onClick={() => (window.location.href = "/petunjuk-pengerjaan-visualisasi")}
+//           className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E] cursor-pointer transition duration-300"
+//         >
+//           Lanjut ke Kuis →
+//         </button>
+//       </div>
+//     </Layout>
+//   );
+// }
 
 import Layout from "../../components/Layout";
 
 export default function RangkumanVisualisasiData() {
   return (
     <Layout>
-      <div className="border-l-4 border-[#255F38] pl-4">
+      <div className="border-4 border-[#255F38] p-4 rounded-lg">
         <div className="p-4 bg-[#255F38] mb-4 text-white font-bold text-lg text-center rounded-lg shadow-lg">
           RANGKUMAN VISUALISASI DATA
         </div>
 
         <section className="p-6 bg-white shadow-lg border border-gray-300">
           <p className="text-gray-700 text-sm md:text-base text-justify leading-relaxed px-4 mb-4">
-            Materi ini membahas konsep visualisasi data dalam bentuk chart, tabel, atau grafik untuk menyajikan informasi secara jelas dan mudah dipahami menggunakan aplikasi lembar kerja, sehingga informasi lebih cepat dipahami dibandingkan hanya angka atau teks.
+            Materi ini membahas konsep visualisasi data dalam bentuk chart,
+            tabel, atau grafik untuk menyajikan informasi secara jelas dan mudah
+            dipahami menggunakan aplikasi lembar kerja, sehingga informasi lebih
+            cepat dipahami dibandingkan hanya angka atau teks.
           </p>
 
           <div className="space-y-6 px-4">
             {/* Peran Visualisasi Data */}
             <div>
-              <h3 className="text-lg font-semibold text-green-700">1. Peran Visualisasi Data</h3>
+              <h3 className="text-lg font-semibold text-green-700">
+                1. Peran Visualisasi Data
+              </h3>
               <p className="text-gray-700 text-sm md:text-base mt-2 leading-relaxed">
-                Visualisasi data membantu menyajikan informasi dengan lebih mudah melalui chart, tabel, atau grafik.
+                Visualisasi data membantu menyajikan informasi dengan lebih
+                mudah melalui chart, tabel, atau grafik.
               </p>
               <ul className="list-disc ml-6 text-gray-700 mt-3 text-sm md:text-base space-y-1">
-                <li>Mengidentifikasi pola dan tren (contoh: nilai ujian siswa meningkat dari 75 ke 90 selama 5 bulan).</li>
-                <li>Membantu membuat keputusan (contoh: strategi belajar berdasarkan tren nilai).</li>
-                <li>Menyajikan data lebih ringkas (contoh: penjualan jajanan dalam bentuk Bar Chart).</li>
-                <li>Meningkatkan komunikasi data (contoh: presentasi data menjadi lebih menarik).</li>
-                <li>Mendeteksi kesalahan (contoh: menemukan nilai ujian yang tidak wajar).</li>
+                <li>
+                  Mengidentifikasi pola dan tren (contoh: nilai ujian siswa
+                  meningkat dari 75 ke 90 selama 5 bulan).
+                </li>
+                <li>
+                  Membantu membuat keputusan (contoh: strategi belajar
+                  berdasarkan tren nilai).
+                </li>
+                <li>
+                  Menyajikan data lebih ringkas (contoh: penjualan jajanan dalam
+                  bentuk Bar Chart).
+                </li>
+                <li>
+                  Meningkatkan komunikasi data (contoh: presentasi data menjadi
+                  lebih menarik).
+                </li>
+                <li>
+                  Mendeteksi kesalahan (contoh: menemukan nilai ujian yang tidak
+                  wajar).
+                </li>
               </ul>
             </div>
 
             {/* Jenis Visualisasi Data */}
             <div>
-              <h3 className="text-lg font-semibold text-green-700">2. Jenis Visualisasi Data</h3>
+              <h3 className="text-lg font-semibold text-green-700">
+                2. Jenis Visualisasi Data
+              </h3>
               <p className="text-gray-700 text-sm md:text-base mt-2 leading-relaxed">
-                Berbagai jenis chart digunakan untuk menyajikan data sesuai kebutuhan.
+                Berbagai jenis chart digunakan untuk menyajikan data sesuai
+                kebutuhan.
               </p>
               <ul className="list-disc ml-6 text-gray-700 mt-3 text-sm md:text-base space-y-1">
-                <li><strong>Line Chart:</strong> Menunjukkan perubahan data seiring waktu (contoh: nilai ujian Budi dari Januari 75, Februari 80, Maret 85, April 78, Mei 90).</li>
-                <li><strong>Bar Chart:</strong> Membandingkan jumlah data (contoh: penjualan jajanan bakpao 50 porsi, siomay 30 porsi, cilok 20 porsi).</li>
-                <li><strong>Pie Chart:</strong> Menunjukkan persentase (contoh: pilihan ekstrakurikuler Pramuka 40 siswa, Seni Tari 30 siswa, Bola Voli 20 siswa).</li>
-                <li><strong>Area Chart:</strong> Menampilkan jumlah total atau tren (contoh: jumlah tugas yang dikumpulkan per bulan).</li>
-                <li><strong>Column Chart:</strong> Membandingkan data antar kategori (contoh: kehadiran siswa Senin 90, Selasa 85, Rabu 88, Kamis 92, Jumat 80).</li>
+                <li>
+                  <strong>Line Chart:</strong> Menunjukkan perubahan data
+                  seiring waktu (contoh: nilai ujian Budi dari Januari 75,
+                  Februari 80, Maret 85, April 78, Mei 90).
+                </li>
+                <li>
+                  <strong>Bar Chart:</strong> Membandingkan jumlah data (contoh:
+                  penjualan jajanan bakpao 50 porsi, siomay 30 porsi, cilok 20
+                  porsi).
+                </li>
+                <li>
+                  <strong>Pie Chart:</strong> Menunjukkan persentase (contoh:
+                  pilihan ekstrakurikuler Pramuka 40 siswa, Seni Tari 30 siswa,
+                  Bola Voli 20 siswa).
+                </li>
+                <li>
+                  <strong>Area Chart:</strong> Menampilkan jumlah total atau
+                  tren (contoh: jumlah tugas yang dikumpulkan per bulan).
+                </li>
+                <li>
+                  <strong>Column Chart:</strong> Membandingkan data antar
+                  kategori (contoh: kehadiran siswa Senin 90, Selasa 85, Rabu
+                  88, Kamis 92, Jumat 80).
+                </li>
               </ul>
             </div>
 
             {/* Langkah Membuat Visualisasi Data */}
             <div>
-              <h3 className="text-lg font-semibold text-green-700">3. Langkah Membuat Visualisasi Data</h3>
+              <h3 className="text-lg font-semibold text-green-700">
+                3. Langkah Membuat Visualisasi Data
+              </h3>
               <p className="text-gray-700 text-sm md:text-base mt-2 leading-relaxed">
-                Langkah-langkah untuk membuat chart di spreadsheet agar data lebih mudah dipahami:
+                Langkah-langkah untuk membuat chart di spreadsheet agar data
+                lebih mudah dipahami:
               </p>
               <ul className="list-disc ml-6 text-gray-700 mt-3 text-sm md:text-base space-y-1">
-                <li>Tentukan tujuan visualisasi (contoh: membandingkan penjualan jajanan atau melihat tren nilai ujian).</li>
-                <li>Kumpulkan data yang dibutuhkan (contoh: nilai ujian Budi dari Januari hingga Mei).</li>
-                <li>Pilih jenis chart yang tepat (contoh: Line Chart untuk tren, Bar Chart untuk perbandingan).</li>
-                <li>Siapkan data dalam tabel rapi, blok data, lalu klik "Insert Chart" untuk membuat visualisasi.</li>
+                <li>
+                  Tentukan tujuan visualisasi (contoh: membandingkan penjualan
+                  jajanan atau melihat tren nilai ujian).
+                </li>
+                <li>
+                  Kumpulkan data yang dibutuhkan (contoh: nilai ujian Budi dari
+                  Januari hingga Mei).
+                </li>
+                <li>
+                  Pilih jenis chart yang tepat (contoh: Line Chart untuk tren,
+                  Bar Chart untuk perbandingan).
+                </li>
+                <li>
+                  Siapkan data dalam tabel rapi, blok data, lalu klik "Insert
+                  Chart" untuk membuat visualisasi.
+                </li>
               </ul>
             </div>
           </div>
         </section>
 
         {/* Navigasi */}
-        <div className="flex justify-between mt-10 px-4">
+        <div className="flex justify-between items-center px-2 sm:px-6 py-2 mt-2 sm:mt-4">
           <button
             onClick={() => (window.location.href = "/pencarian-data")}
             className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 cursor-pointer transition duration-300"
@@ -70,7 +208,9 @@ export default function RangkumanVisualisasiData() {
             Sebelumnya
           </button>
           <button
-            onClick={() => (window.location.href = "/petunjuk-pengerjaan-visualisasi")}
+            onClick={() =>
+              (window.location.href = "/petunjuk-pengerjaan-visualisasi")
+            }
             className="bg-[#255F38] text-white px-5 py-2 rounded-lg hover:bg-[#1E4D2E] cursor-pointer transition duration-300"
           >
             Lanjut ke Kuis →
