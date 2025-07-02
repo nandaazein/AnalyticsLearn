@@ -431,7 +431,7 @@ const AktivitasVisualisasiGambar = () => {
           </div>
 
           {/* Tombol Navigasi */}
-          <div className="flex justify-between mt-4 sm:mt-8 px-2 sm:px-4 border border-gray-300">
+          <div className="flex justify-between mt-4 sm:mt-8 px-2 sm:px-4 ">
             <button
               onClick={() => (window.location.href = "/contoh-penerapan-visualisasi-data")}
               className="px-3 sm:px-5 py-1 sm:py-2 text-xs sm:text-base text-white transition duration-300 bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 cursor-pointer"

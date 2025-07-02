@@ -62,7 +62,7 @@ export default function RangkumanVisualisasiData() {
         </section>
 
         {/* Navigasi */}
-        <div className="flex justify-between mt-10 px-4 border border-gray-300">
+        <div className="flex justify-between mt-10 px-4">
           <button
             onClick={() => (window.location.href = "/pencarian-data")}
             className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 cursor-pointer transition duration-300"

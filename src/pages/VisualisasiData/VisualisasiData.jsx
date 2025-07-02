@@ -724,7 +724,7 @@ export default function VisualisasiData() {
           </div>
         </div>
 
-        <div className="flex justify-between px-2 sm:px-4 py-2 mt-4 sm:mt-8 space-x-2 border border-gray-300">
+        <div className="flex justify-between px-2 sm:px-4 py-2 mt-4 sm:mt-8 space-x-2 ">
           <button
             onClick={() => (window.location.href = "/contoh-lookup")}
             className="bg-gray-500 text-white px-3 sm:px-5 py-1 sm:py-2 rounded-lg hover:bg-gray-600 text-xs sm:text-base text-center min-w-[100px] cursor-pointer"

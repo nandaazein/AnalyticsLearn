@@ -346,7 +346,7 @@ export default function ChartLesson() {
         </section>
 
         {/* Tombol Selesai */}
-        <div className="flex justify-center mt-8 border border-gray-300">
+        <div className="flex justify-center mt-8 ">
           <button
             onClick={submitLatihan}
             className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md cursor-pointer"

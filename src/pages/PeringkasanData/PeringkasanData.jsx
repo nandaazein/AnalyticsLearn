@@ -1091,7 +1091,7 @@ export default function PeringkasanData() {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-6 px-2 sm:px-4 border border-gray-300">
+        <div className="flex justify-between items-center mt-6 px-2 sm:px-4">
           <button
             onClick={() => navigate("/feedback2")}
             className="bg-gray-500 text-white px-3 sm:px-5 py-1 sm:py-2 rounded hover:bg-gray-600 transition duration-300 cursor-pointer text-xs sm:text-base min-w-[100px]"

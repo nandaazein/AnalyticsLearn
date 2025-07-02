@@ -417,7 +417,7 @@ const ContohPenerapanVisualisasiData = () => {
         </div>
 
         {/* Tombol Navigasi */}
-        <div className="flex flex-row justify-between mt-8 px-4 border border-gray-300">
+        <div className="flex flex-row justify-between mt-8 px-4">
           <a
             href="/visualisasi-data"
             className="bg-gray-500 text-white px-3 sm:px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer"
