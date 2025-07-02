@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
 import axios from "axios";
@@ -231,126 +232,128 @@ export default function ChartLesson() {
 
   return (
     <Layout>
-      <div className="p-4 bg-[#255F38] mb-4 text-white font-bold text-lg text-center rounded-lg shadow-lg">
-        MARI BERLATIH VISUALISASI DATA
-      </div>
-
-      {/* Petunjuk Umum */}
-      <section className="p-4 bg-green-100 rounded shadow-md mb-6">
-        <h3 className="text-lg font-semibold text-[#255F38] mb-2">
-          Petunjuk Umum
-        </h3>
-        <ol className="list-decimal list-inside text-gray-700 space-y-1 text-sm md:text-base">
-          <li>Bacalah studi kasus berikut dengan saksama.</li>
-          <li>
-            Jawab setiap pertanyaan pada bagian yang yang telah disediakan.
-          </li>
-          <li>
-            Setelah selesai menjawab semua pertanyaan, klik tombol{" "}
-            <em>“Selesai Latihan”</em> untuk mengumpulkan jawabanmu.
-          </li>
-        </ol>
-      </section>
-
-      {/* Studi Kasus */}
-      <section className="p-6 bg-white rounded shadow-lg mb-6">
-        <h3 className="text-lg font-semibold text-green-700 mb-3">
-          Studi Kasus: Berlatih Visualisasi Data
-        </h3>
-        <p className="px-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base">
-          Sebagai pengurus OSIS, kamu diminta membuat laporan untuk kepala
-          sekolah mengenai minat siswa terhadap kegiatan ekstrakurikuler. Data
-          jumlah anggota tiap ekstrakurikuler sudah dicatat dalam bentuk tabel,
-          namun sulit dipahami jika hanya dilihat begitu saja. Untuk mempermudah
-          analisis dan presentasi, kamu akan menyajikan data ini dalam bentuk
-          grafik yang lebih mudah dibaca.
-        </p>
-        <div className="flex justify-center w-full px-4 mt-5">
-          <div
-            id="spreadsheet"
-            className="w-full max-w-full md:max-w-screen-md"
-            style={{ height: "600px" }}
-          ></div>
+      <div className="border-l-4 border-[#255F38] pl-4">
+        <div className="p-4 bg-[#255F38] mb-4 text-white font-bold text-lg text-center rounded-lg shadow-lg">
+          MARI BERLATIH VISUALISASI DATA
         </div>
-      </section>
 
-      {/* Soal Latihan */}
-      <section className="mb-6">
-        {[
-          {
-            key: "decomposition",
-            title: "1. Memecah Masalah (Dekomposisi)",
-            question:
-              "Data utama apa yang diperlukan untuk membuat grafik perbandingan jumlah anggota ekstrakurikuler?",
-            points: [
-              "Identifikasi elemen penting dari data yang akan digunakan untuk membuat grafik.",
-              "Fokus pada angka atau informasi yang akan divisualisasikan.",
-            ],
-          },
-          {
-            key: "pattern",
-            title: "2. Mencari Pola (Pengenalan Pola)",
-            question:
-              "Ekstrakurikuler apa yang memiliki anggota paling banyak?",
-            points: [
-              "Bandingkan jumlah anggota pada setiap ekstrakurikuler.",
-              "Cari nilai tertinggi dari data yang tersedia.",
-            ],
-          },
-          {
-            key: "abstraction",
-            title: "3. Mengabaikan yang Tidak Penting (Abstraksi)",
-            question:
-              "Kolom atau informasi apa yang tidak diperlukan dalam grafik perbandingan jumlah anggota ekstrakurikuler?",
-            points: [
-              "Tentukan informasi yang tidak relevan untuk tujuan visualisasi perbandingan.",
-              "Fokus hanya pada data yang mendukung tujuan grafik.",
-            ],
-          },
-          {
-            key: "algorithm",
-            title: "4. Membuat Langkah-langkah (Algoritma)",
-            question:
-              "Jenis grafik apa yang paling cocok untuk membandingkan jumlah anggota ekstrakurikuler?",
-            points: [
-              "Pilih jenis grafik yang sesuai untuk membandingkan data antar kategori.",
-              "Pastikan grafik yang dipilih memudahkan pembaca untuk melihat perbandingan dengan jelas.",
-            ],
-          },
-        ].map(({ key, title, question, points }) => (
-          <div key={key} className="p-6 bg-white rounded shadow-lg mb-6">
-            <h4 className="text-md font-semibold text-green-700 mb-3">
-              {title}
-            </h4>
-            <p className="text-gray-700 leading-relaxed">
-              <strong>Pertanyaan:</strong> {question}
-            </p>
-            <ul className="list-disc ml-6 text-gray-700 mt-1 text-sm md:text-base">
-              {points.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              <strong>Jawaban Anda:</strong>
-            </p>
-            <input
-              className="border p-2 rounded w-full mt-2"
-              placeholder="Tulis jawabanmu di sini"
-              value={answers[key]}
-              onChange={(e) => handleChange(key, e.target.value)}
-            />
+        {/* Petunjuk Umum */}
+        <section className="p-4 bg-green-100 rounded shadow-md mb-6">
+          <h3 className="text-lg font-semibold text-[#255F38] mb-2">
+            Petunjuk Umum
+          </h3>
+          <ol className="list-decimal list-inside text-gray-700 space-y-1 text-sm md:text-base">
+            <li>Bacalah studi kasus berikut dengan saksama.</li>
+            <li>
+              Jawab setiap pertanyaan pada bagian yang yang telah disediakan.
+            </li>
+            <li>
+              Setelah selesai menjawab semua pertanyaan, klik tombol{" "}
+              <em>“Selesai Latihan”</em> untuk mengumpulkan jawabanmu.
+            </li>
+          </ol>
+        </section>
+
+        {/* Studi Kasus */}
+        <section className="p-6 bg-white rounded shadow-lg mb-6 border border-gray-300">
+          <h3 className="text-lg font-semibold text-green-700 mb-3">
+            Studi Kasus: Berlatih Visualisasi Data
+          </h3>
+          <p className="px-4 text-sm leading-relaxed text-justify text-gray-700 md:text-base">
+            Sebagai pengurus OSIS, kamu diminta membuat laporan untuk kepala
+            sekolah mengenai minat siswa terhadap kegiatan ekstrakurikuler. Data
+            jumlah anggota tiap ekstrakurikuler sudah dicatat dalam bentuk tabel,
+            namun sulit dipahami jika hanya dilihat begitu saja. Untuk mempermudah
+            analisis dan presentasi, kamu akan menyajikan data ini dalam bentuk
+            grafik yang lebih mudah dibaca.
+          </p>
+          <div className="flex justify-center w-full px-4 mt-5">
+            <div
+              id="spreadsheet"
+              className="w-full max-w-full md:max-w-screen-md"
+              style={{ height: "600px" }}
+            ></div>
           </div>
-        ))}
-      </section>
+        </section>
 
-      {/* Tombol Selesai */}
-      <div className="flex justify-center mt-8">
-        <button
-          onClick={submitLatihan}
-          className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md cursor-pointer"
-        >
-          Selesai Latihan
-        </button>
+        {/* Soal Latihan */}
+        <section className="mb-6">
+          {[
+            {
+              key: "decomposition",
+              title: "1. Memecah Masalah (Dekomposisi)",
+              question:
+                "Data utama apa yang diperlukan untuk membuat grafik perbandingan jumlah anggota ekstrakurikuler?",
+              points: [
+                "Identifikasi elemen penting dari data yang akan digunakan untuk membuat grafik.",
+                "Fokus pada angka atau informasi yang akan divisualisasikan.",
+              ],
+            },
+            {
+              key: "pattern",
+              title: "2. Mencari Pola (Pengenalan Pola)",
+              question:
+                "Ekstrakurikuler apa yang memiliki anggota paling banyak?",
+              points: [
+                "Bandingkan jumlah anggota pada setiap ekstrakurikuler.",
+                "Cari nilai tertinggi dari data yang tersedia.",
+              ],
+            },
+            {
+              key: "abstraction",
+              title: "3. Mengabaikan yang Tidak Penting (Abstraksi)",
+              question:
+                "Kolom atau informasi apa yang tidak diperlukan dalam grafik perbandingan jumlah anggota ekstrakurikuler?",
+              points: [
+                "Tentukan informasi yang tidak relevan untuk tujuan visualisasi perbandingan.",
+                "Fokus hanya pada data yang mendukung tujuan grafik.",
+              ],
+            },
+            {
+              key: "algorithm",
+              title: "4. Membuat Langkah-langkah (Algoritma)",
+              question:
+                "Jenis grafik apa yang paling cocok untuk membandingkan jumlah anggota ekstrakurikuler?",
+              points: [
+                "Pilih jenis grafik yang sesuai untuk membandingkan data antar kategori.",
+                "Pastikan grafik yang dipilih memudahkan pembaca untuk melihat perbandingan dengan jelas.",
+              ],
+            },
+          ].map(({ key, title, question, points }) => (
+            <div key={key} className="p-6 bg-white rounded shadow-lg mb-6 border border-gray-300">
+              <h4 className="text-md font-semibold text-green-700 mb-3">
+                {title}
+              </h4>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Pertanyaan:</strong> {question}
+              </p>
+              <ul className="list-disc ml-6 text-gray-700 mt-1 text-sm md:text-base">
+                {points.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+              <p className="text-gray-700 mt-3 leading-relaxed">
+                <strong>Jawaban Anda:</strong>
+              </p>
+              <input
+                className="border p-2 rounded w-full mt-2"
+                placeholder="Tulis jawabanmu di sini"
+                value={answers[key]}
+                onChange={(e) => handleChange(key, e.target.value)}
+              />
+            </div>
+          ))}
+        </section>
+
+        {/* Tombol Selesai */}
+        <div className="flex justify-center mt-8 border border-gray-300">
+          <button
+            onClick={submitLatihan}
+            className="bg-green-800 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-base shadow-md cursor-pointer"
+          >
+            Selesai Latihan
+          </button>
+        </div>
       </div>
     </Layout>
   );
