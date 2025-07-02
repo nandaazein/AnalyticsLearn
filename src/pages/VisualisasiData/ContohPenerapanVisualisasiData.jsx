@@ -168,10 +168,10 @@
 //       {/* Instruksi untuk Siswa */}
 //       <div className="flex justify-center mt-8">
 //         <div className="bg-green-50 p-4 sm:p-6 mx-2 rounded-lg shadow-md mb-2 w-full max-w-[calc(100%-1rem)] sm:max-w-4xl">
-//           <h3 className="text-green-800 text-base sm:text-lg font-semibold mb-3">
+//           <h3 className="mb-3 text-base font-semibold text-green-800 sm:text-lg">
 //             Instruksi:
 //           </h3>
-//           <ul className="text-green-700 text-xs sm:text-sm md:text-base space-y-2">
+//           <ul className="space-y-2 text-xs text-green-700 sm:text-sm md:text-base">
 //             <li>1. Perhatikan tabel untuk memahami data nilai ulangan Budi.</li>
 //             <li>2. Isi kotak kosong berdasarkan tabel dan petunjuk yang diberikan.</li>
 //             <li>3. Klik di luar kotak atau tekan Enter untuk memeriksa jawaban.</li>
@@ -182,24 +182,24 @@
 //       </div>
 
 //       {/* Paragraf Penjelasan */}
-//       <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4 mt-6">
+//       <p className="px-4 mt-6 text-sm leading-relaxed text-justify text-gray-700 sm:text-base">
 //         Budi, seorang siswa SMP, ingin melihat apakah nilai ulangan harian Matematikanya meningkat atau menurun selama lima bulan terakhir (Januari hingga Mei). Dia telah mencatat nilai rata-rata ulangannya setiap bulan dalam tabel, tetapi sulit untuk melihat tren hanya dari angka-angka tersebut. Untuk memudahkan analisis, Budi ingin menampilkan data ini dalam bentuk Diagram Garis (Line Chart) menggunakan spreadsheet. Dengan grafik ini, Budi dapat dengan cepat memahami apakah dia perlu belajar lebih giat atau sudah berada di jalur yang benar.
 //       </p>
 
 //       {/* Tabel Data Nilai Ulangan */}
 //       <div className="flex flex-col items-center mt-6">
-//         <p className="text-gray-600 text-xs sm:text-sm text-center mb-2 italic">
+//         <p className="mb-2 text-xs italic text-center text-gray-600 sm:text-sm">
 //           Tabel 9. Data Nilai Ulangan Harian Budi
 //         </p>
-//         <div className="w-full overflow-x-auto flex justify-center">
-//           <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center text-xs sm:text-sm">
+//         <div className="flex justify-center w-full overflow-x-auto">
+//           <table className="w-full text-xs text-center border border-collapse border-green-800 md:w-2/3 sm:text-sm">
 //             <thead>
 //               <tr className="bg-[#255F38] text-white">
-//                 <th className="border border-green-600 px-4 py-2">Bulan</th>
-//                 <th className="border border-green-600 px-4 py-2">
+//                 <th className="px-4 py-2 border border-green-600">Bulan</th>
+//                 <th className="px-4 py-2 border border-green-600">
 //                   Nilai Rata-rata Ulangan
 //                 </th>
-//                 <th className="border border-green-600 px-4 py-2">
+//                 <th className="px-4 py-2 border border-green-600">
 //                   Jumlah Ulangan yang Dilakukan
 //                 </th>
 //               </tr>
@@ -217,7 +217,7 @@
 //                   className={index % 2 === 0 ? "bg-green-50" : "bg-white"}
 //                 >
 //                   {row.map((cell, i) => (
-//                     <td key={i} className="border border-green-600 px-4 py-2">
+//                     <td key={i} className="px-4 py-2 border border-green-600">
 //                       {cell}
 //                     </td>
 //                   ))}
@@ -228,18 +228,18 @@
 //         </div>
 //       </div>
 
-//       <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4 mt-6">
+//       <p className="px-4 mt-6 text-sm leading-relaxed text-justify text-gray-700 sm:text-base">
 //         Penyelesaian dengan{" "}
-//         <span className="font-semibold italic">Computational Thinking:</span>
+//         <span className="italic font-semibold">Computational Thinking:</span>
 //       </p>
 
 //       {/* DEKOMPOSISI */}
-//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative">
-//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-//           <Lightbulb className="mr-2 w-4 sm:w-5 h-4 sm:h-5" /> Dekomposisi
+//       <div className="relative p-5 mt-12 space-y-4 bg-white border-gray-300">
+//         <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+//           <Lightbulb className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> Dekomposisi
 //         </div>
-//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
-//           <li className="list-none -ml-6">
+//         <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
+//           <li className="-ml-6 list-none">
 //             Sebelum membuat grafik, kita perlu membagi masalah menjadi langkah-langkah kecil:
 //           </li>
 //           <li>
@@ -269,11 +269,11 @@
 //       </div>
 
 //       {/* Pengenalan Pola */}
-//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-//           <BarChart className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> PENGENALAN POLA
+//       <div className="relative p-5 mt-10 space-y-4 bg-white border-gray-300">
+//         <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+//           <BarChart className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> PENGENALAN POLA
 //         </div>
-//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
+//         <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
 //           <li>
 //             Jika nilai Budi meningkat, garis grafik akan bergerak{" "}
 //             <input
@@ -317,11 +317,11 @@
 //       </div>
 
 //       {/* Abstraksi */}
-//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-//           <Filter className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ABSTRAKSI
+//       <div className="relative p-5 mt-10 space-y-4 bg-white border-gray-300">
+//         <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+//           <Filter className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> ABSTRAKSI
 //         </div>
-//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
+//         <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
 //           <li>
 //             Fokus hanya pada dua kolom utama: Bulan dan Nilai Rata-rata Ulangan, tanpa
 //             memasukkan informasi lain seperti{" "}
@@ -347,14 +347,14 @@
 //       </div>
 
 //       {/* Algoritma */}
-//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-//           <Code className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ALGORITMA
+//       <div className="relative p-5 mt-10 space-y-4 bg-white border-gray-300">
+//         <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+//           <Code className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> ALGORITMA
 //         </div>
-//         <p className="text-gray-700 text-xs sm:text-sm md:text-base px-4 mt-2">
+//         <p className="px-4 mt-2 text-xs text-gray-700 sm:text-sm md:text-base">
 //           Klik tombol di bawah untuk melihat langkah-langkah membuat Diagram Garis satu per satu!
 //         </p>
-//         <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
+//         <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
 //           <li>
 //             <span className="font-semibold">Langkah {algorithmStep + 1} dari {algorithmSteps.length}</span>
 //             <br />
@@ -364,7 +364,7 @@
 //         <div className="flex justify-center mt-4 space-x-2">
 //           <button
 //             onClick={() => handlePreviousStep(algorithmStep, setAlgorithmStep)}
-//             className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base cursor-pointer"
+//             className="px-4 py-2 text-sm text-white transition duration-300 bg-gray-500 rounded-lg cursor-pointer hover:bg-gray-600 sm:text-base"
 //           >
 //             Langkah Sebelumnya
 //           </button>
@@ -372,13 +372,13 @@
 //             onClick={() =>
 //               handleNextStep(algorithmStep, setAlgorithmStep, algorithmSteps.length)
 //             }
-//             className="bg-green-800 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base cursor-pointer"
+//             className="px-4 py-2 text-sm text-white transition duration-300 bg-green-800 rounded-lg cursor-pointer hover:bg-green-700 sm:text-base"
 //           >
 //             {algorithmStep < algorithmSteps.length - 1 ? "Langkah Selanjutnya" : "Ulangi"}
 //           </button>
 //         </div>
 
-//         <div className="w-full flex justify-center px-4 mt-6">
+//         <div className="flex justify-center w-full px-4 mt-6">
 //           <div
 //             id="spreadsheet"
 //             className="w-full max-w-full md:max-w-screen-md"
@@ -388,17 +388,17 @@
 //       </div>
 
 //       {/* Kesimpulan dan Analisis */}
-//       <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative">
-//         <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-//           <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> KESIMPULAN & ANALISIS
+//       <div className="relative p-5 mt-10 space-y-4 bg-white border-gray-300">
+//         <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+//           <CheckCircle className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> KESIMPULAN & ANALISIS
 //         </div>
-//         <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-6">
+//         <p className="mt-6 text-xs text-gray-600 sm:text-sm md:text-base">
 //           Dengan Diagram Garis (Line Chart), Budi dapat melihat tren nilai ulangan hariannya setiap bulan dengan lebih cepat dan jelas, tanpa harus menganalisis angka secara manual.
 //         </p>
-//         <p className="text-gray-600 text-xs sm:text-sm md:text-base font-semibold">
+//         <p className="text-xs font-semibold text-gray-600 sm:text-sm md:text-base">
 //           Analisis
 //         </p>
-//         <ul className="list-disc list-inside text-gray-600 text-xs sm:text-sm md:text-base mt-4 space-y-2">
+//         <ul className="mt-4 space-y-2 text-xs text-gray-600 list-disc list-inside sm:text-sm md:text-base">
 //           <li
 //             className="text-justify"
 //             style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
@@ -415,16 +415,16 @@
 //       </div>
 
 //       {/* Tombol Navigasi */}
-//       <div className="flex flex-row justify-between mt-8 px-4">
+//       <div className="flex flex-row justify-between px-4 mt-8">
 //         <a
 //           href="/visualisasi-data"
-//           className="bg-gray-500 text-white px-3 sm:px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer"
+//           className="px-3 py-2 text-sm text-white transition duration-300 bg-gray-500 rounded-lg shadow-md cursor-pointer sm:px-5 hover:bg-gray-600 sm:text-base"
 //         >
 //           ← Sebelumnya
 //         </a>
 //         <a
 //           href="/aktivitas-visualisasi"
-//           className="bg-green-800 text-white px-3 sm:px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer"
+//           className="px-3 py-2 text-sm text-white transition duration-300 bg-green-800 rounded-lg shadow-md cursor-pointer sm:px-5 hover:bg-green-700 sm:text-base"
 //         >
 //           Selanjutnya →
 //         </a>
@@ -652,10 +652,10 @@ const ContohPenerapanVisualisasiData = () => {
         {/* Instruksi untuk Siswa */}
         <div className="flex justify-center mt-8">
           <div className="bg-green-50 p-4 sm:p-6 mx-2 rounded-lg shadow-md mb-2 w-full max-w-[calc(100%-1rem)] sm:max-w-4xl border border-gray-300">
-            <h3 className="text-green-800 text-base sm:text-lg font-semibold mb-3">
+            <h3 className="mb-3 text-base font-semibold text-green-800 sm:text-lg">
               Instruksi:
             </h3>
-            <ul className="text-green-700 text-xs sm:text-sm md:text-base space-y-2">
+            <ul className="space-y-2 text-xs text-green-700 sm:text-sm md:text-base">
               <li>
                 1. Perhatikan tabel untuk memahami data nilai ulangan Budi.
               </li>
@@ -679,7 +679,7 @@ const ContohPenerapanVisualisasiData = () => {
         </div>
 
         {/* Paragraf Penjelasan */}
-        <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4 mt-6">
+        <p className="px-4 mt-6 text-sm leading-relaxed text-justify text-gray-700 sm:text-base">
           Budi, seorang siswa SMP, ingin melihat apakah nilai ulangan harian
           Matematikanya meningkat atau menurun selama lima bulan terakhir
           (Januari hingga Mei). Dia telah mencatat nilai rata-rata ulangannya
@@ -693,18 +693,18 @@ const ContohPenerapanVisualisasiData = () => {
 
         {/* Tabel Data Nilai Ulangan */}
         <div className="flex flex-col items-center mt-6">
-          <p className="text-gray-600 text-xs sm:text-sm text-center mb-2 italic">
+          <p className="mb-2 text-xs italic text-center text-gray-600 sm:text-sm">
             Tabel 9. Data Nilai Ulangan Harian Budi
           </p>
-          <div className="w-full overflow-x-auto flex justify-center">
-            <table className="border-collapse border border-green-800 w-full md:w-2/3 text-center text-xs sm:text-sm">
+          <div className="flex justify-center w-full overflow-x-auto">
+            <table className="w-full text-xs text-center border border-collapse border-green-800 md:w-2/3 sm:text-sm">
               <thead>
                 <tr className="bg-[#255F38] text-white">
-                  <th className="border border-green-600 px-4 py-2">Bulan</th>
-                  <th className="border border-green-600 px-4 py-2">
+                  <th className="px-4 py-2 border border-green-600">Bulan</th>
+                  <th className="px-4 py-2 border border-green-600">
                     Nilai Rata-rata Ulangan
                   </th>
-                  <th className="border border-green-600 px-4 py-2">
+                  <th className="px-4 py-2 border border-green-600">
                     Jumlah Ulangan yang Dilakukan
                   </th>
                 </tr>
@@ -722,7 +722,7 @@ const ContohPenerapanVisualisasiData = () => {
                     className={index % 2 === 0 ? "bg-green-50" : "bg-white"}
                   >
                     {row.map((cell, i) => (
-                      <td key={i} className="border border-green-600 px-4 py-2">
+                      <td key={i} className="px-4 py-2 border border-green-600">
                         {cell}
                       </td>
                     ))}
@@ -733,18 +733,19 @@ const ContohPenerapanVisualisasiData = () => {
           </div>
         </div>
 
-        <p className="text-gray-700 text-sm sm:text-base text-justify leading-relaxed px-4 mt-6">
+        <p className="px-4 mt-6 text-sm leading-relaxed text-justify text-gray-700 sm:text-base">
           Penyelesaian dengan{" "}
-          <span className="font-semibold italic">Computational Thinking:</span>
+          <span className="italic font-semibold">Computational Thinking:</span>
         </p>
 
         {/* DEKOMPOSISI */}
-        <div className="bg-white p-5 border-gray-300 space-y-4 mt-12 relative border border-gray-300">
-          <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-            <Lightbulb className="mr-2 w-4 sm:w-5 h-4 sm:h-5" /> Dekomposisi
+        <div className="relative p-5 mt-12 space-y-4 bg-white border-gray-300">
+          <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+            {" "}
+            <Lightbulb className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> Dekomposisi
           </div>
-          <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
-            <li className="list-none -ml-6">
+          <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
+            <li className="-ml-6 list-none">
               Sebelum membuat grafik, kita perlu membagi masalah menjadi
               langkah-langkah kecil:
             </li>
@@ -784,11 +785,12 @@ const ContohPenerapanVisualisasiData = () => {
         </div>
 
         {/* Pengenalan Pola */}
-        <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative border border-gray-300">
-          <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-            <BarChart className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> PENGENALAN POLA
+        <div className="relative p-5 mt-12 space-y-4 bg-white border-gray-300">
+          <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+            {" "}
+            <BarChart className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> PENGENALAN POLA
           </div>
-          <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
+          <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
             <li>
               Jika nilai Budi meningkat, garis grafik akan bergerak{" "}
               <input
@@ -845,11 +847,12 @@ const ContohPenerapanVisualisasiData = () => {
         </div>
 
         {/* Abstraksi */}
-        <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative border border-gray-300">
-          <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-            <Filter className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ABSTRAKSI
+        <div className="relative p-5 mt-12 space-y-4 bg-white border-gray-300">
+          <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+            {" "}
+            <Filter className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> ABSTRAKSI
           </div>
-          <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
+          <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
             <li>
               Fokus hanya pada dua kolom utama: Bulan dan Nilai Rata-rata
               Ulangan, tanpa memasukkan informasi lain seperti{" "}
@@ -881,15 +884,16 @@ const ContohPenerapanVisualisasiData = () => {
         </div>
 
         {/* Algoritma */}
-        <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative border border-gray-300">
-          <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-            <Code className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> ALGORITMA
+        <div className="relative p-5 mt-12 space-y-4 bg-white border-gray-300">
+          <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+            {" "}
+            <Code className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> ALGORITMA
           </div>
-          <p className="text-gray-700 text-xs sm:text-sm md:text-base px-4 mt-2">
+          <p className="px-4 mt-2 text-xs text-gray-700 sm:text-sm md:text-base">
             Klik tombol di bawah untuk melihat langkah-langkah membuat Diagram
             Garis satu per satu!
           </p>
-          <ul className="text-gray-700 list-disc pl-6 ml-6 space-y-1 mt-6 text-xs sm:text-sm md:text-base">
+          <ul className="pl-6 mt-6 ml-6 space-y-1 text-xs text-gray-700 list-disc sm:text-sm md:text-base">
             <li>
               <span className="font-semibold">
                 Langkah {algorithmStep + 1} dari {algorithmSteps.length}
@@ -903,7 +907,7 @@ const ContohPenerapanVisualisasiData = () => {
               onClick={() =>
                 handlePreviousStep(algorithmStep, setAlgorithmStep)
               }
-              className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base cursor-pointer"
+              className="px-4 py-2 text-sm text-white transition duration-300 bg-gray-500 rounded-lg cursor-pointer hover:bg-gray-600 sm:text-base"
             >
               Langkah Sebelumnya
             </button>
@@ -915,7 +919,7 @@ const ContohPenerapanVisualisasiData = () => {
                   algorithmSteps.length
                 )
               }
-              className="bg-green-800 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base cursor-pointer"
+              className="px-4 py-2 text-sm text-white transition duration-300 bg-green-800 rounded-lg cursor-pointer hover:bg-green-700 sm:text-base"
             >
               {algorithmStep < algorithmSteps.length - 1
                 ? "Langkah Selanjutnya"
@@ -923,7 +927,7 @@ const ContohPenerapanVisualisasiData = () => {
             </button>
           </div>
 
-          <div className="w-full flex justify-center px-4 mt-6">
+          <div className="flex justify-center w-full px-4 mt-6">
             <div
               id="spreadsheet"
               className="w-full max-w-full md:max-w-screen-md"
@@ -933,20 +937,21 @@ const ContohPenerapanVisualisasiData = () => {
         </div>
 
         {/* Kesimpulan dan Analisis */}
-        <div className="bg-white p-5 border-gray-300 space-y-4 mt-10 relative border border-gray-300">
-          <div className="absolute -top-6 left-4 bg-green-800 text-white px-3 sm:px-5 py-2 rounded-t-lg text-base sm:text-lg font-bold flex items-center shadow-lg">
-            <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5 mr-2" /> KESIMPULAN &
+        <div className="relative p-5 mt-12 space-y-4 bg-white border-gray-300">
+          <div className="absolute flex items-center px-3 py-2 text-base font-bold text-white bg-green-800 rounded-t-lg shadow-lg -top-6 left-4 sm:px-5 sm:text-lg">
+            {" "}
+            <CheckCircle className="w-4 h-4 mr-2 sm:w-5 sm:h-5" /> KESIMPULAN &
             ANALISIS
           </div>
-          <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-6">
+          <p className="mt-6 text-xs text-gray-600 sm:text-sm md:text-base">
             Dengan Diagram Garis (Line Chart), Budi dapat melihat tren nilai
             ulangan hariannya setiap bulan dengan lebih cepat dan jelas, tanpa
             harus menganalisis angka secara manual.
           </p>
-          <p className="text-gray-600 text-xs sm:text-sm md:text-base font-semibold">
+          <p className="text-xs font-semibold text-gray-600 sm:text-sm md:text-base">
             Analisis
           </p>
-          <ul className="list-disc list-inside text-gray-600 text-xs sm:text-sm md:text-base mt-4 space-y-2">
+          <ul className="mt-4 space-y-2 text-xs text-gray-600 list-disc list-inside sm:text-sm md:text-base">
             <li
               className="text-justify"
               style={{ textIndent: "-1.5em", paddingLeft: "1.5em" }}
@@ -966,16 +971,16 @@ const ContohPenerapanVisualisasiData = () => {
         </div>
 
         {/* Tombol Navigasi */}
-        <div className="flex justify-between items-center px-2 sm:px-6 py-2 mt-2 sm:mt-4">
+        <div className="flex items-center justify-between px-2 py-2 mt-2 sm:px-6 sm:mt-4">
           <a
             href="/visualisasi-data"
-            className="bg-gray-500 text-white px-3 sm:px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer"
+            className="px-3 py-2 text-sm text-white transition duration-300 bg-gray-500 rounded-lg shadow-md cursor-pointer sm:px-5 hover:bg-gray-600 sm:text-base"
           >
             ← Sebelumnya
           </a>
           <a
             href="/aktivitas-visualisasi"
-            className="bg-green-800 text-white px-3 sm:px-5 py-2 rounded-lg hover:bg-green-700 transition duration-300 text-sm sm:text-base shadow-md cursor-pointer"
+            className="px-3 py-2 text-sm text-white transition duration-300 bg-green-800 rounded-lg shadow-md cursor-pointer sm:px-5 hover:bg-green-700 sm:text-base"
           >
             Selanjutnya →
           </a>

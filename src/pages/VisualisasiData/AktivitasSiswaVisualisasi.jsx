@@ -85,11 +85,11 @@
 //         AKTIVITAS VISUALISASI DATA
 //       </div>
 
-//       <div className="p-2 sm:p-6 bg-white">
+//       <div className="p-2 bg-white sm:p-6">
 //         {/* Petunjuk Umum */}
-//         <section className="p-2 sm:p-4 bg-green-100 rounded shadow-md mb-2 sm:mb-6">
-//           <h3 className="text-sm sm:text-lg font-semibold text-gray-700 mb-2">Petunjuk Umum</h3>
-//           <ol className="list-decimal list-inside text-gray-700 space-y-1 text-xs sm:text-sm md:text-base">
+//         <section className="p-2 mb-2 bg-green-100 rounded shadow-md sm:p-4 sm:mb-6">
+//           <h3 className="mb-2 text-sm font-semibold text-gray-700 sm:text-lg">Petunjuk Umum</h3>
+//           <ol className="space-y-1 text-xs text-gray-700 list-decimal list-inside sm:text-sm md:text-base">
 //             <li>Halaman ini terdiri dari lima soal yang masing-masing menguji pemahaman Anda mengenai visualisasi data.</li>
 //             <li>Setiap soal memiliki kolom masukan untuk menjawab, tombol Periksa untuk memeriksa jawaban, dan tombol Hapus untuk mengosongkan jawaban jika ingin anda mencoba lagi.</li>
 //             <li>Bacalah soal dengan cermat, masukkan jawaban Anda, dan periksa hasilnya untuk mendapatkan umpan balik.</li>
@@ -97,12 +97,12 @@
 //         </section>
 
 //         {/* Soal 1 */}
-//         <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-//           <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-//             <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">1.</span>
+//         <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+//           <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+//             <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">1.</span>
 //             Kamu ingin melihat perubahan jumlah penjualan produk dari waktu ke waktu selama 4 bulan terakhir. Grafik apa yang paling tepat untuk digunakan?
 //           </p>
-//           <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+//           <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform transform ${
 //                 selected === "Line Chart" ? "border-blue-600" : "border-gray-200"
@@ -110,7 +110,7 @@
 //               onClick={() => setSelected("Line Chart")}
 //             >
 //               <img src={satuLine} alt="Line Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Line Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Line Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -119,7 +119,7 @@
 //               onClick={() => setSelected("Bar Chart")}
 //             >
 //               <img src={satuBar} alt="Bar Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Column Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Column Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -128,7 +128,7 @@
 //               onClick={() => setSelected("Pie Chart")}
 //             >
 //               <img src={satuPie} alt="Pie Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Pie Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Pie Chart</p>
 //             </div>
 //           </div>
 //           <div className="text-center">
@@ -144,7 +144,7 @@
 //                 setIsTouched1(false);
 //                 setFeedback1("");
 //               }}
-//               className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+//               className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
 //             >
 //               Hapus
 //             </button>
@@ -159,12 +159,12 @@
 //         </div>
 
 //         {/* Soal 2 */}
-//         <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-//           <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-//             <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">2.</span>
+//         <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+//           <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+//             <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">2.</span>
 //             Kelasmu melakukan survei tentang warna favorit. Grafik apa yang paling tepat untuk menunjukkan persentase warna favorit dari seluruh kelas?
 //           </p>
-//           <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+//           <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
 //                 jawaban2 === "Pie Chart" ? "border-blue-600" : "border-gray-200"
@@ -172,7 +172,7 @@
 //               onClick={() => setJawaban2("Pie Chart")}
 //             >
 //               <img src={duaPie} alt="Pie Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Pie Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Pie Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -181,7 +181,7 @@
 //               onClick={() => setJawaban2("Bar Chart")}
 //             >
 //               <img src={duaBar} alt="Bar Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Bar Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Bar Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -190,7 +190,7 @@
 //               onClick={() => setJawaban2("Line Chart")}
 //             >
 //               <img src={duaLine} alt="Line Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Line Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Line Chart</p>
 //             </div>
 //           </div>
 //           <div className="text-center">
@@ -206,7 +206,7 @@
 //                 setIsTouched2(false);
 //                 setFeedback2("");
 //               }}
-//               className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+//               className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
 //             >
 //               Hapus
 //             </button>
@@ -221,12 +221,12 @@
 //         </div>
 
 //         {/* Soal 3 */}
-//         <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-//           <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-//             <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">3.</span>
+//         <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+//           <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+//             <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">3.</span>
 //             Kamu ingin melihat perubahan jumlah pengunjung perpustakaan sekolah dari waktu ke waktu setiap bulan. Grafik apa yang paling cocok?
 //           </p>
-//           <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+//           <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
 //                 jawaban3 === "Pie Chart" ? "border-blue-600" : "border-gray-200"
@@ -234,7 +234,7 @@
 //               onClick={() => setJawaban3("Pie Chart")}
 //             >
 //               <img src={tigaPie} alt="Pie Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Pie Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Pie Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -243,7 +243,7 @@
 //               onClick={() => setJawaban3("Bar Chart")}
 //             >
 //               <img src={tigaBar} alt="Bar Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Bar Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Bar Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -252,7 +252,7 @@
 //               onClick={() => setJawaban3("Line Chart")}
 //             >
 //               <img src={tigaLine} alt="Line Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Line Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Line Chart</p>
 //             </div>
 //           </div>
 //           <div className="text-center">
@@ -268,7 +268,7 @@
 //                 setIsTouched3(false);
 //                 setFeedback3("");
 //               }}
-//               className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+//               className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
 //             >
 //               Hapus
 //             </button>
@@ -283,12 +283,12 @@
 //         </div>
 
 //         {/* Soal 4 */}
-//         <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-//           <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-//             <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">4.</span>
+//         <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+//           <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+//             <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">4.</span>
 //             Kamu ingin melihat perbandingan nilai rata-rata siswa di pelajaran Matematika, IPA, dan Bahasa Indonesia. Grafik apa yang paling tepat?
 //           </p>
-//           <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+//           <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
 //                 jawaban4 === "Pie Chart" ? "border-blue-600" : "border-gray-200"
@@ -296,7 +296,7 @@
 //               onClick={() => setJawaban4("Pie Chart")}
 //             >
 //               <img src={empatPie} alt="Pie Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Pie Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Pie Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -305,7 +305,7 @@
 //               onClick={() => setJawaban4("Bar Chart")}
 //             >
 //               <img src={empatKolom} alt="Bar Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Bar Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Bar Chart</p>
 //             </div>
 //             <div
 //               className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
@@ -314,7 +314,7 @@
 //               onClick={() => setJawaban4("Line Chart")}
 //             >
 //               <img src={empatLine} alt="Line Chart" className="rounded-lg" />
-//               <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">Line Chart</p>
+//               <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">Line Chart</p>
 //             </div>
 //           </div>
 //           <div className="text-center">
@@ -330,7 +330,7 @@
 //                 setIsTouched4(false);
 //                 setFeedback4("");
 //               }}
-//               className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+//               className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
 //             >
 //               Hapus
 //             </button>
@@ -345,16 +345,16 @@
 //         </div>
 
 //         {/* Soal 5 */}
-//         <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-//           <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-//             <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">5.</span>
+//         <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+//           <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+//             <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">5.</span>
 //             Lengkapi tabel berikut ini dengan jenis grafik yang paling sesuai berdasarkan deskripsi kasus.
 //           </p>
-//           <table className="w-full text-xs sm:text-sm md:text-base border border-gray-400 rounded-lg">
+//           <table className="w-full text-xs border border-gray-400 rounded-lg sm:text-sm md:text-base">
 //             <thead>
 //               <tr className="bg-gray-200">
-//                 <th className="p-1 sm:p-2 border text-center font-bold">Kasus</th>
-//                 <th className="p-1 sm:p-2 border text-center font-bold">Jenis Grafik</th>
+//                 <th className="p-1 font-bold text-center border sm:p-2">Kasus</th>
+//                 <th className="p-1 font-bold text-center border sm:p-2">Jenis Grafik</th>
 //               </tr>
 //             </thead>
 //             <tbody>
@@ -369,8 +369,8 @@
 //                 },
 //               ].map((item, index) => (
 //                 <tr key={index} className="bg-white">
-//                   <td className="p-1 sm:p-2 border">{item.kasus}</td>
-//                   <td className="p-1 sm:p-2 border">
+//                   <td className="p-1 border sm:p-2">{item.kasus}</td>
+//                   <td className="p-1 border sm:p-2">
 //                     <input
 //                       type="text"
 //                       value={jawaban5[index] || ""}
@@ -379,7 +379,7 @@
 //                         newJawaban[index] = e.target.value;
 //                         setJawaban5(newJawaban);
 //                       }}
-//                       className="w-full p-1 sm:p-2 border-2 rounded-lg text-xs sm:text-sm"
+//                       className="w-full p-1 text-xs border-2 rounded-lg sm:p-2 sm:text-sm"
 //                       placeholder="Ketik jawaban Anda..."
 //                     />
 //                   </td>
@@ -387,7 +387,7 @@
 //               ))}
 //             </tbody>
 //           </table>
-//           <div className="text-center mt-2 sm:mt-4">
+//           <div className="mt-2 text-center sm:mt-4">
 //             <button
 //               onClick={handlePeriksa5}
 //               className="px-3 sm:px-4 py-1 sm:py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 text-xs sm:text-base cursor-pointer mr-2"
@@ -399,7 +399,7 @@
 //                 setJawaban5([]);
 //                 setIsTouched5(false);
 //               }}
-//               className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+//               className="px-3 py-1 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
 //             >
 //               Hapus
 //             </button>
@@ -429,10 +429,10 @@
 //         </div>
 
 //         {/* Tombol Navigasi */}
-//         <div className="flex justify-between mt-4 sm:mt-8 px-2 sm:px-4">
+//         <div className="flex justify-between px-2 mt-4 sm:mt-8 sm:px-4">
 //           <button
 //             onClick={() => (window.location.href = "/contoh-penerapan-visualisasi-data")}
-//             className="px-3 sm:px-5 py-1 sm:py-2 text-xs sm:text-base text-white transition duration-300 bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 cursor-pointer"
+//             className="px-3 py-1 text-xs text-white transition duration-300 bg-gray-500 rounded-lg shadow-md cursor-pointer sm:px-5 sm:py-2 sm:text-base hover:bg-gray-600"
 //           >
 //             ← Sebelumnya
 //           </button>
@@ -538,14 +538,13 @@ const AktivitasVisualisasiGambar = () => {
         <div className="p-2 sm:p-4 bg-[#255F38] mb-2 sm:mb-4 text-white font-bold text-sm sm:text-lg text-center rounded-lg shadow-lg">
           AKTIVITAS VISUALISASI DATA
         </div>
-
-        <div className="p-2 sm:p-6 bg-white border border-gray-300">
+        <div className="relative p-5 mt-8 space-y-4 bg-white border-gray-300">
           {/* Petunjuk Umum */}
-          <section className="p-2 sm:p-4 bg-green-100 rounded shadow-md mb-2 sm:mb-6">
-            <h3 className="text-sm sm:text-lg font-semibold text-gray-700 mb-2">
+          <section className="p-2 mb-2 bg-green-100 rounded shadow-md sm:p-4 sm:mb-6">
+            <h3 className="mb-2 text-sm font-semibold text-gray-700 sm:text-lg">
               Petunjuk Umum
             </h3>
-            <ol className="list-decimal list-inside text-gray-700 space-y-1 text-xs sm:text-sm md:text-base">
+            <ol className="space-y-1 text-xs text-gray-700 list-decimal list-inside sm:text-sm md:text-base">
               <li>
                 Halaman ini terdiri dari lima soal yang masing-masing menguji
                 pemahaman Anda mengenai visualisasi data.
@@ -563,16 +562,16 @@ const AktivitasVisualisasiGambar = () => {
           </section>
 
           {/* Soal 1 */}
-          <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-            <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+          <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+            <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+              <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">
                 1.
               </span>
               Kamu ingin melihat perubahan jumlah penjualan produk dari waktu ke
               waktu selama 4 bulan terakhir. Grafik apa yang paling tepat untuk
               digunakan?
             </p>
-            <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
               <div
                 className={`border-4 rounded-xl p-2 cursor-pointer transition-transform transform ${
                   selected === "Line Chart"
@@ -582,7 +581,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setSelected("Line Chart")}
               >
                 <img src={satuLine} alt="Line Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Line Chart
                 </p>
               </div>
@@ -595,7 +594,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setSelected("Bar Chart")}
               >
                 <img src={satuBar} alt="Bar Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Column Chart
                 </p>
               </div>
@@ -608,7 +607,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setSelected("Pie Chart")}
               >
                 <img src={satuPie} alt="Pie Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Pie Chart
                 </p>
               </div>
@@ -626,7 +625,7 @@ const AktivitasVisualisasiGambar = () => {
                   setIsTouched1(false);
                   setFeedback1("");
                 }}
-                className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+                className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
               >
                 Hapus
               </button>
@@ -645,16 +644,16 @@ const AktivitasVisualisasiGambar = () => {
           </div>
 
           {/* Soal 2 */}
-          <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-            <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+          <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+            <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+              <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">
                 2.
               </span>
               Kelasmu melakukan survei tentang warna favorit. Grafik apa yang
               paling tepat untuk menunjukkan persentase warna favorit dari
               seluruh kelas?
             </p>
-            <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
               <div
                 className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
                   jawaban2 === "Pie Chart"
@@ -664,7 +663,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban2("Pie Chart")}
               >
                 <img src={duaPie} alt="Pie Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Pie Chart
                 </p>
               </div>
@@ -677,7 +676,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban2("Bar Chart")}
               >
                 <img src={duaBar} alt="Bar Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Bar Chart
                 </p>
               </div>
@@ -690,7 +689,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban2("Line Chart")}
               >
                 <img src={duaLine} alt="Line Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Line Chart
                 </p>
               </div>
@@ -708,7 +707,7 @@ const AktivitasVisualisasiGambar = () => {
                   setIsTouched2(false);
                   setFeedback2("");
                 }}
-                className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+                className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
               >
                 Hapus
               </button>
@@ -727,16 +726,16 @@ const AktivitasVisualisasiGambar = () => {
           </div>
 
           {/* Soal 3 */}
-          <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-            <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+          <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+            <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+              <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">
                 3.
               </span>
               Kamu ingin melihat perubahan jumlah pengunjung perpustakaan
               sekolah dari waktu ke waktu setiap bulan. Grafik apa yang paling
               cocok?
             </p>
-            <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
               <div
                 className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
                   jawaban3 === "Pie Chart"
@@ -746,7 +745,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban3("Pie Chart")}
               >
                 <img src={tigaPie} alt="Pie Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Pie Chart
                 </p>
               </div>
@@ -759,7 +758,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban3("Bar Chart")}
               >
                 <img src={tigaBar} alt="Bar Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Bar Chart
                 </p>
               </div>
@@ -772,7 +771,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban3("Line Chart")}
               >
                 <img src={tigaLine} alt="Line Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Line Chart
                 </p>
               </div>
@@ -790,7 +789,7 @@ const AktivitasVisualisasiGambar = () => {
                   setIsTouched3(false);
                   setFeedback3("");
                 }}
-                className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+                className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
               >
                 Hapus
               </button>
@@ -809,16 +808,16 @@ const AktivitasVisualisasiGambar = () => {
           </div>
 
           {/* Soal 4 */}
-          <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-            <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+          <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+            <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+              <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">
                 4.
               </span>
               Kamu ingin melihat perbandingan nilai rata-rata siswa di pelajaran
               Matematika, IPA, dan Bahasa Indonesia. Grafik apa yang paling
               tepat?
             </p>
-            <div className="grid grid-cols-1 gap-2 sm:gap-4 px-2 sm:px-4 mb-2 sm:mb-5 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-2 px-2 mb-2 sm:gap-4 sm:px-4 sm:mb-5 md:grid-cols-3">
               <div
                 className={`border-4 rounded-xl p-2 cursor-pointer transition-transform-all ${
                   jawaban4 === "Pie Chart"
@@ -828,7 +827,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban4("Pie Chart")}
               >
                 <img src={empatPie} alt="Pie Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Pie Chart
                 </p>
               </div>
@@ -841,7 +840,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban4("Bar Chart")}
               >
                 <img src={empatKolom} alt="Bar Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Bar Chart
                 </p>
               </div>
@@ -854,7 +853,7 @@ const AktivitasVisualisasiGambar = () => {
                 onClick={() => setJawaban4("Line Chart")}
               >
                 <img src={empatLine} alt="Line Chart" className="rounded-lg" />
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm font-semibold text-center text-gray-700">
+                <p className="mt-1 text-xs font-semibold text-center text-gray-700 sm:mt-2 sm:text-sm">
                   Line Chart
                 </p>
               </div>
@@ -872,7 +871,7 @@ const AktivitasVisualisasiGambar = () => {
                   setIsTouched4(false);
                   setFeedback4("");
                 }}
-                className="ml-2 px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+                className="px-3 py-1 ml-2 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
               >
                 Hapus
               </button>
@@ -891,21 +890,21 @@ const AktivitasVisualisasiGambar = () => {
           </div>
 
           {/* Soal 5 */}
-          <div className="p-2 sm:p-6 mb-2 sm:mb-6 bg-green-50 border border-green-200 rounded-lg shadow-md">
-            <p className="px-2 sm:px-4 mb-2 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed text-gray-700 flex items-center">
-              <span className="text-sm sm:text-lg font-bold text-green-700 mr-2">
+          <div className="p-2 mb-2 border border-green-200 rounded-lg shadow-md sm:p-6 sm:mb-6 bg-green-50">
+            <p className="flex items-center px-2 mb-2 text-xs leading-relaxed text-gray-700 sm:px-4 sm:mb-4 sm:text-sm md:text-base">
+              <span className="mr-2 text-sm font-bold text-green-700 sm:text-lg">
                 5.
               </span>
               Lengkapi tabel berikut ini dengan jenis grafik yang paling sesuai
               berdasarkan deskripsi kasus.
             </p>
-            <table className="w-full text-xs sm:text-sm md:text-base border border-gray-400 rounded-lg">
+            <table className="w-full text-xs border border-gray-400 rounded-lg sm:text-sm md:text-base">
               <thead>
                 <tr className="bg-gray-200">
-                  <th className="p-1 sm:p-2 border text-center font-bold">
+                  <th className="p-1 font-bold text-center border sm:p-2">
                     Kasus
                   </th>
-                  <th className="p-1 sm:p-2 border text-center font-bold">
+                  <th className="p-1 font-bold text-center border sm:p-2">
                     Jenis Grafik
                   </th>
                 </tr>
@@ -924,8 +923,8 @@ const AktivitasVisualisasiGambar = () => {
                   },
                 ].map((item, index) => (
                   <tr key={index} className="bg-white">
-                    <td className="p-1 sm:p-2 border">{item.kasus}</td>
-                    <td className="p-1 sm:p-2 border">
+                    <td className="p-1 border sm:p-2">{item.kasus}</td>
+                    <td className="p-1 border sm:p-2">
                       <input
                         type="text"
                         value={jawaban5[index] || ""}
@@ -934,7 +933,7 @@ const AktivitasVisualisasiGambar = () => {
                           newJawaban[index] = e.target.value;
                           setJawaban5(newJawaban);
                         }}
-                        className="w-full p-1 sm:p-2 border-2 rounded-lg text-xs sm:text-sm"
+                        className="w-full p-1 text-xs border-2 rounded-lg sm:p-2 sm:text-sm"
                         placeholder="Ketik jawaban Anda..."
                       />
                     </td>
@@ -942,7 +941,7 @@ const AktivitasVisualisasiGambar = () => {
                 ))}
               </tbody>
             </table>
-            <div className="text-center mt-2 sm:mt-4">
+            <div className="mt-2 text-center sm:mt-4">
               <button
                 onClick={handlePeriksa5}
                 className="px-3 sm:px-4 py-1 sm:py-2 bg-[#255F38] text-white rounded-lg hover:bg-green-700 transition duration-200 text-xs sm:text-base cursor-pointer mr-2"
@@ -954,7 +953,7 @@ const AktivitasVisualisasiGambar = () => {
                   setJawaban5([]);
                   setIsTouched5(false);
                 }}
-                className="px-3 sm:px-4 py-1 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200 text-xs sm:text-base cursor-pointer"
+                className="px-3 py-1 text-xs text-white transition duration-200 bg-red-500 rounded-lg cursor-pointer sm:px-4 sm:py-2 hover:bg-red-600 sm:text-base"
               >
                 Hapus
               </button>
@@ -984,12 +983,12 @@ const AktivitasVisualisasiGambar = () => {
           </div>
 
           {/* Tombol Navigasi */}
-          <div className="flex justify-between items-center px-2 sm:px-6 py-2 mt-2 sm:mt-4">
+          <div className="flex items-center justify-between px-2 py-2 mt-2 sm:px-6 sm:mt-4">
             <button
               onClick={() =>
                 (window.location.href = "/contoh-penerapan-visualisasi-data")
               }
-              className="px-3 sm:px-5 py-1 sm:py-2 text-xs sm:text-base text-white transition duration-300 bg-gray-500 rounded-lg shadow-md hover:bg-gray-600 cursor-pointer"
+              className="px-3 py-1 text-xs text-white transition duration-300 bg-gray-500 rounded-lg shadow-md cursor-pointer sm:px-5 sm:py-2 sm:text-base hover:bg-gray-600"
             >
               ← Sebelumnya
             </button>
